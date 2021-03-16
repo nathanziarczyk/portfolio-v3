@@ -7,6 +7,8 @@ $font-size: 16px;
 $line-height: 100%;
 $regular: 400;
 
+$text-color: #050c2b;
+
 body,
 p {
   font-family: $base-font;
@@ -23,6 +25,17 @@ h5,
 h6 {
   font-family: $head-font;
   line-height: $line-height;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  color: $text-color;
 }
 
 h1 {
