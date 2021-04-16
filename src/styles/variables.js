@@ -1,6 +1,7 @@
 export const colors = {
-  text: "#050c2b",
-  yellow: "#fbaf36",
-  orange: "#f7604b",
+  text: "#FFFFFF",
+  text_dark: "#BCBABC",
+  primary: "#252834",
+  secondary: "#333746",
   pink: "#f80257",
 };
