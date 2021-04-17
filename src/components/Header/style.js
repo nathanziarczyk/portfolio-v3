@@ -36,12 +36,31 @@ export const HeaderEl = styled.header`
 
       li {
         &:not(:last-child) {
-          margin-right: 2.5rem;
+          margin-right: 1.5rem;
         }
 
         a {
-          font-size: 1.25rem;
+          position: relative;
+          font-size: 1.1rem;
           font-weight: 800;
+
+          &::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            height: 5px;
+            background-color: ${colors.accent};
+            transform: translateY(90%) scaleX(0);
+            transition: transform 150ms ease-in-out;
+            transform-origin: right;
+          }
+
+          &:hover::after {
+            transform: translateY(90%) scaleX(1);
+            transform-origin: left;
+          }
         }
       }
     }
