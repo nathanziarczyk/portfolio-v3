@@ -5,6 +5,7 @@ import "../styles/typography.scss";
 import Layout from "../components/Layout";
 import Hero from "../components/Hero";
 import ImageText from "../components/ImageText";
+import ContactForm from "../components/ContactForm";
 
 const IndexPage = () => {
   return (
@@ -12,6 +13,7 @@ const IndexPage = () => {
       <main>
         <Hero />
         <ImageText />
+        <ContactForm />
       </main>
     </Layout>
   );

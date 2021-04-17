@@ -35,6 +35,10 @@ h6 {
   margin-top: 0;
 }
 
+textarea {
+  font-family: $base-font;
+}
+
 a {
   text-decoration: none;
   color: $text-color;
@@ -58,19 +62,19 @@ h1 {
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 h3 {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
 }
 
 h4 {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
 }
 
 h5 {
-  font-size: 1rem;
+  font-size: 1.125rem;
 }
 
 h6 {
