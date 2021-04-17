@@ -7,8 +7,9 @@ export const HeaderEl = styled.header`
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  h1 {
+  h2 {
     margin: 0;
+    font-size: 2.5rem;
 
     a {
       position: relative;
@@ -40,7 +41,7 @@ export const HeaderEl = styled.header`
 
         a {
           font-size: 1.25rem;
-          font-weight: 600;
+          font-weight: 800;
         }
       }
     }
