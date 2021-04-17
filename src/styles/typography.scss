@@ -10,6 +10,12 @@ $regular: 400;
 
 $text-color: #fff;
 
+$text: "#FFFFFF";
+$text_dark: "#BCBABC";
+$primary: "#252834";
+$secondary: "#333746";
+$accent: "#FFC15C";
+
 body,
 p {
   font-family: $base-font;
@@ -31,6 +37,10 @@ h6 {
 
 a {
   text-decoration: none;
+  color: $text-color;
+  &:not(header a) {
+    color: $primary;
+  }
 }
 
 h1,
@@ -39,8 +49,7 @@ h3,
 h4,
 h5,
 h6,
-p,
-a {
+p {
   color: $text-color;
 }
 
