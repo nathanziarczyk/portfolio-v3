@@ -12,10 +12,10 @@ const ImageText = () => {
           <Row>
             <Col lg={6}>
               <Content>
-                <h1>
+                <h2>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor
-                </h1>
+                </h2>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
