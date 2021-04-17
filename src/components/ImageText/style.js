@@ -3,6 +3,17 @@ import { colors } from "../../styles/variables";
 
 export const ImageTextWrapper = styled.div`
   background-color: ${colors.primary};
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 12%;
+    height: 3px;
+    background-color: ${colors.accent};
+    transform: translateY(-50%) translateX(-50%);
+  }
 `;
 
 export const Content = styled.div`
