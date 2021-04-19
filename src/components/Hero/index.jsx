@@ -15,7 +15,7 @@ const Hero = () => {
             <Col></Col>
             <Col lg={8}>
               <h1>
-                {`Lorem ipsum dolor sit amet, consectetur`
+                {`Professional, beautiful and easy-to-use digital experiences`
                   .split(" ")
                   .map((word, i) => (
                     <span className="overflow-hidden" key={i}>
@@ -31,12 +31,21 @@ const Hero = () => {
                     </span>
                   ))}
               </h1>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
+              <motion.div
+                initial="hidden"
+                animate="visible"
+                variants={variants.content}
+              >
+                <p>
+                  Hi! 👋 I'm Nathan. I'm a web developer, currently working at{" "}
+                  <a target="_blank" href="https://xlab.be/en">
+                    Experience Lab
+                  </a>
+                  <br />
+                  In addition to my day job, I provide my knowledge and
+                  expertise to people who need it as a freelance web developer.
+                </p>
+              </motion.div>
             </Col>
             <Col></Col>
           </Row>
