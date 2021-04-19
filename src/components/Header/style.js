@@ -53,7 +53,7 @@ export const HeaderEl = styled.header`
             height: 5px;
             background-color: ${colors.accent};
             transform: translateY(90%) scaleX(0);
-            transition: transform 150ms ease-in-out;
+            transition: transform 250ms ease-in-out;
             transform-origin: right;
           }
 
