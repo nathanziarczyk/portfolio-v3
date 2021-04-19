@@ -22,6 +22,11 @@ const SEO = ({ title, description, image, article }) => {
   };
   return (
     <Helmet title={seo.title} titleTemplate={titleTemplate}>
+      <link rel="preconnect" href="https://fonts.gstatic.com"></link>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Orelega+One&family=Raleway:wght@400;600;700&display=swap"
+        rel="stylesheet"
+      ></link>
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
       {seo.url && <meta property="og:url" content={seo.url} />}
