@@ -17,4 +17,18 @@ export const variants = {
       }),
     },
   },
+  content: {
+    hidden: {
+      opacity: 0,
+      y: 2,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: 0.75,
+        duration: 0.75,
+      },
+    },
+  },
 };
