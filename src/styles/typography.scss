@@ -9,11 +9,11 @@ $regular: 400;
 
 $text-color: #fff;
 
-$text: "#FFFFFF";
-$text_dark: "#BCBABC";
-$primary: "#252834";
-$secondary: "#333746";
-$accent: "#FFC15C";
+$text: #ffffff;
+$text_dark: #bcbabc;
+$primary: #252834;
+$secondary: #333746;
+$accent: #ffc15c;
 
 body,
 p {
@@ -46,7 +46,26 @@ a {
   text-decoration: none;
   color: $text-color;
   &:not(header a) {
-    color: $primary;
+    color: $accent;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      height: 1px;
+      background-color: $accent;
+      transform: translateY(90%) scaleX(0);
+      transition: transform 250ms ease-in-out;
+      transform-origin: right;
+    }
+
+    &:hover::after {
+      transform: translateY(90%) scaleX(1);
+      transform-origin: left;
+    }
   }
 }
 
