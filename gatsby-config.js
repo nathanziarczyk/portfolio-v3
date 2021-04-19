@@ -7,6 +7,7 @@ module.exports = {
     url: "https://www.nathanz.dev", // No trailing slash allowed!
     image: "/images/snape.jpg", // Path to your image you placed in the 'static' folder
     twitterUsername: "@zzznathan",
+    siteUrl: "https://nathanz.dev",
   },
   plugins: [
     "gatsby-plugin-styled-components",
