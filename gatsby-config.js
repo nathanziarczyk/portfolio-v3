@@ -45,5 +45,20 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: "gatsby-source-sanity",
+      options: {
+        projectId: "ieh8d0v4",
+        dataset: "production",
+        token: process.env.SANITY_TOKEN,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-sanity-image",
+      options: {
+        projectId: "ieh8d0v4",
+        dataset: "production",
+      },
+    },
   ],
 };
