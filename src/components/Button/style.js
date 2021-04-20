@@ -1,19 +1,18 @@
-import { darken } from "polished";
+import { darken, transparentize } from "polished";
 import styled from "styled-components";
 import { colors } from "../../styles/variables";
 
 export const Button = styled.button`
   border: none;
+  z-index: 1;
+
   padding: 0.6rem 1.5rem;
   font-size: 0.9rem;
   text-transform: uppercase;
   font-weight: 600;
-  border-radius: 20px;
+  border-radius: 2px;
   cursor: pointer;
   background: ${colors.accent};
   color: ${colors.text};
-
-  &:hover {
-    background-color: ${darken(0.1, colors.accent)};
-  }
+  position: relative;
 `;
