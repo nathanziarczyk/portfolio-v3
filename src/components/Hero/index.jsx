@@ -41,6 +41,7 @@ const Hero = () => {
                   <a target="_blank" href="https://xlab.be/en">
                     Experience Lab
                   </a>
+                  .
                   <br />
                   In addition to my day job, I provide my knowledge and
                   expertise to people who need it as a freelance web developer.
