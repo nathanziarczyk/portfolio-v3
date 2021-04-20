@@ -21,7 +21,11 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-bottom: 6rem;
+  padding-bottom: 4rem;
+
+  .links {
+    margin-top: 1rem;
+  }
 `;
 export const Image = styled.div`
   position: relative;
@@ -29,6 +33,9 @@ export const Image = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+
+  img {
+  }
 
   &::after {
     content: "";
