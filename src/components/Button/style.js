@@ -1,6 +1,4 @@
-import { darken, transparentize } from "polished";
 import styled from "styled-components";
-import { colors } from "../../styles/variables";
 
 export const Button = styled.button`
   border: none;
@@ -13,6 +11,6 @@ export const Button = styled.button`
   border-radius: 2px;
   cursor: pointer;
   background: ${({ theme }) => theme.accent};
-  color: ${({ theme }) => theme.text};
+  color: ${({ theme }) => theme.button_color};
   position: relative;
 `;
