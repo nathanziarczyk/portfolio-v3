@@ -8,7 +8,7 @@ import SEO from "../SEO";
 
 const Layout = ({ children }) => {
   return (
-    <ThemeProvider theme={theme.dark}>
+    <ThemeProvider theme={theme.light}>
       <GlobalStyles />
       <SEO />
       <Header />
