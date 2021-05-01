@@ -2,6 +2,7 @@ import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { Wrapper } from "../../styles/base";
 import { Form, FormRow, FormWrapper } from "./style";
+import { Button } from "../Button/style";
 
 const ContactForm = () => {
   return (
@@ -39,7 +40,7 @@ const ContactForm = () => {
                     <textarea required name="message" id="message"></textarea>
                   </label>
                 </FormRow>
-                <button type="submit">Submit</button>
+                <Button type="submit">Submit</Button>
               </Form>
             </Col>
             <Col></Col>
