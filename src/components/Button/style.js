@@ -12,7 +12,7 @@ export const Button = styled.button`
   font-weight: 600;
   border-radius: 2px;
   cursor: pointer;
-  background: ${colors.accent};
-  color: ${colors.text};
+  background: ${({ theme }) => theme.accent};
+  color: ${({ theme }) => theme.text};
   position: relative;
 `;

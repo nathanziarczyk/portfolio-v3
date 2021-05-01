@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { colors } from "../../styles/variables";
 
 export const ImageTextWrapper = styled.div`
-  background-color: ${colors.primary};
+  background-color: ${({ theme }) => theme.primary};
   position: relative;
   &::before {
     content: "";
@@ -11,7 +11,7 @@ export const ImageTextWrapper = styled.div`
     left: 50%;
     width: 12%;
     height: 3px;
-    background-color: ${colors.accent};
+    background-color: ${({ theme }) => theme.accent};
     transform: translateY(-50%) translateX(-50%);
   }
 `;
@@ -44,7 +44,7 @@ export const Image = styled.div`
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: ${colors.primary};
+    background-color: ${({ theme }) => theme.primary};
     opacity: 0.15;
   }
 `;

@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { colors } from "../../styles/variables";
 
 export const FormWrapper = styled.section`
   h2 {
@@ -9,7 +8,7 @@ export const FormWrapper = styled.section`
 
 export const Form = styled.form`
   label {
-    color: ${colors.text};
+    color: ${({ theme }) => theme.text};
     font-weight: 600;
     input,
     textarea {
@@ -17,10 +16,10 @@ export const Form = styled.form`
       min-width: 100%;
       max-width: 100%;
       border: none;
-      background-color: ${colors.primary};
+      background-color: ${({ theme }) => theme.primary};
       padding: 0.75rem 1.25rem;
-      outline-color: ${colors.accent};
-      color: ${colors.text};
+      outline-color: ${({ theme }) => theme.accent};
+      color: ${({ theme }) => theme.text};
       font-size: 1rem;
       margin-top: 0.5rem !important;
     }
@@ -32,8 +31,8 @@ export const Form = styled.form`
 
   button[type="submit"] {
     border: none;
-    background-color: ${colors.accent};
-    color: ${colors.text};
+    background-color: ${({ theme }) => theme.accent};
+    color: ${({ theme }) => theme.text};
     font-weight: 600;
     padding: 0.6rem 1.5rem;
     font-size: 1.05rem;

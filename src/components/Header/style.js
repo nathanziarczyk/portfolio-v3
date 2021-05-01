@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { colors } from "../../styles/variables";
 
 export const HeaderEl = styled.header`
   padding: 2rem 0;
@@ -20,7 +19,7 @@ export const HeaderEl = styled.header`
         right: -5px;
         left: -5px;
         height: 40%;
-        background-color: ${colors.accent};
+        background-color: ${({ theme }) => theme.accent};
         z-index: -1;
         opacity: 0.45;
       }
@@ -51,7 +50,7 @@ export const HeaderEl = styled.header`
             bottom: 0;
             left: 0;
             height: 5px;
-            background-color: ${colors.accent};
+            background-color: ${({ theme }) => theme.accent};
             transform: translateY(90%) scaleX(0);
             transition: transform 250ms ease-in-out;
             transform-origin: right;
