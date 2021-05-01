@@ -14,6 +14,13 @@ body {
 body {
   background-color: ${({ theme }) => theme.bg};
   transition: background-color .3s ease-out;
+  font-family: ${variables.baseFont};
+  font-weight: ${variables.regular};
+  line-height: ${variables.lineHeight};
+}
+
+html{
+  font-size: ${variables.fontSize};
 }
 
 .overflow-hidden {
@@ -38,15 +45,6 @@ main {
   overflow: hidden;
 }
 
-html{
-  font-size: ${variables.fontSize};
-}
-
-body {
-  font-family: ${variables.baseFont};
-  font-weight: ${variables.regular};
-  line-height: ${variables.lineHeight};
-}
 h1,
 h2,
 h3,
@@ -71,6 +69,7 @@ a {
   text-decoration: none;
   color: ${({ theme }) => theme.text};
   &:not(header a) {
+    font-weight: bold;
     color: ${({ theme }) => theme.accent};
     position: relative;
 

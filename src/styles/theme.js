@@ -9,10 +9,10 @@ export const theme = {
   },
   light: {
     text: "#333746",
-    text_dark: "#333746",
-    primary: "#FFFFFF",
-    secondary: "#BABABA",
+    text_dark: "#252834",
+    primary: "#EBEBEB",
+    secondary: "#252834",
     accent: "#FFC15C",
-    bg: "#252834",
+    bg: "#FFFFFF",
   },
 };
