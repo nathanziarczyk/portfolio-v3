@@ -30,17 +30,9 @@ export const Form = styled.form`
   }
 
   button[type="submit"] {
-    border: none;
-    background-color: ${({ theme }) => theme.accent};
-    color: ${({ theme }) => theme.text};
-    font-weight: 600;
-    padding: 0.6rem 1.5rem;
-    font-size: 1.05rem;
-    cursor: pointer;
     margin: 0 auto;
     display: block;
     margin-top: 1.5rem;
-    border-radius: 2px;
   }
 `;
 
