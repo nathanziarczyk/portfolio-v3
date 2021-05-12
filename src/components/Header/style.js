@@ -34,6 +34,7 @@ export const HeaderEl = styled.header`
       padding: 0;
 
       li {
+        display: flex;
         &:not(:last-child) {
           margin-right: 1.5rem;
         }
