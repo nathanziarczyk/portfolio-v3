@@ -9,7 +9,6 @@ import SanityImage from "gatsby-plugin-sanity-image";
 import BlockContent from "@sanity/block-content-to-react";
 
 const ImageText = ({ data }) => {
-  console.log(data);
   return (
     <ImageTextWrapper>
       <Wrapper style={{ paddingBottom: 0, paddingTop: "4rem" }}>
