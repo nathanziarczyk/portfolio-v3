@@ -1,5 +1,5 @@
 import "bootstrap/dist/css/bootstrap-grid.min.css";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ThemeProvider } from "styled-components";
 import { ThemeContext } from "../../context/themeContext";
 import { GlobalStyles } from "../../styles/global";
@@ -9,11 +9,23 @@ import SEO from "../SEO";
 
 const Layout = ({ children }) => {
   const [selectedTheme, setSelectedTheme] = useState("light");
+
+  useEffect(() => {
+    if (window.localStorage.getItem("nz-theme")) {
+      setSelectedTheme(window.localStorage.getItem("nz-theme"));
+    } else {
+      window.localStorage.setItem("nz-theme", selectedTheme);
+    }
+  }, []);
+  useEffect(() => {
+    console.log(selectedTheme);
+    window.localStorage.setItem("nz-theme", selectedTheme);
+  }, [selectedTheme]);
+
   const toggleTheme = () => {
-    selectedTheme === "light"
-      ? setSelectedTheme("dark")
-      : setSelectedTheme("light");
+    setSelectedTheme(selectedTheme === "light" ? "dark" : "light");
   };
+
   return (
     <ThemeContext.Provider value={[selectedTheme, toggleTheme]}>
       <ThemeProvider theme={theme[selectedTheme]}>
