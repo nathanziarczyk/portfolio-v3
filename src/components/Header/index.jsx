@@ -37,6 +37,10 @@ const Header = () => {
 const ThemeToggle = () => {
   const [theme, toggleTheme] = useContext(ThemeContext);
 
+  const handleClick = () => {
+    toggleTheme();
+  };
+
   const properties = {
     moon: {
       r: 9,
@@ -74,7 +78,7 @@ const ThemeToggle = () => {
       strokeLinecap="round"
       strokeLinejoin="round"
       stroke="currentColor"
-      onClick={toggleTheme}
+      onClick={handleClick}
       style={{
         cursor: "pointer",
         ...svgContainerProps,
