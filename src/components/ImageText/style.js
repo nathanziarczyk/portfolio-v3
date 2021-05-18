@@ -30,6 +30,7 @@ export const Content = styled.div`
 export const Image = styled.div`
   position: relative;
   height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
