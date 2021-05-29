@@ -11,9 +11,7 @@ const ImageText = ({ data }) => {
         <Container>
           <Row>
             <Col lg={7}>
-              <Content>
-                <BlockContent blocks={data.body}></BlockContent>
-              </Content>
+              <Content></Content>
             </Col>
             <Col lg={5}>
               <Image></Image>
