@@ -5,16 +5,21 @@ import { Content, ImageTextWrapper, Image } from "./style";
 import { Button } from "../Button/style";
 
 const ImageText = ({ data }) => {
+  const { content, direction, image } = data.primary;
   return (
     <ImageTextWrapper>
       <Wrapper style={{ paddingBottom: 0, paddingTop: "4rem" }}>
         <Container>
           <Row>
             <Col lg={7}>
-              <Content></Content>
+              <Content
+                dangerouslySetInnerHTML={{ __html: content.html }}
+              ></Content>
             </Col>
             <Col lg={5}>
-              <Image></Image>
+              <Image>
+                <img src={image.fluid.src} alt={image.alt} />
+              </Image>
             </Col>
           </Row>
         </Container>
