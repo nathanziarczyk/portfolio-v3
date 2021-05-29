@@ -6,7 +6,8 @@ import { Wrapper } from "../../styles/base";
 import { variants } from "./animations";
 import { HeroWrapper } from "./style";
 
-const Hero = () => {
+const Hero = ({ data }) => {
+  const { hero_title, hero_body } = data.primary;
   return (
     <Wrapper>
       <HeroWrapper>
@@ -15,38 +16,26 @@ const Hero = () => {
             <Col></Col>
             <Col lg={8}>
               <h1>
-                {`Professional, beautiful and easy-to-use digital experiences`
-                  .split(" ")
-                  .map((word, i) => (
-                    <span className="overflow-hidden" key={i}>
-                      <motion.span
-                        className="word"
-                        custom={i}
-                        initial="hidden"
-                        animate="visible"
-                        variants={variants.h1.word}
-                      >
-                        {word + " "}
-                      </motion.span>
-                    </span>
-                  ))}
+                {hero_title.text.split(" ").map((word, i) => (
+                  <span className="overflow-hidden" key={i}>
+                    <motion.span
+                      className="word"
+                      custom={i}
+                      initial="hidden"
+                      animate="visible"
+                      variants={variants.h1.word}
+                    >
+                      {word + " "}
+                    </motion.span>
+                  </span>
+                ))}
               </h1>
               <motion.div
                 initial="hidden"
                 animate="visible"
                 variants={variants.content}
-              >
-                <p>
-                  Hi! 👋 I'm Nathan. I'm a web developer, currently working at{" "}
-                  <a target="_blank" href="https://xlab.be/en">
-                    Experience Lab
-                  </a>
-                  .
-                  <br />
-                  In addition to my day job, I provide my knowledge and
-                  expertise to people who need it as a freelance web developer.
-                </p>
-              </motion.div>
+                dangerouslySetInnerHTML={{ __html: hero_body.html }}
+              ></motion.div>
             </Col>
             <Col></Col>
           </Row>
