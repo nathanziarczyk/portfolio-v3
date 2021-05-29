@@ -2,11 +2,7 @@ import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { Wrapper } from "../../styles/base";
 import { Content, ImageTextWrapper, Image } from "./style";
-import headshot from "../../images/me_web_2.png";
 import { Button } from "../Button/style";
-import { graphql } from "gatsby";
-import SanityImage from "gatsby-plugin-sanity-image";
-import BlockContent from "@sanity/block-content-to-react";
 
 const ImageText = ({ data }) => {
   return (
@@ -20,13 +16,7 @@ const ImageText = ({ data }) => {
               </Content>
             </Col>
             <Col lg={5}>
-              <Image>
-                <SanityImage
-                  {...data.image}
-                  width={300}
-                  alt="Sweet Christmas!"
-                />
-              </Image>
+              <Image></Image>
             </Col>
           </Row>
         </Container>
