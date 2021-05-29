@@ -10,7 +10,6 @@ const IndexPage = ({ data }) => {
     <Layout>
       <main>
         <Hero />
-        <ImageText data={data.allSanityImageText.nodes[0]} />
         <ContactForm />
       </main>
     </Layout>
@@ -18,26 +17,3 @@ const IndexPage = ({ data }) => {
 };
 
 export default IndexPage;
-
-export const query = graphql`
-  query ImageText {
-    allSanityImageText {
-      nodes {
-        id
-        image {
-          ...ImageWithPreview
-        }
-        body {
-          _type
-          style
-          children {
-            text
-            _key
-            _type
-            marks
-          }
-        }
-      }
-    }
-  }
-`;
