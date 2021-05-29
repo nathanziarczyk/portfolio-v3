@@ -29,7 +29,8 @@
         "labels": {
           "richt_text": [],
           "rich_text": [],
-          "hero": []
+          "hero": [],
+          "image_text": []
         },
         "choices": {
           "rich_text": {
@@ -70,6 +71,41 @@
                   "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, embed, list-item, o-list-item, rtl",
                   "allowTargetBlank": true,
                   "label": "Body"
+                }
+              }
+            },
+            "repeat": {}
+          },
+          "image_text": {
+            "type": "Slice",
+            "fieldset": "Image text",
+            "description": "Image text slice",
+            "icon": "image_aspect_ratio",
+            "display": "list",
+            "non-repeat": {
+              "direction": {
+                "type": "Boolean",
+                "config": {
+                  "placeholder_false": "Image - Text",
+                  "placeholder_true": "Text - Image",
+                  "default_value": true,
+                  "label": "Direction"
+                }
+              },
+              "image": {
+                "type": "Image",
+                "config": {
+                  "constraint": {},
+                  "thumbnails": [],
+                  "label": "Image"
+                }
+              },
+              "content": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "paragraph, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, embed, list-item, o-list-item, rtl",
+                  "allowTargetBlank": true,
+                  "label": "Content"
                 }
               }
             },
