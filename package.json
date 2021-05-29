@@ -8,8 +8,9 @@
     "gatsby"
   ],
   "scripts": {
-    "develop": "gatsby develop",
-    "start": "gatsby develop",
+    "develop": "ENABLE_GATSBY_REFRESH_ENDPOINT=TRUE gatsby develop",
+    "start": "npm run develop",
+    "refresh": "curl -X POST http://localhost:8000/__refresh",
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean"
