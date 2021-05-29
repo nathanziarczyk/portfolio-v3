@@ -1,3 +1,8 @@
+require("dotenv").config({
+  path: `.env`,
+});
+const { linkResolver } = require("./prismic/linkResolver");
+
 module.exports = {
   siteMetadata: {
     title: "Home",
@@ -10,6 +15,17 @@ module.exports = {
     siteUrl: "https://nathanz.dev",
   },
   plugins: [
+    {
+      resolve: "gatsby-source-prismic",
+      options: {
+        repositoryName: process.env.PRISMIC_REPO_NAME,
+        accessToken: process.env.PRISMIC_TOKEN,
+        linkResolver: () => linkResolver,
+        schemas: {
+          page: require("./prismic/types/page.json"),
+        },
+      },
+    },
     "gatsby-plugin-styled-components",
     "gatsby-plugin-image",
     {
@@ -43,21 +59,6 @@ module.exports = {
         rule: {
           include: /assets/,
         },
-      },
-    },
-    {
-      resolve: "gatsby-source-sanity",
-      options: {
-        projectId: "ieh8d0v4",
-        dataset: "production",
-        token: process.env.SANITY_TOKEN,
-      },
-    },
-    {
-      resolve: "gatsby-plugin-sanity-image",
-      options: {
-        projectId: "ieh8d0v4",
-        dataset: "production",
       },
     },
   ],
