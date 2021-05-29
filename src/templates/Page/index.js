@@ -39,9 +39,30 @@ export const query = graphql`
                 primary {
                   hero_title {
                     html
+                    text
                   }
                   hero_body {
                     html
+                  }
+                }
+              }
+              ... on PrismicPageBodyImageText {
+                id
+                slice_type
+                primary {
+                  direction
+                  content {
+                    html
+                  }
+                  image {
+                    fluid {
+                      src
+                      srcSet
+                      srcWebp
+                      srcSetWebp
+                      sizes
+                    }
+                    alt
                   }
                 }
               }
