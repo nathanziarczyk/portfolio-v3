@@ -20,7 +20,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   pages.data.allPrismicPage.nodes.forEach((page) => {
     createPage({
-      path: page.uid,
+      path: page.uid === "home" ? "/" : page.uid,
       component: path.resolve(__dirname, "src/templates/Page/index.js"),
       context: { ...page },
     });
