@@ -6,7 +6,6 @@ import Layout from "../../components/Layout";
 const Page = (props) => {
   const { data } = props.data.allPrismicPage.edges[0].node;
   const { pageTitle, pageDescription, body } = data;
-  console.log(data);
   return (
     <Layout pageTitle={pageTitle} pageDescription={pageDescription}>
       <main>{body.map(sliceResolver)}</main>
@@ -24,15 +23,6 @@ export const query = graphql`
               text
             }
             body {
-              ... on PrismicPageBodyRichText {
-                id
-                slice_type
-                primary {
-                  text {
-                    html
-                  }
-                }
-              }
               ... on PrismicPageBodyHero {
                 id
                 slice_type
@@ -64,6 +54,13 @@ export const query = graphql`
                     }
                     alt
                   }
+                }
+              }
+              ... on PrismicPageBodyWidget {
+                id
+                slice_type
+                primary {
+                  widget
                 }
               }
             }
