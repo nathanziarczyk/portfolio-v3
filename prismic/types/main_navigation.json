@@ -1,0 +1,33 @@
+{
+  "Main" : {
+    "title" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1",
+        "label" : "Title"
+      }
+    },
+    "links" : {
+      "type" : "Group",
+      "config" : {
+        "fields" : {
+          "label" : {
+            "type" : "StructuredText",
+            "config" : {
+              "single" : "heading1",
+              "label" : "Label"
+            }
+          },
+          "link" : {
+            "type" : "Link",
+            "config" : {
+              "allowTargetBlank" : true,
+              "label" : "Link"
+            }
+          }
+        },
+        "label" : "Links"
+      }
+    }
+  }
+}

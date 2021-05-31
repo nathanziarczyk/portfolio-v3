@@ -23,6 +23,7 @@ module.exports = {
         linkResolver: () => linkResolver,
         schemas: {
           page: require("./prismic/types/page.json"),
+          main_navigation: require("./prismic/types/main_navigation.json"),
         },
       },
     },
