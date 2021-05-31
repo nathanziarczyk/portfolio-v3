@@ -1,11 +1,15 @@
 import { animated, useSpring } from "react-spring";
-import { Link } from "gatsby";
+import { graphql, Link, useStaticQuery } from "gatsby";
 import React, { useContext } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { ThemeContext } from "../../context/themeContext";
 import { HeaderEl } from "./style";
+import { linkResolver } from "../../../prismic/linkResolver";
 
 const Header = () => {
+  const { prismicMainNavigation } = useStaticQuery(query);
+  const { links } = prismicMainNavigation.data;
+  console.log(links);
   return (
     <Container>
       <Row>
@@ -16,12 +20,11 @@ const Header = () => {
             </h2>
             <nav>
               <ul>
-                <li>
-                  <a href="/">About</a>
-                </li>
-                <li>
-                  <a href="/">Contact</a>
-                </li>
+                {links.map((link) => (
+                  <li>
+                    <Link to={linkResolver(link.link)}>{link.label.text}</Link>
+                  </li>
+                ))}
                 <li>
                   <ThemeToggle />
                 </li>
@@ -109,5 +112,26 @@ const ThemeToggle = () => {
     </animated.svg>
   );
 };
+
+const query = graphql`
+  query MainNavigation {
+    prismicMainNavigation {
+      data {
+        links {
+          link {
+            id
+            link_type
+            uid
+            url
+            target
+          }
+          label {
+            text
+          }
+        }
+      }
+    }
+  }
+`;
 
 export default Header;
