@@ -1,8 +1,6 @@
-const linkResolver = function (doc) {
-  // Pretty URLs for known types
-  if (doc.type === "blog") return "/post/" + doc.uid;
-  if (doc.type === "page") return "/" + doc.uid;
+export const linkResolver = function (link) {
+  console.log(link);
+  if (link.link_type === "Document") return "/" + link.uid;
   // Fallback for other types, in case new custom types get created
-  return "/doc/" + doc.id;
+  return "/doc/" + link.id;
 };
-module.exports = linkResolver;
