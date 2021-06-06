@@ -1,7 +1,7 @@
 require("dotenv").config({
   path: `.env`,
 });
-const { linkResolver } = require("./prismic/linkResolver");
+const linkResolver = require("./prismic/linkResolver");
 
 module.exports = {
   siteMetadata: {

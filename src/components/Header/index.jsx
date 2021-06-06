@@ -4,7 +4,7 @@ import React, { useContext } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { ThemeContext } from "../../context/themeContext";
 import { HeaderEl } from "./style";
-import { linkResolver } from "../../../prismic/linkResolver";
+import linkResolver from "../../../prismic/linkResolver";
 
 const Header = () => {
   const { prismicMainNavigation } = useStaticQuery(query);
