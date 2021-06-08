@@ -41,6 +41,17 @@
             "icon": "text_fields",
             "display": "list",
             "non-repeat": {
+              "theme": {
+                "type": "Select",
+                "config": {
+                  "options": [
+                    "without_bg",
+                    "with_bg"
+                  ],
+                  "default_value": "without_bg",
+                  "label": "Theme"
+                }
+              },
               "text": {
                 "type": "StructuredText",
                 "config": {
@@ -84,6 +95,17 @@
             "icon": "image_aspect_ratio",
             "display": "list",
             "non-repeat": {
+              "theme": {
+                "type": "Select",
+                "config": {
+                  "options": [
+                    "without_bg",
+                    "with_bg"
+                  ],
+                  "default_value": "without_bg",
+                  "label": "Theme"
+                }
+              },
               "direction": {
                 "type": "Boolean",
                 "config": {
@@ -119,11 +141,23 @@
             "icon": "widgets",
             "display": "list",
             "non-repeat": {
+              "theme": {
+                "type": "Select",
+                "config": {
+                  "options": [
+                    "without_bg",
+                    "with_bg"
+                  ],
+                  "default_value": "without_bg",
+                  "label": "Theme"
+                }
+              },
               "widget": {
                 "type": "Select",
                 "config": {
                   "options": [
-                    "Contact form"
+                    "Contact form",
+                    "Services"
                   ],
                   "label": "Widget"
                 }
