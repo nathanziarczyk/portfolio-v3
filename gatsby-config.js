@@ -24,6 +24,7 @@ module.exports = {
         schemas: {
           page: require("./prismic/types/page.json"),
           main_navigation: require("./prismic/types/main_navigation.json"),
+          service: require("./prismic/types/services.json"),
         },
       },
     },
