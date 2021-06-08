@@ -18,7 +18,6 @@ const Layout = ({ children }) => {
     }
   }, []);
   useEffect(() => {
-    console.log(selectedTheme);
     window.localStorage.setItem("nz-theme", selectedTheme);
   }, [selectedTheme]);
 
