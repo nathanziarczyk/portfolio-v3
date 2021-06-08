@@ -4,10 +4,10 @@ import { Wrapper } from "../../styles/base";
 import { Form, FormRow, FormWrapper } from "./style";
 import { Button } from "../Button/style";
 
-const ContactForm = () => {
+const ContactForm = ({ theme }) => {
   return (
     <FormWrapper>
-      <Wrapper>
+      <Wrapper bg={theme}>
         <Container>
           <Row>
             <Col></Col>

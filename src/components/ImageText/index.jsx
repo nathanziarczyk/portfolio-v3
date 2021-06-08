@@ -5,10 +5,10 @@ import { Content, ImageTextWrapper, Image } from "./style";
 import { Button } from "../Button/style";
 
 const ImageText = ({ data }) => {
-  const { content, direction, image } = data.primary;
+  const { content, direction, image, theme } = data.primary;
   return (
     <ImageTextWrapper>
-      <Wrapper style={{ paddingBottom: 0, paddingTop: "4rem" }}>
+      <Wrapper bg={theme} style={{ paddingBottom: 0, paddingTop: "4rem" }}>
         <Container>
           <Row>
             <Col lg={7}>
