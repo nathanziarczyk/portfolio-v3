@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { colors } from "../../styles/variables";
 
 export const ImageTextWrapper = styled.div`
-  background-color: ${({ theme }) => theme.primary};
   position: relative;
   &::before {
     content: "";
