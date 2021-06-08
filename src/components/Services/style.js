@@ -8,13 +8,15 @@ export const Title = styled.h2`
 export const ServicesContainer = styled.div``;
 export const Service = styled.div`
   padding: 2rem;
+  height: 90%;
   border-radius: 0.5rem;
   background-color: ${({ bg, theme }) =>
     bg === "with_bg"
-      ? "rgba(255, 255, 255, .5)"
+      ? transparentize(0.5, theme.bg)
       : transparentize(0.5, theme.primary)};
   backdrop-filter: blur(5px);
   margin-top: 2rem;
+  transition: transform 0.35s ease-in-out;
 
   .header {
     display: flex;
@@ -30,5 +32,17 @@ export const Service = styled.div`
     h3 {
       margin: 0;
     }
+
+    .content {
+      p {
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  &:hover {
+    transform: translateY(-0.25rem);
   }
 `;

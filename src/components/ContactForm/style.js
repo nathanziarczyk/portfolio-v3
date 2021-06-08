@@ -16,8 +16,9 @@ export const Form = styled.form`
       min-width: 100%;
       max-width: 100%;
       border: none;
-      background-color: ${({ theme, bg }) =>
-        bg === "with_bg" ? "#fff" : theme.primary};
+      background-color: ${({ theme, bg }) => {
+        return bg === "with_bg" ? theme.bg : theme.primary;
+      }};
       padding: 0.75rem 1.25rem;
       outline-color: ${({ theme }) => theme.accent};
       color: ${({ theme }) => theme.text};
