@@ -9,7 +9,6 @@ import linkResolver from "../../../prismic/linkResolver";
 const Header = () => {
   const { prismicMainNavigation } = useStaticQuery(query);
   const { links } = prismicMainNavigation.data;
-  console.log(links);
   return (
     <Container>
       <Row>
@@ -20,8 +19,8 @@ const Header = () => {
             </h2>
             <nav>
               <ul>
-                {links.map((link) => (
-                  <li>
+                {links.map((link, i) => (
+                  <li key={i}>
                     <Link to={linkResolver(link.link)}>{link.label.text}</Link>
                   </li>
                 ))}
