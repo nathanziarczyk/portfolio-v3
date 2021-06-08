@@ -28,6 +28,7 @@ export const query = graphql`
                 slice_type
                 slice_label
                 primary {
+                  theme
                   text {
                     html
                   }
@@ -50,6 +51,7 @@ export const query = graphql`
                 id
                 slice_type
                 primary {
+                  theme
                   direction
                   content {
                     html
@@ -70,6 +72,7 @@ export const query = graphql`
                 id
                 slice_type
                 primary {
+                  theme
                   widget
                 }
               }
