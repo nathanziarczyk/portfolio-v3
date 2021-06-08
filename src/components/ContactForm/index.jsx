@@ -4,7 +4,8 @@ import { Wrapper } from "../../styles/base";
 import { Form, FormRow, FormWrapper } from "./style";
 import { Button } from "../Button/style";
 
-const ContactForm = ({ theme }) => {
+const ContactForm = (props) => {
+  const { theme } = props.data.primary;
   return (
     <FormWrapper>
       <Wrapper bg={theme}>
@@ -13,7 +14,7 @@ const ContactForm = ({ theme }) => {
             <Col></Col>
             <Col lg={8}>
               <h2>Let's work together!</h2>
-              <Form>
+              <Form bg={theme}>
                 <FormRow>
                   <label htmlFor="name">
                     Name *
