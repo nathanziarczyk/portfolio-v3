@@ -46,7 +46,6 @@ p {
 }
 
 main {
-  overflow: hidden;
 }
 
 h1,
