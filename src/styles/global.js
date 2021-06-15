@@ -18,7 +18,7 @@ body {
   font-weight: ${variables.regular};
   line-height: ${variables.lineHeight};
 
-  *{
+  *:not(#tsparticles){
     transition: color .3s ease-out;
   }
 }
