@@ -8,8 +8,8 @@ module.exports = {
     title: "Home",
     titleTemplate: "%s · Nathan",
     description:
-      "Providing clients with beautiful, flawless and solid digital products",
-    url: "https://www.nathanz.dev", // No trailing slash allowed!
+      "I create great websites and webshops to boost your company's performance.",
+    url: "https://nathanz.dev", // No trailing slash allowed!
     image: "/images/snape.jpg", // Path to your image you placed in the 'static' folder
     twitterUsername: "@zzznathan",
     siteUrl: "https://nathanz.dev",

@@ -26,6 +26,7 @@ const SEO = ({ title, description, image, article }) => {
       <link
         href="https://fonts.googleapis.com/css2?family=Orelega+One&family=Raleway:wght@400;600;700&display=swap"
         rel="stylesheet"
+        defer
       ></link>
       <link
         rel="stylesheet"
@@ -33,6 +34,7 @@ const SEO = ({ title, description, image, article }) => {
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
         crossorigin="anonymous"
         referrerpolicy="no-referrer"
+        defer
       />
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
