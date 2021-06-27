@@ -20,13 +20,13 @@ export const Service = styled.div`
 
   .header {
     display: flex;
-    gap: 1rem;
     align-items: center;
     margin-bottom: 1rem;
 
     i {
       font-size: 1.25rem;
       color: ${({ theme }) => theme.text};
+      margin-right: 1rem;
     }
 
     h3 {
