@@ -15,6 +15,7 @@ module.exports = {
     siteUrl: "https://nathanz.dev",
   },
   plugins: [
+    "gatsby-plugin-robots-txt",
     {
       resolve: "gatsby-source-prismic",
       options: {
