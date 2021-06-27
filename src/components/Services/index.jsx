@@ -20,7 +20,6 @@ const Services = ({ data }) => {
           <Row>
             {services.map((service, i) => {
               const { title, body, icon_class } = service.node.data;
-              console.log(service.node.data);
               return (
                 <Col md={6} key={i}>
                   <Service>
