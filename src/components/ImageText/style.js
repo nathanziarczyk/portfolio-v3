@@ -47,4 +47,17 @@ export const Image = styled.div`
     background-color: ${({ theme }) => theme.primary};
     opacity: 0.15;
   }
+
+  @media screen and (max-width: 992px) {
+    width: 60%;
+    margin: 0 auto;
+  }
+  @media screen and (max-width: 768px) {
+    width: 80%;
+    margin: 0 auto;
+  }
+  @media screen and (max-width: 576px) {
+    width: 100%;
+    margin: 0 auto;
+  }
 `;
