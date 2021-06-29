@@ -30,15 +30,24 @@ const SEO = ({ title, description, image, article }) => {
       ></link>
       <link
         href="https://fonts.googleapis.com/css2?family=Orelega+One&display=swap"
-        rel="stylesheet"
+        rel="preload"
+        as="style"
+        onload="this.rel='stylesheet'"
       ></link>
       <link
         href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap"
-        rel="stylesheet"
+        rel="preload"
+        as="style"
+        onload="this.rel='stylesheet'"
       ></link>
       <link
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+        rel="preload"
+        as="style"
+        onload="this.rel='stylesheet'"
       />
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
