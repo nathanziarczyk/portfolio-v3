@@ -21,6 +21,64 @@ body {
   *:not(#tsparticles){
     transition: color .3s ease-out;
   }
+  .splash{
+    position: fixed;
+    z-index: 20;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+
+    .balls {
+      width: 4em;
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .balls div {
+      width: 1em;
+      height: 1em;
+      border-radius: 50%;
+      background-color: ${({ theme }) => theme.accent};
+      transform: translateY(-100%);
+      animation: wave 0.8s ease-in-out alternate infinite;
+    }
+
+    .balls div:nth-of-type(1) {
+      animation-delay: -0.4s;
+    }
+
+    .balls div:nth-of-type(2) {
+      animation-delay: -0.2s;
+    }
+
+    @keyframes wave {
+      from {
+        transform: translateY(-100%);
+      }
+      to {
+        transform: translateY(100%);
+      }
+    }
+    transition: visibility 0s, opacity 0.5s linear;
+  }
+  &:not(.wf-orelega-one--loaded){
+    height: 100vh;
+    overflow: hidden;
+  }
+  &.wf-orelega-one--loaded{
+    .splash{
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
 }
 
 html{

@@ -27,6 +27,13 @@ const Layout = ({ children }) => {
 
   return (
     <ThemeContext.Provider value={[selectedTheme, toggleTheme]}>
+      <div className="splash">
+        <div class="balls">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
       <ThemeProvider theme={theme[selectedTheme]}>
         <GlobalStyles />
         <SEO />
