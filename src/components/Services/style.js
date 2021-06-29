@@ -16,7 +16,7 @@ export const Service = styled.div`
       : transparentize(0.5, theme.primary)};
   backdrop-filter: blur(5px);
   margin-top: 2rem;
-  transition: transform 0.35s ease-in-out;
+  transition: transform 0.35s ease-in-out !important;
 
   .header {
     display: flex;
