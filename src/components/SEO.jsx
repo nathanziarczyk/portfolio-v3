@@ -21,53 +21,40 @@ const SEO = ({ title, description, image, article }) => {
     url: `${siteUrl}${pathname}`,
   };
   return (
-    <Helmet title={seo.title} titleTemplate={titleTemplate}>
-      <link rel="preconnect" href="https://fonts.googleapis.com"></link>
-      <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin
-      ></link>
-      <link
-        href="https://fonts.googleapis.com/css2?family=Orelega+One&display=swap"
-        rel="preload"
-        as="style"
-        onload="this.rel='stylesheet'"
-      ></link>
-      <link
-        href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap"
-        rel="preload"
-        as="style"
-        onload="this.rel='stylesheet'"
-      ></link>
-      <link
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-        crossorigin="anonymous"
-        referrerpolicy="no-referrer"
-        rel="preload"
-        as="style"
-        onload="this.rel='stylesheet'"
-      />
-      <meta name="description" content={seo.description} />
-      <meta name="image" content={seo.image} />
-      {seo.url && <meta property="og:url" content={seo.url} />}
-      {(article ? true : null) && <meta property="og:type" content="article" />}
-      {seo.title && <meta property="og:title" content={seo.title} />}
-      {seo.description && (
-        <meta property="og:description" content={seo.description} />
-      )}
-      {seo.image && <meta property="og:image" content={seo.image} />}
-      <meta name="twitter:card" content="summary_large_image" />
-      {twitterUsername && (
-        <meta name="twitter:creator" content={twitterUsername} />
-      )}
-      {seo.title && <meta name="twitter:title" content={seo.title} />}
-      {seo.description && (
-        <meta name="twitter:description" content={seo.description} />
-      )}
-      {seo.image && <meta name="twitter:image" content={seo.image} />}
-    </Helmet>
+    <>
+      <Helmet title={seo.title} titleTemplate={titleTemplate}>
+        <link rel="preconnect" href="https://fonts.googleapis.com"></link>
+        <link
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+          integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"
+          rel="preload"
+          as="style"
+          onload="this.rel='stylesheet'"
+        />
+        <meta name="description" content={seo.description} />
+        <meta name="image" content={seo.image} />
+        {seo.url && <meta property="og:url" content={seo.url} />}
+        {(article ? true : null) && (
+          <meta property="og:type" content="article" />
+        )}
+        {seo.title && <meta property="og:title" content={seo.title} />}
+        {seo.description && (
+          <meta property="og:description" content={seo.description} />
+        )}
+        {seo.image && <meta property="og:image" content={seo.image} />}
+        <meta name="twitter:card" content="summary_large_image" />
+        {twitterUsername && (
+          <meta name="twitter:creator" content={twitterUsername} />
+        )}
+        {seo.title && <meta name="twitter:title" content={seo.title} />}
+        {seo.description && (
+          <meta name="twitter:description" content={seo.description} />
+        )}
+        {seo.image && <meta name="twitter:image" content={seo.image} />}
+      </Helmet>
+    </>
   );
 };
 SEO.defaultProps = {

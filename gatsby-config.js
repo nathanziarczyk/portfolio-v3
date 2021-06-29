@@ -15,6 +15,25 @@ module.exports = {
     siteUrl: "https://nathanz.dev",
   },
   plugins: [
+    {
+      resolve: "gatsby-omni-font-loader",
+      options: {
+        mode: "async",
+        enableListener: true,
+        preconnect: ["https://fonts.gstatic.com"],
+        /* Web fonts. File link should point to font CSS file. */
+        web: [
+          {
+            name: "Orelega One",
+            file: "https://fonts.googleapis.com/css2?family=Orelega+One",
+          },
+          {
+            name: "Raleway",
+            file: "https://fonts.googleapis.com/css2?family=Raleway",
+          },
+        ],
+      },
+    },
     "gatsby-plugin-robots-txt",
     {
       resolve: "gatsby-source-prismic",
