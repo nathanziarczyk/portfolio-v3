@@ -1,23 +1,14 @@
-import React, { useEffect } from "react";
+import { motion } from "framer-motion";
+import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
+import { useScrollAnimation } from "../../hooks/useScrollAnimation";
 import { Wrapper } from "../../styles/base";
-import { Content, ImageTextWrapper, Image } from "./style";
-import { Button } from "../Button/style";
-import { motion, useAnimation } from "framer-motion";
 import { variants } from "./animations";
-import { useInView } from "react-intersection-observer";
+import { Content, Image, ImageTextWrapper } from "./style";
 
 const ImageText = ({ data }) => {
   const { content, direction, image, theme } = data.primary;
-
-  const controls = useAnimation();
-  const [ref, inView] = useInView();
-
-  useEffect(() => {
-    if (inView) {
-      controls.start("visible");
-    }
-  }, [controls, inView]);
+  const [ref, controls] = useScrollAnimation();
 
   return (
     <ImageTextWrapper ref={ref}>
