@@ -12,7 +12,8 @@ const ContactForm = (props) => {
           <Col></Col>
           <Col lg={8}>
             {title?.text && <h2>{title.text}</h2>}
-            <Form bg={theme}>
+            <Form bg={theme} name="contact" method="POST" data-netlify="true">
+              <input type="hidden" name="form-name" value="contact" />
               <FormRow>
                 <label htmlFor="name">
                   Name *
