@@ -13,7 +13,6 @@ body {
 
 body {
   background-color: ${({ theme }) => theme.bg};
-  transition: background-color .5s ease-out;
   font-family: ${variables.baseFont};
   font-weight: ${variables.regular};
   line-height: ${variables.lineHeight};
