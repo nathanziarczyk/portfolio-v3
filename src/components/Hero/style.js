@@ -1,5 +1,7 @@
 import styled from "styled-components";
-export const HeroWrapper = styled.div`
+import { Wrapper } from "../../styles/base";
+
+export const HeroWrapper = styled(Wrapper)`
   * {
     text-align: center;
   }

@@ -6,16 +6,15 @@ export const Wrapper = styled.div`
   padding: 6rem 0;
   ${({ bg, theme }) => {
     if (bg === "with_bg") {
-      return `background-color: ${theme.primary}`;
+      return `
+        padding: 6rem 0;
+        background-color: ${theme.primary};
+      `;
+    } else {
+      return `
+        padding: 0;
+        margin: 6rem 0;
+      `;
     }
   }};
-
-  #tsparticles {
-    position: absolute;
-    top: -10rem;
-    z-index: -1;
-    right: 0;
-    bottom: 0;
-    left: 0;
-  }
 `;

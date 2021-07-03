@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { Wrapper } from "../../styles/base";
 
-export const FormWrapper = styled.section`
+export const FormWrapper = styled(Wrapper)`
   h2 {
     text-align: center;
   }
