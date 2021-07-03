@@ -31,7 +31,8 @@
           "rich_text": [],
           "hero": [],
           "image_text": [],
-          "widget": []
+          "widget": [],
+          "page_header": []
         },
         "choices": {
           "rich_text": {
@@ -160,6 +161,41 @@
                     "Services"
                   ],
                   "label": "Widget"
+                }
+              }
+            },
+            "repeat": {}
+          },
+          "page_header": {
+            "type": "Slice",
+            "fieldset": "Page header",
+            "description": "Page header slice",
+            "icon": "pages",
+            "display": "list",
+            "non-repeat": {
+              "theme": {
+                "type": "Select",
+                "config": {
+                  "options": [
+                    "without_bg",
+                    "with_bg"
+                  ],
+                  "default_value": "without_bg",
+                  "label": "Theme"
+                }
+              },
+              "title": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "heading1",
+                  "label": "Title"
+                }
+              },
+              "body1": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "paragraph, strong, em",
+                  "label": "Body"
                 }
               }
             },
