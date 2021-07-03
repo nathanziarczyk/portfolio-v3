@@ -20,6 +20,7 @@ const ImageText = ({ data }) => {
                 initial="hidden"
                 animate={controls}
                 variants={variants.content}
+                style={{ height: "100%" }}
               >
                 <Content
                   dangerouslySetInnerHTML={{ __html: content.html }}
