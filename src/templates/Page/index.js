@@ -89,6 +89,9 @@ export const query = graphql`
                 primary {
                   theme
                   widget
+                  title {
+                    text
+                  }
                 }
               }
             }

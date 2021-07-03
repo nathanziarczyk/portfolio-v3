@@ -162,6 +162,13 @@
                   ],
                   "label": "Widget"
                 }
+              },
+              "title": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "heading2",
+                  "label": "Title"
+                }
               }
             },
             "repeat": {}

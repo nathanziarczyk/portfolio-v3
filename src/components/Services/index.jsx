@@ -5,16 +5,14 @@ import { Wrapper } from "../../styles/base";
 import { ServicesContainer, Title, Service } from "./style";
 
 const Services = ({ data }) => {
-  const { theme } = data.primary;
+  const { theme, title } = data.primary;
   const { allPrismicService } = useStaticQuery(query);
   const { edges: services } = allPrismicService;
   return (
     <Wrapper bg={theme}>
       <Container>
         <Row>
-          <Col>
-            <Title>What services do I offer?</Title>
-          </Col>
+          <Col>{title?.text && <Title>{title?.text}</Title>}</Col>
         </Row>
         <ServicesContainer>
           <Row>

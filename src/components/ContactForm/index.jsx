@@ -4,14 +4,14 @@ import { Form, FormRow, FormWrapper } from "./style";
 import { Button } from "../Button/style";
 
 const ContactForm = (props) => {
-  const { theme } = props.data.primary;
+  const { theme, title } = props.data.primary;
   return (
     <FormWrapper bg={theme}>
       <Container>
         <Row>
           <Col></Col>
           <Col lg={8}>
-            <h2>Let's work together!</h2>
+            {title?.text && <h2>{title.text}</h2>}
             <Form bg={theme}>
               <FormRow>
                 <label htmlFor="name">
