@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Wrapper } from "../../styles/base";
+import { variables } from "../../styles/variables";
 
 export const FormWrapper = styled(Wrapper)`
   h2 {
@@ -48,5 +49,15 @@ export const FormRow = styled.div`
 
   label {
     width: ${({ children }) => (children.length === 2 ? "48%" : "100%")};
+  }
+
+  @media screen and (max-width: ${variables.sm}) {
+    flex-direction: column;
+    margin-bottom: 0 !important;
+
+    label {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
   }
 `;
