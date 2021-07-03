@@ -4,6 +4,7 @@ import { ThemeProvider } from "styled-components";
 import { ThemeContext } from "../../context/themeContext";
 import { GlobalStyles } from "../../styles/global";
 import { theme } from "../../styles/theme";
+import Footer from "../Footer";
 import Header from "../Header";
 import SEO from "../SEO";
 
@@ -39,6 +40,7 @@ const Layout = ({ children, title, description }) => {
         <SEO title={title} description={description} />
         <Header />
         {children}
+        <Footer />
       </ThemeProvider>
     </ThemeContext.Provider>
   );
