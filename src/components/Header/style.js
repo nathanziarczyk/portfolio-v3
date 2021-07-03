@@ -44,7 +44,7 @@ export const HeaderEl = styled.header`
         a {
           position: relative;
           font-size: 1.1rem;
-          font-weight: 800;
+          font-weight: 700;
 
           &::after {
             content: "";
