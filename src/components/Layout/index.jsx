@@ -7,7 +7,7 @@ import { theme } from "../../styles/theme";
 import Header from "../Header";
 import SEO from "../SEO";
 
-const Layout = ({ children }) => {
+const Layout = ({ children, title, description }) => {
   const [selectedTheme, setSelectedTheme] = useState("light");
 
   useEffect(() => {
@@ -28,7 +28,7 @@ const Layout = ({ children }) => {
   return (
     <ThemeContext.Provider value={[selectedTheme, toggleTheme]}>
       <div className="splash">
-        <div class="balls">
+        <div className="balls">
           <div></div>
           <div></div>
           <div></div>
@@ -36,7 +36,7 @@ const Layout = ({ children }) => {
       </div>
       <ThemeProvider theme={theme[selectedTheme]}>
         <GlobalStyles />
-        <SEO />
+        <SEO title={title} description={description} />
         <Header />
         {children}
       </ThemeProvider>

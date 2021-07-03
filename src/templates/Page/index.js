@@ -5,9 +5,11 @@ import Layout from "../../components/Layout";
 
 const Page = (props) => {
   const { data } = props.data.allPrismicPage.edges[0].node;
-  const { pageTitle, pageDescription, body } = data;
+  const { page_title, page_description, body } = data;
+  const pageTitle = page_title.text;
+  const pageDescription = page_description.text;
   return (
-    <Layout pageTitle={pageTitle} pageDescription={pageDescription}>
+    <Layout title={pageTitle} description={pageDescription}>
       <main>{body.map(sliceResolver)}</main>
     </Layout>
   );

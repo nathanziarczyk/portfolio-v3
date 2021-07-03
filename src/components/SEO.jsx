@@ -3,26 +3,34 @@ import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 import { useLocation } from "@reach/router";
 import { useStaticQuery, graphql } from "gatsby";
-const SEO = ({ title, description, image, article }) => {
+const SEO = (props) => {
+  const { title, description, image, article } = props;
   const { pathname } = useLocation();
   const { site } = useStaticQuery(query);
   const {
     defaultTitle,
-    titleTemplate,
     defaultDescription,
     siteUrl,
     defaultImage,
     twitterUsername,
   } = site.siteMetadata;
+
+  const isHome = pathname === "/";
+
   const seo = {
-    title: title || defaultTitle,
+    title: isHome ? `Nathan Ziarczyk · ${title}` : `${title} · Nathan Ziarczyk`,
     description: description || defaultDescription,
     image: `${siteUrl}${image || defaultImage}`,
     url: `${siteUrl}${pathname}`,
   };
   return (
     <>
-      <Helmet title={seo.title} titleTemplate={titleTemplate}>
+      <Helmet
+        title={seo.title}
+        htmlAttributes={{
+          lang: "en",
+        }}
+      >
         <link rel="preconnect" href="https://fonts.googleapis.com"></link>
         <link
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
