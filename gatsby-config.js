@@ -10,7 +10,7 @@ module.exports = {
     description:
       "I create great websites and webshops to boost your company's performance.",
     url: "https://nathanz.dev", // No trailing slash allowed!
-    image: "./static/images/seo-image.jpg", // Path to your image you placed in the 'static' folder
+    image: "/images/seo-image.jpg", // Path to your image you placed in the 'static' folder
     twitterUsername: "@zzznathan",
     siteUrl: "https://nathanz.dev",
   },
