@@ -33,12 +33,11 @@ export const Service = styled(motion.div)`
     h3 {
       margin: 0;
     }
-
-    .content {
-      p {
-        &:last-of-type {
-          margin-bottom: 0;
-        }
+  }
+  .content {
+    p {
+      &:last-child {
+        margin-bottom: 0;
       }
     }
   }
