@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors } from "../../styles/variables";
+import { colors, variables } from "../../styles/variables";
 
 export const ImageTextWrapper = styled.div`
   position: relative;
@@ -9,9 +9,14 @@ export const ImageTextWrapper = styled.div`
     top: 0;
     left: 50%;
     width: 12%;
-    height: 3px;
+    height: 5px;
+    border-radius: 2px 2px 0 0;
     background-color: ${({ theme }) => theme.accent};
     transform: translateY(-50%) translateX(-50%);
+
+    @media screen and (max-width: ${variables.md}) {
+      width: 30%;
+    }
   }
 `;
 
