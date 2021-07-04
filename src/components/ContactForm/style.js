@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 import { Wrapper } from "../../styles/base";
 import { variables } from "../../styles/variables";
@@ -8,7 +9,7 @@ export const FormWrapper = styled(Wrapper)`
   }
 `;
 
-export const Form = styled.form`
+export const Form = styled(motion.form)`
   label {
     color: ${({ theme }) => theme.text};
     font-weight: 600;

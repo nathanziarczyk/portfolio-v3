@@ -1,12 +1,13 @@
+import { motion } from "framer-motion";
 import { transparentize } from "polished";
 import styled from "styled-components";
 
-export const Title = styled.h2`
+export const Title = styled(motion.h2)`
   text-align: center;
 `;
 
 export const ServicesContainer = styled.div``;
-export const Service = styled.div`
+export const Service = styled(motion.div)`
   padding: 2rem;
   height: 90%;
   border-radius: 0.5rem;

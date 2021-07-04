@@ -2,22 +2,38 @@ import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { Form, FormRow, FormWrapper } from "./style";
 import { Button } from "../Button/style";
+import { motion } from "framer-motion";
+import { useScrollAnimation } from "../../hooks/useScrollAnimation";
+import { variants } from "./animations";
 
 const ContactForm = (props) => {
   const { theme, title } = props.data.primary;
+  const [ref, controls] = useScrollAnimation(0.1);
   return (
-    <FormWrapper bg={theme}>
+    <FormWrapper bg={theme} ref={ref}>
       <Container>
         <Row>
           <Col></Col>
           <Col lg={8}>
-            {title?.text && <h2>{title.text}</h2>}
+            {title?.text && (
+              <motion.h2
+                initial="hidden"
+                animate={controls}
+                variants={variants}
+              >
+                {title.text}
+              </motion.h2>
+            )}
             <Form
               bg={theme}
               action="/success"
               name="contact"
               method="POST"
               data-netlify="true"
+              initial="hidden"
+              animate={controls}
+              variants={variants}
+              custom={1}
             >
               <input type="hidden" name="form-name" value="contact" />
               <FormRow>
