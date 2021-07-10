@@ -4,6 +4,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import styled from "styled-components";
 import Layout from "../components/Layout";
 import { useLocation } from "@reach/router";
+import { transparentize } from "polished";
 
 const MessageWrapper = styled.div`
   min-height: calc(100vh - 144px);
@@ -15,7 +16,7 @@ const MessageWrapper = styled.div`
 const Message = styled.div`
   padding: 2rem;
   border-radius: 1rem;
-  background: ${({ theme }) => theme.primary};
+  background: ${({ theme }) => transparentize(0.5, theme.primary)};
   text-align: center;
 
   h1 {
