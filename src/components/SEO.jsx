@@ -15,7 +15,7 @@ const SEO = (props) => {
     twitterUsername,
   } = site.siteMetadata;
 
-  const isHome = pathname === "/";
+  const isHome = pathname === "/" || pathname === "/nl";
 
   const seo = {
     title: isHome ? `Nathan Ziarczyk · ${title}` : `${title} · Nathan Ziarczyk`,
@@ -23,6 +23,7 @@ const SEO = (props) => {
     image: `${siteUrl}${image || defaultImage}`,
     url: `${siteUrl}${pathname}`,
   };
+
   return (
     <>
       <Helmet

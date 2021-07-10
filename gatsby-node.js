@@ -13,14 +13,31 @@ exports.createPages = async ({ graphql, actions }) => {
           lang
           type
           url
+          lang
         }
       }
     }
   `);
 
   pages.data.allPrismicPage.nodes.forEach((page) => {
+    const { lang } = page;
+    let pagePath;
+    if (lang === "nl-be") {
+      if (page.uid === "home") {
+        pagePath = "nl/";
+      } else {
+        pagePath = `nl/${page.uid}`;
+      }
+    } else if (lang === "en-gb") {
+      if (page.uid === "home") {
+        pagePath = "/";
+      } else {
+        pagePath = page.uid;
+      }
+    }
+    console.log(pagePath);
     createPage({
-      path: page.uid === "home" ? "/" : page.uid,
+      path: pagePath,
       component: path.resolve(__dirname, "src/templates/Page/index.js"),
       context: { ...page },
     });

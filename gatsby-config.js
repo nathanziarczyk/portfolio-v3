@@ -42,6 +42,7 @@ module.exports = {
         repositoryName: process.env.PRISMIC_REPO_NAME,
         accessToken: process.env.PRISMIC_TOKEN,
         linkResolver: () => linkResolver,
+        lang: "*",
         schemas: {
           page: require("./prismic/types/page.json"),
           main_navigation: require("./prismic/types/main_navigation.json"),

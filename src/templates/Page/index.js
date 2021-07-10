@@ -16,8 +16,8 @@ const Page = (props) => {
 };
 
 export const query = graphql`
-  query PageQuery($uid: String) {
-    allPrismicPage(filter: { uid: { eq: $uid } }) {
+  query PageQuery($uid: String, $lang: String) {
+    allPrismicPage(filter: { uid: { eq: $uid }, lang: { eq: $lang } }) {
       edges {
         node {
           data {
