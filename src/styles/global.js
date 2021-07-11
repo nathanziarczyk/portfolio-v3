@@ -9,6 +9,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -125,10 +126,10 @@ span {
   // white-space: pre;
 }
 
-a {
+a{
   text-decoration: none;
   color: ${({ theme }) => theme.text};
-  &:not(header a) {
+  &:not(header a)::not(.disable-global) {
     font-weight: bold;
     color: ${({ theme }) => theme.accent};
     position: relative;
