@@ -39,6 +39,10 @@ export const FooterTab = styled.div`
     padding: 0;
     margin: 0;
 
+    li:not(:last-child) {
+      margin-bottom: 0.5rem;
+    }
+
     li,
     a {
       color: ${({ theme }) => theme.text};
@@ -46,5 +50,9 @@ export const FooterTab = styled.div`
   }
   @media screen and (max-width: ${variables.lg}) {
     margin-top: 1.5rem;
+
+    h3 {
+      margin-bottom: 0.5rem;
+    }
   } ;
 `;
