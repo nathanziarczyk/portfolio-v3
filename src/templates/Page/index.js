@@ -68,6 +68,7 @@ export const query = graphql`
                 primary {
                   theme
                   direction
+                  image_alignment
                   content {
                     html
                   }

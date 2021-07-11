@@ -107,6 +107,17 @@
                   "label": "Theme"
                 }
               },
+              "image_alignment": {
+                "type": "Select",
+                "config": {
+                  "options": [
+                    "center",
+                    "bottom"
+                  ],
+                  "default_value": "center",
+                  "label": "Image alignment"
+                }
+              },
               "direction": {
                 "type": "Boolean",
                 "config": {
