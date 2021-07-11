@@ -6,7 +6,6 @@ import Services from "../src/components/Services";
 import PageHeader from "../src/components/PageHeader";
 
 export const sliceResolver = (slice, key) => {
-  console.log(slice);
   switch (slice?.slice_type) {
     case "hero":
       return <Hero data={slice} key={key} />;

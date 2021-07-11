@@ -6,7 +6,6 @@ import { Body, PageHeaderWrapper, Title } from "./style";
 
 const PageHeader = (props) => {
   const { primary } = props.data;
-  console.log(primary);
   return (
     <PageHeaderWrapper>
       <Container>

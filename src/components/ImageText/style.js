@@ -1,10 +1,13 @@
 import { transparentize } from "polished";
 import styled from "styled-components";
+import { Wrapper } from "../../styles/base";
 import { colors, variables } from "../../styles/variables";
 
-export const ImageTextWrapper = styled.div`
+export const ImageTextWrapper = styled(Wrapper)`
   position: relative;
   overflow: hidden;
+  padding: ${({ imageAlignment }) =>
+    imageAlignment === "bottom" ? "4rem 0 0 0" : "4rem 0"};
   &::before {
     content: "";
     position: absolute;
@@ -28,7 +31,8 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-bottom: 4rem;
+  padding-bottom: ${({ imageAlignment }) =>
+    imageAlignment === "bottom" ? "4rem" : 0};
 
   .links {
     margin-top: 1rem;
@@ -44,7 +48,7 @@ export const Image = styled.div`
 
   img {
     filter: drop-shadow(
-      0px -7px 12px ${({ theme }) => (theme.secondary === "#252834" ? transparentize(0.75, theme.secondary) : theme.secondary)}
+      0px -7px 12px ${({ theme }) => (theme.secondary === "#252834" ? transparentize(0.85, theme.secondary) : theme.secondary)}
     );
   }
 
