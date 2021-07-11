@@ -10,7 +10,7 @@ const Footer = () => {
         <Row>
           <Col lg={3}>
             <h2>
-              <Link className="disable-global" href="/">
+              <Link className="disable-global" to="/">
                 Nathan
               </Link>
             </h2>
