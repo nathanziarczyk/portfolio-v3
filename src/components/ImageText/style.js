@@ -1,8 +1,10 @@
+import { transparentize } from "polished";
 import styled from "styled-components";
 import { colors, variables } from "../../styles/variables";
 
 export const ImageTextWrapper = styled.div`
   position: relative;
+  overflow: hidden;
   &::before {
     content: "";
     position: absolute;
@@ -10,6 +12,7 @@ export const ImageTextWrapper = styled.div`
     left: 50%;
     width: 12%;
     height: 5px;
+    z-index: 2;
     border-radius: 2px 2px 0 0;
     background-color: ${({ theme }) => theme.accent};
     transform: translateY(-50%) translateX(-50%);
@@ -40,12 +43,15 @@ export const Image = styled.div`
   justify-content: flex-end;
 
   img {
+    filter: drop-shadow(
+      0px -7px 12px ${({ theme }) => (theme.secondary === "#252834" ? transparentize(0.75, theme.secondary) : theme.secondary)}
+    );
   }
 
   &::after {
     content: "";
     position: absolute;
-    top: 0;
+    top: -100vh;
     right: 0;
     bottom: 0;
     left: 0;
