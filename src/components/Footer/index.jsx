@@ -40,7 +40,7 @@ const Footer = () => {
                 <li>
                   <a href="mailto:hello@nathanz.dev">hello@nathanz.dev</a>
                 </li>
-                <li>BTW: BE0733.981.776</li>
+                <li>BE0733.981.776</li>
               </ul>
             </FooterTab>
           </Col>
