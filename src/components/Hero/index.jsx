@@ -6,36 +6,40 @@ import { variants } from "./animations";
 import { HeroWrapper } from "./style";
 
 const Hero = ({ data }) => {
-  const { hero_title, hero_body } = data.primary;
+  const { hero_title, hero_body, image } = data.primary;
+  console.log(image);
   return (
     <HeroWrapper>
       <Container>
         <Row>
-          <Col></Col>
-          <Col lg={8}>
-            <h1>
-              {hero_title.text.split(" ").map((word, i) => (
-                <span className="overflow-hidden" key={i}>
-                  <motion.span
-                    className="word"
-                    custom={i}
-                    initial="hidden"
-                    animate="visible"
-                    variants={variants.h1.word}
-                  >
-                    {word + " "}
-                  </motion.span>
-                </span>
-              ))}
-            </h1>
-            <motion.div
-              initial="hidden"
-              animate="visible"
-              variants={variants.content}
-              dangerouslySetInnerHTML={{ __html: hero_body.html }}
-            ></motion.div>
+          <Col lg={7}>
+            <div className="content-wrapper">
+              <h1>
+                {hero_title.text.split(" ").map((word, i) => (
+                  <span className="overflow-hidden" key={i}>
+                    <motion.span
+                      className="word"
+                      custom={i}
+                      initial="hidden"
+                      animate="visible"
+                      variants={variants.h1.word}
+                    >
+                      {word + " "}
+                    </motion.span>
+                  </span>
+                ))}
+              </h1>
+              <motion.div
+                initial="hidden"
+                animate="visible"
+                variants={variants.content}
+                dangerouslySetInnerHTML={{ __html: hero_body.html }}
+              ></motion.div>
+            </div>
           </Col>
-          <Col></Col>
+          <Col lg={4} className="offset-lg-1">
+            <motion.img src={image.fluid.src} alt={image.alt} />
+          </Col>
         </Row>
       </Container>
     </HeroWrapper>
