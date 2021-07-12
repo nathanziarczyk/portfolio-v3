@@ -71,6 +71,14 @@
             "icon": "crop_16_9",
             "display": "list",
             "non-repeat": {
+              "image": {
+                "type": "Image",
+                "config": {
+                  "constraint": {},
+                  "thumbnails": [],
+                  "label": "Image"
+                }
+              },
               "hero_title": {
                 "type": "StructuredText",
                 "config": {

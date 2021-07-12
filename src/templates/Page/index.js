@@ -60,6 +60,16 @@ export const query = graphql`
                   hero_body {
                     html
                   }
+                  image {
+                    fluid {
+                      src
+                      srcSet
+                      srcWebp
+                      srcSetWebp
+                      sizes
+                    }
+                    alt
+                  }
                 }
               }
               ... on PrismicPageBodyImageText {
