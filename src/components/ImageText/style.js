@@ -54,14 +54,12 @@ export const Image = styled.div`
 
   @media screen and (max-width: 992px) {
     width: 60%;
-    margin: 0 auto;
+    margin: 2rem auto 0;
   }
   @media screen and (max-width: 768px) {
     width: 80%;
-    margin: 0 auto;
   }
   @media screen and (max-width: 576px) {
     width: 100%;
-    margin: 0 auto;
   }
 `;

@@ -40,7 +40,13 @@ const Hero = ({ data }) => {
           </Col>
           <Col lg={4} className="offset-lg-1">
             <Parallax y={[7.5, -7.5]}>
-              <motion.img src={image.fluid.src} alt={image.alt} />
+              <motion.img
+                initial="hidden"
+                animate="visible"
+                variants={variants.image}
+                src={image.fluid.src}
+                alt={image.alt}
+              />
             </Parallax>
           </Col>
         </Row>
