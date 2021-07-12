@@ -1,3 +1,4 @@
+import { transparentize } from "polished";
 import styled from "styled-components";
 import { Wrapper } from "../../styles/base";
 
@@ -17,5 +18,11 @@ export const HeroWrapper = styled(Wrapper)`
     p {
       color: ${({ theme }) => theme.text_dark};
     }
+  }
+
+  img {
+    filter: drop-shadow(
+      0px -7px 12px ${({ theme }) => (theme.secondary === "#252834" ? transparentize(0.95, theme.secondary) : theme.secondary)}
+    );
   }
 `;

@@ -1,6 +1,8 @@
 import "bootstrap/dist/css/bootstrap-grid.min.css";
 import React, { useEffect, useState } from "react";
 import { ThemeProvider } from "styled-components";
+import { ParallaxProvider } from "react-scroll-parallax";
+
 import { ThemeContext } from "../../context/themeContext";
 import { GlobalStyles } from "../../styles/global";
 import { theme } from "../../styles/theme";
@@ -27,22 +29,24 @@ const Layout = ({ children, title, description }) => {
   };
 
   return (
-    <ThemeContext.Provider value={[selectedTheme, toggleTheme]}>
-      <div className="splash">
-        <div className="balls">
-          <div></div>
-          <div></div>
-          <div></div>
+    <ParallaxProvider>
+      <ThemeContext.Provider value={[selectedTheme, toggleTheme]}>
+        <div className="splash">
+          <div className="balls">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
         </div>
-      </div>
-      <ThemeProvider theme={theme[selectedTheme]}>
-        <GlobalStyles />
-        <SEO title={title} description={description} />
-        <Header />
-        {children}
-        <Footer />
-      </ThemeProvider>
-    </ThemeContext.Provider>
+        <ThemeProvider theme={theme[selectedTheme]}>
+          <GlobalStyles />
+          <SEO title={title} description={description} />
+          <Header />
+          {children}
+          <Footer />
+        </ThemeProvider>
+      </ThemeContext.Provider>
+    </ParallaxProvider>
   );
 };
 

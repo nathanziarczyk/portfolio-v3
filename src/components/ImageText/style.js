@@ -48,19 +48,8 @@ export const Image = styled.div`
 
   img {
     filter: drop-shadow(
-      0px -7px 12px ${({ theme }) => (theme.secondary === "#252834" ? transparentize(0.85, theme.secondary) : theme.secondary)}
+      0px -7px 12px ${({ theme }) => (theme.secondary === "#252834" ? transparentize(0.95, theme.secondary) : theme.secondary)}
     );
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: -100vh;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: ${({ theme }) => theme.primary};
-    opacity: 0.15;
   }
 
   @media screen and (max-width: 992px) {

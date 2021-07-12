@@ -4,6 +4,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import { Wrapper } from "../../styles/base";
 import { variants } from "./animations";
 import { HeroWrapper } from "./style";
+import { Parallax } from "react-scroll-parallax";
 
 const Hero = ({ data }) => {
   const { hero_title, hero_body, image } = data.primary;
@@ -38,7 +39,9 @@ const Hero = ({ data }) => {
             </div>
           </Col>
           <Col lg={4} className="offset-lg-1">
-            <motion.img src={image.fluid.src} alt={image.alt} />
+            <Parallax y={[7.5, -7.5]}>
+              <motion.img src={image.fluid.src} alt={image.alt} />
+            </Parallax>
           </Col>
         </Row>
       </Container>
