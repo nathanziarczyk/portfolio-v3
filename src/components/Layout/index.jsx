@@ -1,4 +1,6 @@
 import "bootstrap/dist/css/bootstrap-grid.min.css";
+import "@fontsource/orelega-one";
+import "@fontsource/raleway";
 import React, { useEffect, useState } from "react";
 import { ThemeProvider } from "styled-components";
 import { ParallaxProvider } from "react-scroll-parallax";
