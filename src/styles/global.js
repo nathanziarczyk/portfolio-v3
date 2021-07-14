@@ -34,40 +34,25 @@ body {
     align-items: center;
     opacity: 1;
 
-    .balls {
-      width: 4em;
-      display: flex;
-      flex-flow: row nowrap;
-      align-items: center;
-      justify-content: space-between;
+    p{
+      font-family: "Orelega One";
+      line-height: 8.5rem;
+      font-size: 8.5rem;
+      -webkit-text-stroke: 2px #252834;
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+      animation: hue 10s infinite linear;
+      background-image: -webkit-linear-gradient(92deg, #FFC15C, #FFC15C);
     }
-
-    .balls div {
-      width: 1em;
-      height: 1em;
-      border-radius: 50%;
-      background-color: ${({ theme }) => theme.accent};
-      transform: translateY(-100%);
-      animation: wave 0.8s ease-in-out alternate infinite;
-    }
-
-    .balls div:nth-of-type(1) {
-      animation-delay: -0.4s;
-    }
-
-    .balls div:nth-of-type(2) {
-      animation-delay: -0.2s;
-    }
-
-    @keyframes wave {
+    @keyframes hue {
       from {
-        transform: translateY(-100%);
+        -webkit-filter: hue-rotate(0deg);
       }
       to {
-        transform: translateY(100%);
+        -webkit-filter: hue-rotate(-90deg);
       }
     }
-    transition: visibility 0s, opacity 0.5s linear;
+    visibility: hidden;
   }
   &:not(.wf-orelega-one--loaded){
     height: 100vh;
@@ -75,7 +60,6 @@ body {
   }
   &.wf-orelega-one--loaded{
     .splash{
-      visibility: hidden;
       opacity: 0;
     }
   }

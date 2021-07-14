@@ -12,7 +12,7 @@ export const theme = {
     text: "#333746",
     text_dark: "#252834",
     button_color: "#FFFFFF",
-    primary: "#EBEBEB",
+    primary: "#E7EAF0",
     secondary: "#252834",
     accent: "#FFC15C",
     bg: "#FFFFFF",
