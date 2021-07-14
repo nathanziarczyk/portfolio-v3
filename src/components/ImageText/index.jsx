@@ -9,9 +9,8 @@ import { variants } from "./animations";
 import { Content, Image, ImageTextWrapper } from "./style";
 
 const ImageText = ({ data }) => {
-  const { content, direction, image, theme, image_alignment } = data.primary;
+  let { content, direction, image, theme, image_alignment } = data.primary;
   const [ref, controls] = useScrollAnimation();
-  console.log(direction);
   return (
     <ImageTextWrapper bg={theme} imageAlignment={image_alignment} ref={ref}>
       <Container>
@@ -36,7 +35,9 @@ const ImageText = ({ data }) => {
           </Col>
           <Col
             lg={4}
-            className={[direction ? "order-lg-1" : "offset-lg-1"].join(" ")}
+            className={[
+              direction ? "order-lg-1" : "offset-lg-1 order-lg-2",
+            ].join(" ")}
           >
             <Parallax y={[-7.5, 7.5]}>
               <Image>
