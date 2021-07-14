@@ -54,15 +54,6 @@ body {
     }
     visibility: hidden;
   }
-  &:not(.wf-orelega-one--loaded){
-    height: 100vh;
-    overflow: hidden;
-  }
-  &.wf-orelega-one--loaded{
-    .splash{
-      opacity: 0;
-    }
-  }
 }
 
 html{
