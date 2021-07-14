@@ -18,7 +18,7 @@ const Header = () => {
           <HeaderEl>
             <motion.h2
               variants={variants.fadeIn}
-              initial={"hidden"}
+              initial={window && !window.GATSBY_LOADED ? "hidden" : ""}
               animate={"visible"}
               custom={0}
             >
@@ -29,7 +29,7 @@ const Header = () => {
                 {links.map((link, i) => (
                   <motion.li
                     variants={variants.fadeIn}
-                    initial={"hidden"}
+                    initial={window && !window.GATSBY_LOADED ? "hidden" : ""}
                     animate={"visible"}
                     custom={i}
                     key={i}
@@ -37,14 +37,14 @@ const Header = () => {
                     <Link to={linkResolver(link.link)}>{link.label.text}</Link>
                   </motion.li>
                 ))}
-                <motion.li
+                {/* <motion.li
                   variants={variants.fadeIn}
                   initial={"hidden"}
                   animate={"visible"}
                   custom={links.length}
                 >
                   <ThemeToggle />
-                </motion.li>
+                </motion.li> */}
               </ul>
             </nav>
           </HeaderEl>
