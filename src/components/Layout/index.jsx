@@ -9,6 +9,7 @@ import { theme } from "../../styles/theme";
 import Footer from "../Footer";
 import Header from "../Header";
 import SEO from "../SEO";
+import SplashScreen from "./SplashScreen";
 
 const Layout = ({ children, title, description }) => {
   const [selectedTheme, setSelectedTheme] = useState("light");
@@ -31,15 +32,9 @@ const Layout = ({ children, title, description }) => {
   return (
     <ParallaxProvider>
       <ThemeContext.Provider value={[selectedTheme, toggleTheme]}>
-        <div className="splash">
-          <div className="balls">
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-        </div>
         <ThemeProvider theme={theme[selectedTheme]}>
           <GlobalStyles />
+          <SplashScreen />
           <SEO title={title} description={description} />
           <Header />
           {children}
