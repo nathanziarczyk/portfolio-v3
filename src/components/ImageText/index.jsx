@@ -46,6 +46,8 @@ const ImageText = ({ data }) => {
                   initial="hidden"
                   animate={controls}
                   variants={variants.image}
+                  width={600}
+                  height={500}
                 />
               </Image>
             </Parallax>

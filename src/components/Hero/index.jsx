@@ -46,6 +46,8 @@ const Hero = ({ data }) => {
                 variants={variants.image}
                 src={image.fluid.src}
                 alt={image.alt}
+                width={600}
+                height={500}
               />
             </Parallax>
           </Col>

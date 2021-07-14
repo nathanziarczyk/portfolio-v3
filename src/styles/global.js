@@ -17,10 +17,8 @@ body {
   font-family: ${variables.baseFont};
   font-weight: ${variables.regular};
   line-height: ${variables.lineHeight};
+  transition: color .3s ease-out;
 
-  *:not(#tsparticles){
-    transition: color .3s ease-out;
-  }
   .splash{
     position: fixed;
     z-index: 20;
