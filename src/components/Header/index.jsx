@@ -5,6 +5,8 @@ import { Col, Container, Row } from "react-bootstrap";
 import { ThemeContext } from "../../context/themeContext";
 import { HeaderEl } from "./style";
 import linkResolver from "../../../prismic/linkResolver";
+import { motion } from "framer-motion";
+import { variants } from "./animations";
 
 const Header = () => {
   const { prismicMainNavigation } = useStaticQuery(query);
@@ -14,19 +16,35 @@ const Header = () => {
       <Row>
         <Col>
           <HeaderEl>
-            <h2>
+            <motion.h2
+              variants={variants.fadeIn}
+              initial={"hidden"}
+              animate={"visible"}
+              custom={0}
+            >
               <Link to="/">Nathan</Link>
-            </h2>
+            </motion.h2>
             <nav>
               <ul>
                 {links.map((link, i) => (
-                  <li key={i}>
+                  <motion.li
+                    variants={variants.fadeIn}
+                    initial={"hidden"}
+                    animate={"visible"}
+                    custom={i}
+                    key={i}
+                  >
                     <Link to={linkResolver(link.link)}>{link.label.text}</Link>
-                  </li>
+                  </motion.li>
                 ))}
-                <li>
+                <motion.li
+                  variants={variants.fadeIn}
+                  initial={"hidden"}
+                  animate={"visible"}
+                  custom={links.length}
+                >
                   <ThemeToggle />
-                </li>
+                </motion.li>
               </ul>
             </nav>
           </HeaderEl>
