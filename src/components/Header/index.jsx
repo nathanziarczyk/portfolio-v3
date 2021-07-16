@@ -18,7 +18,11 @@ const Header = () => {
           <HeaderEl>
             <motion.h2
               variants={variants.fadeIn}
-              initial={window && !window.GATSBY_LOADED ? "hidden" : ""}
+              initial={
+                typeof window !== "undefined" && !window.GATSBY_LOADED
+                  ? "hidden"
+                  : ""
+              }
               animate={"visible"}
               custom={0}
             >
@@ -29,7 +33,11 @@ const Header = () => {
                 {links.map((link, i) => (
                   <motion.li
                     variants={variants.fadeIn}
-                    initial={window && !window.GATSBY_LOADED ? "hidden" : ""}
+                    initial={
+                      typeof window !== "undefined" && !window.GATSBY_LOADED
+                        ? "hidden"
+                        : ""
+                    }
                     animate={"visible"}
                     custom={i}
                     key={i}
