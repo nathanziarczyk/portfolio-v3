@@ -3,7 +3,7 @@ import { graphql, Link, useStaticQuery } from "gatsby";
 import React, { useContext } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { ThemeContext } from "../../context/themeContext";
-import { HeaderEl } from "./style";
+import { HeaderEl, HeaderWrapper } from "./style";
 import linkResolver from "../../../prismic/linkResolver";
 import { motion } from "framer-motion";
 import { variants } from "./animations";
@@ -12,40 +12,43 @@ const Header = () => {
   const { prismicMainNavigation } = useStaticQuery(query);
   const { links } = prismicMainNavigation.data;
   return (
-    <Container>
-      <Row>
-        <Col>
-          <HeaderEl>
-            <motion.h2
-              variants={variants.fadeIn}
-              initial={
-                typeof window !== "undefined" && !window.GATSBY_LOADED
-                  ? "hidden"
-                  : ""
-              }
-              animate={"visible"}
-              custom={0}
-            >
-              <Link to="/">Nathan</Link>
-            </motion.h2>
-            <nav>
-              <ul>
-                {links.map((link, i) => (
-                  <motion.li
-                    variants={variants.fadeIn}
-                    initial={
-                      typeof window !== "undefined" && !window.GATSBY_LOADED
-                        ? "hidden"
-                        : ""
-                    }
-                    animate={"visible"}
-                    custom={i}
-                    key={i}
-                  >
-                    <Link to={linkResolver(link.link)}>{link.label.text}</Link>
-                  </motion.li>
-                ))}
-                {/* <motion.li
+    <HeaderWrapper>
+      <Container>
+        <Row>
+          <Col>
+            <HeaderEl>
+              <motion.h2
+                variants={variants.fadeIn}
+                initial={
+                  typeof window !== "undefined" && !window.GATSBY_LOADED
+                    ? "hidden"
+                    : ""
+                }
+                animate={"visible"}
+                custom={0}
+              >
+                <Link to="/">Nathan</Link>
+              </motion.h2>
+              <nav>
+                <ul>
+                  {links.map((link, i) => (
+                    <motion.li
+                      variants={variants.fadeIn}
+                      initial={
+                        typeof window !== "undefined" && !window.GATSBY_LOADED
+                          ? "hidden"
+                          : ""
+                      }
+                      animate={"visible"}
+                      custom={i}
+                      key={i}
+                    >
+                      <Link to={linkResolver(link.link)}>
+                        {link.label.text}
+                      </Link>
+                    </motion.li>
+                  ))}
+                  {/* <motion.li
                   variants={variants.fadeIn}
                   initial={"hidden"}
                   animate={"visible"}
@@ -53,12 +56,13 @@ const Header = () => {
                 >
                   <ThemeToggle />
                 </motion.li> */}
-              </ul>
-            </nav>
-          </HeaderEl>
-        </Col>
-      </Row>
-    </Container>
+                </ul>
+              </nav>
+            </HeaderEl>
+          </Col>
+        </Row>
+      </Container>
+    </HeaderWrapper>
   );
 };
 

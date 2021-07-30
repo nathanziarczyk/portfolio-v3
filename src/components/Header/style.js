@@ -1,13 +1,32 @@
 import styled from "styled-components";
 
+export const HeaderWrapper = styled.div`
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 2;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: ${({ theme }) => theme.bg};
+    backdrop-filter: blur(0.45rem);
+    z-index: -1;
+  }
+`;
+
 export const HeaderEl = styled.header`
   position: relative;
   z-index: 2;
-  padding: 2rem 0;
+  padding: 1rem 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  height: 5.6rem;
   h2 {
     margin: 0;
     font-size: 2.5rem;

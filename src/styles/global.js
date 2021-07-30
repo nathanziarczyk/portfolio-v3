@@ -18,6 +18,7 @@ body {
   font-weight: ${variables.regular};
   line-height: ${variables.lineHeight};
   transition: color .3s ease-out;
+  padding-top: 5.6rem;
 
   .splash{
     position: fixed;
