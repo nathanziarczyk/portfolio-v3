@@ -14,7 +14,7 @@ import SEO from "../SEO";
 import SplashScreen from "./SplashScreen";
 
 const Layout = ({ children, title, description }) => {
-  const [selectedTheme, setSelectedTheme] = useState("light");
+  const [selectedTheme, setSelectedTheme] = useState("dark");
 
   useEffect(() => {
     if (window.localStorage.getItem("nz-theme")) {
@@ -34,7 +34,7 @@ const Layout = ({ children, title, description }) => {
   return (
     <ParallaxProvider>
       <ThemeContext.Provider value={[selectedTheme, toggleTheme]}>
-        <ThemeProvider theme={theme[selectedTheme]}>
+        <ThemeProvider theme={theme["light"]}>
           <GlobalStyles />
           <SplashScreen />
           <SEO title={title} description={description} />
