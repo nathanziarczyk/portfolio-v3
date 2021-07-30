@@ -9,6 +9,9 @@ export const HeroWrapper = styled(Wrapper)`
     flex-direction: column;
     justify-content: center;
     h1 {
+      font-size: 3.5rem;
+      font-family: "Raleway";
+      font-weight: 900;
       span {
         display: inline-block;
         white-space: break-spaces;
@@ -17,6 +20,8 @@ export const HeroWrapper = styled(Wrapper)`
 
     p {
       color: ${({ theme }) => theme.text_dark};
+      font-size: 1.5rem;
+      line-height: 150%;
     }
   }
 
