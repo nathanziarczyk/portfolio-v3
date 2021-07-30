@@ -12,9 +12,9 @@ export const theme = {
     text: "#333746",
     text_dark: "#252834",
     button_color: "#FFFFFF",
-    primary: "#E7EAF0",
+    primary: "#F0F5FD",
     secondary: "#252834",
     accent: "#FFC15C",
-    bg: "#FFFFFF",
+    bg: "#F7F8FFCC",
   },
 };
