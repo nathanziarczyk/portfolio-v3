@@ -12,12 +12,8 @@ export const Service = styled(motion.div)`
   height: 90%;
   border-radius: 0.5rem;
   background-color: ${({ bg, theme }) =>
-    bg === "with_bg"
-      ? transparentize(0.5, theme.bg)
-      : transparentize(0.5, theme.primary)};
-  backdrop-filter: blur(5px);
+    bg === "with_bg" ? theme.bg : theme.primary};
   margin-top: 2rem;
-  transition: transform 0.35s ease-in-out !important;
 
   .header {
     display: flex;
@@ -40,9 +36,5 @@ export const Service = styled(motion.div)`
         margin-bottom: 0;
       }
     }
-  }
-
-  &:hover {
-    transform: translateY(-0.25rem);
   }
 `;
