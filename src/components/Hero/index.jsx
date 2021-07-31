@@ -13,8 +13,21 @@ const Hero = ({ data }) => {
     <HeroWrapper>
       <Container>
         <Row>
+          <Col lg={4} className="">
+            <Parallax y={[7.5, -7.5]}>
+              <motion.img
+                initial="hidden"
+                animate="visible"
+                variants={variants.image}
+                src={image.fluid.src}
+                alt={image.alt}
+                width={600}
+                height={500}
+              />
+            </Parallax>
+          </Col>
           <Col lg={7}>
-            <div className="content-wrapper">
+            <div className="content-wrapper offset-lg-1">
               <h1>
                 {hero_title.text.split(" ").map((word, i) => (
                   <span className="overflow-hidden" key={i}>
@@ -37,19 +50,6 @@ const Hero = ({ data }) => {
                 dangerouslySetInnerHTML={{ __html: hero_body.html }}
               ></motion.div>
             </div>
-          </Col>
-          <Col lg={4} className="offset-lg-1">
-            <Parallax y={[7.5, -7.5]}>
-              <motion.img
-                initial="hidden"
-                animate="visible"
-                variants={variants.image}
-                src={image.fluid.src}
-                alt={image.alt}
-                width={600}
-                height={500}
-              />
-            </Parallax>
           </Col>
         </Row>
       </Container>

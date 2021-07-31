@@ -28,7 +28,7 @@ const ImageText = ({ data }) => {
           </motion.div>
         </Col>
         <Col sm={5} className="offset-sm-1">
-          <Parallax y={[-7.5, 7.5]}>
+          <Parallax y={[-2.5, 2.5]}>
             <Image>
               <motion.img
                 src={image.fluid.src}
