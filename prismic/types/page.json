@@ -47,10 +47,22 @@
                 "config": {
                   "options": [
                     "without_bg",
-                    "with_bg"
+                    "with_bg",
+                    "rounded"
                   ],
                   "default_value": "without_bg",
                   "label": "Theme"
+                }
+              },
+              "size": {
+                "type": "Select",
+                "config": {
+                  "options": [
+                    "flow",
+                    "container"
+                  ],
+                  "default_value": "flow",
+                  "label": "Size"
                 }
               },
               "text": {
@@ -109,7 +121,8 @@
                 "config": {
                   "options": [
                     "without_bg",
-                    "with_bg"
+                    "with_bg",
+                    "rounded"
                   ],
                   "default_value": "without_bg",
                   "label": "Theme"
@@ -166,7 +179,8 @@
                 "config": {
                   "options": [
                     "without_bg",
-                    "with_bg"
+                    "with_bg",
+                    "rounded"
                   ],
                   "default_value": "without_bg",
                   "label": "Theme"
