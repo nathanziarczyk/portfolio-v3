@@ -8,7 +8,6 @@ import { Parallax } from "react-scroll-parallax";
 
 const Hero = ({ data }) => {
   const { hero_title, hero_body, image } = data.primary;
-  console.log(image);
   return (
     <HeroWrapper>
       <Container>
@@ -26,8 +25,8 @@ const Hero = ({ data }) => {
               />
             </Parallax>
           </Col>
-          <Col lg={7}>
-            <div className="content-wrapper offset-lg-1">
+          <Col lg={7} className="offset-lg-1">
+            <div className="content-wrapper">
               <h1>
                 {hero_title.text.split(" ").map((word, i) => (
                   <span className="overflow-hidden" key={i}>
