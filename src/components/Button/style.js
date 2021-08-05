@@ -4,14 +4,14 @@ export const Button = styled.button`
   border: none;
   z-index: 1;
 
-  padding: 0.8rem 1.5rem;
-  font-size: 0.9rem;
+  padding: 1rem 1.75rem;
+  font-size: 1rem;
   min-width: 8rem;
-  text-transform: uppercase;
   font-weight: 600;
-  border-radius: 2px;
+  letter-spacing: 1px;
+  border-radius: 1.5rem;
   cursor: pointer;
   background: ${({ theme }) => theme.accent};
-  color: ${({ theme }) => theme.button_color};
+  color: ${({ theme }) => theme.text};
   position: relative;
 `;
