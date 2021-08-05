@@ -16,48 +16,46 @@ const Services = ({ data }) => {
   return (
     <div ref={ref}>
       <Wrapper type={theme}>
-        <Container>
+        <Row>
+          <Col>
+            {title?.text && (
+              <Title initial="hidden" variants={variants} animate={controls}>
+                {title?.text}
+              </Title>
+            )}
+          </Col>
+        </Row>
+        <ServicesContainer>
           <Row>
-            <Col>
-              {title?.text && (
-                <Title initial="hidden" variants={variants} animate={controls}>
-                  {title?.text}
-                </Title>
-              )}
-            </Col>
+            {services
+              .sort((current, next) => {
+                if (current.node.data.order < next.node.data.order) {
+                  return -1;
+                }
+                if (current.node.data.order > next.node.data.order) {
+                  return 1;
+                }
+                return 0;
+              })
+              .map((service, i) => {
+                const { title, body, icon_class } = service.node.data;
+                return (
+                  <Col md={6} key={i}>
+                    <Service>
+                      <div className="header">
+                        <i className={icon_class.text}></i>
+                        <h3>{title.text}</h3>
+                      </div>
+                      <div
+                        className="content"
+                        dangerouslySetInnerHTML={{ __html: body.html }}
+                      ></div>
+                    </Service>
+                  </Col>
+                );
+              })}
           </Row>
-          <ServicesContainer>
-            <Row>
-              {services
-                .sort((current, next) => {
-                  if (current.node.data.order < next.node.data.order) {
-                    return -1;
-                  }
-                  if (current.node.data.order > next.node.data.order) {
-                    return 1;
-                  }
-                  return 0;
-                })
-                .map((service, i) => {
-                  const { title, body, icon_class } = service.node.data;
-                  return (
-                    <Col md={6} key={i}>
-                      <Service>
-                        <div className="header">
-                          <i className={icon_class.text}></i>
-                          <h3>{title.text}</h3>
-                        </div>
-                        <div
-                          className="content"
-                          dangerouslySetInnerHTML={{ __html: body.html }}
-                        ></div>
-                      </Service>
-                    </Col>
-                  );
-                })}
-            </Row>
-          </ServicesContainer>
-        </Container>
+        </ServicesContainer>
       </Wrapper>
     </div>
   );
