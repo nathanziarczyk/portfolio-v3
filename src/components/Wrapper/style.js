@@ -30,7 +30,9 @@ export const WrapperWrapper = styled.div`
   @media screen and (max-width: ${variables.md}) {
     ${({ type, theme }) => {
       if (type === "rounded") {
-        return ``;
+        return `
+          padding: 3rem 2rem;
+        `;
       } else if (type === "with_bg") {
         return `
           padding: 3rem 0;

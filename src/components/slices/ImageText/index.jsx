@@ -14,7 +14,7 @@ const ImageText = ({ data }) => {
     <div ref={ref}>
       <ImageTextWrapper type={"rounded"} imageAlignment={image_alignment}>
         <Row>
-          <Col sm={6}>
+          <Col lg={6}>
             <motion.div
               initial="hidden"
               animate={controls}
@@ -27,20 +27,22 @@ const ImageText = ({ data }) => {
               ></Content>
             </motion.div>
           </Col>
-          <Col sm={5} className="offset-sm-1">
-            <Parallax y={[-2.5, 2.5]}>
-              <Image>
-                <motion.img
-                  src={image.fluid.src}
-                  alt={image.alt}
-                  initial="hidden"
-                  animate={controls}
-                  variants={variants.image}
-                  width={600}
-                  height={500}
-                />
-              </Image>
-            </Parallax>
+          <Col lg={5} className="offset-sm-1">
+            <div className="image-wrapper">
+              <Parallax y={[-2.5, 2.5]}>
+                <Image>
+                  <motion.img
+                    src={image.fluid.src}
+                    alt={image.alt}
+                    initial="hidden"
+                    animate={controls}
+                    variants={variants.image}
+                    width={600}
+                    height={500}
+                  />
+                </Image>
+              </Parallax>
+            </div>
           </Col>
         </Row>
       </ImageTextWrapper>

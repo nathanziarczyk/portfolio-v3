@@ -10,8 +10,8 @@ const Hero = ({ data }) => {
   return (
     <HeroWrapper type={"without_bg"}>
       <Row>
-        <Col lg={4} className="">
-          <Parallax y={[7.5, -7.5]}>
+        <Col lg={4} className="d-none d-lg-block">
+          <Parallax y={[2.5, -2.5]}>
             <motion.img
               initial="hidden"
               animate="visible"

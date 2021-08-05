@@ -3,7 +3,13 @@ import styled from "styled-components";
 import { colors, variables } from "../../../styles/variables";
 import Wrapper from "../../Wrapper";
 
-export const ImageTextWrapper = styled(Wrapper)``;
+export const ImageTextWrapper = styled(Wrapper)`
+  .image-wrapper {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+`;
 
 export const Content = styled.div`
   height: 100%;
