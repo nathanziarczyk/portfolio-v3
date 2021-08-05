@@ -1,6 +1,6 @@
 import { transparentize } from "polished";
 import styled from "styled-components";
-import { Wrapper } from "../../../styles/base";
+import Wrapper from "../../Wrapper";
 
 export const HeroWrapper = styled(Wrapper)`
   .content-wrapper {

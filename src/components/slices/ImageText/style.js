@@ -1,30 +1,9 @@
 import { transparentize } from "polished";
 import styled from "styled-components";
 import { colors, variables } from "../../../styles/variables";
-import RoundedWrapper from "../../RoundedWrapper";
+import Wrapper from "../../Wrapper";
 
-export const ImageTextWrapper = styled(RoundedWrapper)`
-  position: relative;
-  overflow: hidden;
-  padding: ${({ imageAlignment }) =>
-    imageAlignment === "bottom" ? "4rem 0 0 0" : "4rem 0"};
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 12%;
-    height: 5px;
-    z-index: 2;
-    border-radius: 2px 2px 0 0;
-    background-color: ${({ theme }) => theme.accent};
-    transform: translateY(-50%) translateX(-50%);
-
-    @media screen and (max-width: ${variables.md}) {
-      width: 30%;
-    }
-  }
-`;
+export const ImageTextWrapper = styled(Wrapper)``;
 
 export const Content = styled.div`
   height: 100%;

@@ -10,8 +10,8 @@ const ContactForm = (props) => {
   const { theme, title } = props.data.primary;
   const [ref, controls] = useScrollAnimation(0.1);
   return (
-    <FormWrapper bg={theme} ref={ref}>
-      <Container>
+    <div ref={ref}>
+      <FormWrapper type={theme}>
         <Row>
           <Col></Col>
           <Col lg={8}>
@@ -67,8 +67,8 @@ const ContactForm = (props) => {
           </Col>
           <Col></Col>
         </Row>
-      </Container>
-    </FormWrapper>
+      </FormWrapper>
+    </div>
   );
 };
 

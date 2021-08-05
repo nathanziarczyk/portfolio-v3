@@ -4,7 +4,6 @@ import { Col, Container, Row } from "react-bootstrap";
 import { Parallax } from "react-scroll-parallax";
 
 import { useScrollAnimation } from "../../../hooks/useScrollAnimation";
-import { Wrapper } from "../../../styles/base";
 import { variants } from "./animations";
 import { Content, Image, ImageTextWrapper } from "./style";
 
@@ -13,7 +12,7 @@ const ImageText = ({ data }) => {
   const [ref, controls] = useScrollAnimation();
   return (
     <div ref={ref}>
-      <ImageTextWrapper bg={theme} imageAlignment={image_alignment}>
+      <ImageTextWrapper type={"rounded"} imageAlignment={image_alignment}>
         <Row>
           <Col sm={6}>
             <motion.div

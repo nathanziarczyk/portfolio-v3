@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Wrapper } from "../../../styles/base";
 
 export const PageHeaderWrapper = styled.div`
   margin: 1rem 0;
