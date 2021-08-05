@@ -1,7 +1,7 @@
 import { transparentize } from "polished";
 import styled from "styled-components";
-import { colors, variables } from "../../styles/variables";
-import RoundedWrapper from "../RoundedWrapper";
+import { colors, variables } from "../../../styles/variables";
+import RoundedWrapper from "../../RoundedWrapper";
 
 export const ImageTextWrapper = styled(RoundedWrapper)`
   position: relative;

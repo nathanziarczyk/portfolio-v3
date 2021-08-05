@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { transparentize } from "polished";
 import styled from "styled-components";
-import { Wrapper } from "../../styles/base";
-import { variables } from "../../styles/variables";
+import { Wrapper } from "../../../styles/base";
+import { variables } from "../../../styles/variables";
 
 export const FormWrapper = styled(Wrapper)`
   h2 {

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import { Wrapper } from "../../styles/base";
+import { Wrapper } from "../../../styles/base";
 import { variants } from "./animations";
 import { HeroWrapper } from "./style";
 import { Parallax } from "react-scroll-parallax";

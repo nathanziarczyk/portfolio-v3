@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import { Wrapper } from "../../styles/base";
+import { Wrapper } from "../../../styles/base";
 import { variants } from "./animations";
 import { ServicesContainer, Title, Service } from "./style";
-import { useScrollAnimation } from "../../hooks/useScrollAnimation";
+import { useScrollAnimation } from "../../../hooks/useScrollAnimation";
 
 const Services = ({ data }) => {
   const { theme, title } = data.primary;

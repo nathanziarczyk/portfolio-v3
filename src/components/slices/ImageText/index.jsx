@@ -3,8 +3,8 @@ import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { Parallax } from "react-scroll-parallax";
 
-import { useScrollAnimation } from "../../hooks/useScrollAnimation";
-import { Wrapper } from "../../styles/base";
+import { useScrollAnimation } from "../../../hooks/useScrollAnimation";
+import { Wrapper } from "../../../styles/base";
 import { variants } from "./animations";
 import { Content, Image, ImageTextWrapper } from "./style";
 
