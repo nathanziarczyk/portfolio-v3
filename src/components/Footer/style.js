@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { variables } from "../../styles/variables";
 
-export const FooterWrapper = styled.div`
+export const FooterWrapper = styled.footer`
   padding: 2rem 0;
 
   p {
