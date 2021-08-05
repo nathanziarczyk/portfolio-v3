@@ -1,3 +1,4 @@
+import { transparentize } from "polished";
 import { createGlobalStyle } from "styled-components";
 import { variables } from "./variables";
 
@@ -19,6 +20,10 @@ body {
   line-height: ${variables.lineHeight};
   transition: color .3s ease-out;
   padding-top: 5.6rem;
+
+  *{
+    outline-color: ${({ theme }) => transparentize(0.5, theme.text)};
+  }
 
   .splash{
     position: fixed;
