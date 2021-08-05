@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { transparentize } from "polished";
 import styled from "styled-components";
 import { Wrapper } from "../../styles/base";
 import { variables } from "../../styles/variables";
@@ -19,14 +20,17 @@ export const Form = styled(motion.form)`
       min-width: 100%;
       max-width: 100%;
       border: none;
+      font-family: "Raleway";
+      font-weight: 400;
       background-color: ${({ theme, bg }) => {
-        return bg === "with_bg" ? theme.bg : theme.primary;
+        return bg === "with_bg" ? "#fff" : theme.primary;
       }};
       padding: 0.75rem 1.25rem;
-      outline-color: ${({ theme }) => theme.accent};
       color: ${({ theme }) => theme.text};
       font-size: 1rem;
       margin-top: 0.5rem !important;
+      border-radius: 0.5rem;
+      border: 1px solid ${({ theme }) => transparentize(0.75, theme.text)};
     }
 
     textarea {
