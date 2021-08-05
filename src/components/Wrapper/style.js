@@ -14,7 +14,7 @@ export const WrapperWrapper = styled.div`
       `;
     } else if (type === "with_bg") {
       return `
-        padding: 6rem 0;
+        padding: 3rem 0;
         background-color: ${theme.primary};
       `;
     } else {
