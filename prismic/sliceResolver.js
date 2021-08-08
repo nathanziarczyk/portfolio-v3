@@ -4,6 +4,7 @@ import ImageText from "../src/components/slices/ImageText";
 import ContactForm from "../src/components/slices/ContactForm";
 import Services from "../src/components/slices/Services";
 import PageHeader from "../src/components/slices/PageHeader";
+import Text from "../src/components/slices/Text";
 
 export const sliceResolver = (slice, key) => {
   switch (slice?.slice_type) {
@@ -15,6 +16,9 @@ export const sliceResolver = (slice, key) => {
 
     case "page_header":
       return <PageHeader data={slice} key={key} />;
+
+    case "rich_text":
+      return <Text data={slice} key={key} />;
 
     case "widget":
       if (slice.primary.widget === "Contact form") {

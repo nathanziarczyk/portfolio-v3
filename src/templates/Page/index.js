@@ -44,6 +44,7 @@ export const query = graphql`
                 slice_label
                 primary {
                   theme
+                  size
                   text {
                     html
                   }
