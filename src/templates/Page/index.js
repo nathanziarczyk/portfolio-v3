@@ -45,6 +45,9 @@ export const query = graphql`
                     link_type
                     target
                   }
+                  button_text {
+                    text
+                  }
                 }
               }
               ... on PrismicPageBodyUsp {
