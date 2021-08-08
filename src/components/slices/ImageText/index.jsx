@@ -12,7 +12,7 @@ const ImageText = ({ data }) => {
   const [ref, controls] = useScrollAnimation();
   return (
     <div ref={ref}>
-      <ImageTextWrapper type={"rounded"} imageAlignment={image_alignment}>
+      <ImageTextWrapper type={theme} imageAlignment={image_alignment}>
         <Row>
           <Col lg={6}>
             <motion.div
