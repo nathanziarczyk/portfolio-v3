@@ -7,10 +7,12 @@ import { HeaderEl, HeaderWrapper } from "./style";
 import linkResolver from "../../../prismic/linkResolver";
 import { motion } from "framer-motion";
 import { variants } from "./animations";
+import { useLocation } from "@reach/router";
 
 const Header = () => {
   const { prismicMainNavigation } = useStaticQuery(query);
   const { links } = prismicMainNavigation.data;
+  const { pathname } = useLocation();
   return (
     <HeaderWrapper>
       <Container>
@@ -43,7 +45,12 @@ const Header = () => {
                       custom={i}
                       key={i}
                     >
-                      <Link to={linkResolver(link.link)}>
+                      <Link
+                        to={linkResolver(link.link)}
+                        className={[
+                          linkResolver(link.link) === pathname ? "active" : "",
+                        ].join(" ")}
+                      >
                         {link.label.text}
                       </Link>
                     </motion.li>

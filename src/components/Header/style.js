@@ -82,6 +82,13 @@ export const HeaderEl = styled.header`
             transform: translateY(90%) scaleX(1);
             transform-origin: left;
           }
+
+          &.active {
+            &::after {
+              transform: translateY(90%) scaleX(1);
+              transform-origin: left;
+            }
+          }
         }
       }
     }
