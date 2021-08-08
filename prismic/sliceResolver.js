@@ -6,6 +6,7 @@ import Services from "../src/components/slices/Services";
 import PageHeader from "../src/components/slices/PageHeader";
 import Text from "../src/components/slices/Text";
 import Usp from "../src/components/slices/Usp";
+import Focus from "../src/components/slices/Focus";
 
 export const sliceResolver = (slice, key) => {
   switch (slice?.slice_type) {
@@ -23,6 +24,9 @@ export const sliceResolver = (slice, key) => {
 
     case "usp":
       return <Usp data={slice} key={key} />;
+
+    case "focus":
+      return <Focus data={slice} key={key} />;
 
     case "widget":
       if (slice.primary.widget === "Contact form") {

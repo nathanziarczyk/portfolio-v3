@@ -33,7 +33,8 @@
           "image_text": [],
           "widget": [],
           "page_header": [],
-          "usp": []
+          "usp": [],
+          "focus": []
         },
         "choices": {
           "rich_text": {
@@ -296,6 +297,56 @@
                 "config": {
                   "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
                   "label": "Content"
+                }
+              }
+            }
+          },
+          "focus": {
+            "type": "Slice",
+            "fieldset": "Focus",
+            "description": "Focus slice",
+            "icon": "hourglass_empty",
+            "display": "list",
+            "non-repeat": {
+              "theme": {
+                "type": "Select",
+                "config": {
+                  "options": [
+                    "rounded",
+                    "with_bg",
+                    "without_bg"
+                  ],
+                  "default_value": "rounded",
+                  "label": "Theme"
+                }
+              },
+              "title": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "heading1, heading2, heading3, heading4, heading5, heading6",
+                  "label": "Title"
+                }
+              },
+              "content": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+                  "label": "Content"
+                }
+              }
+            },
+            "repeat": {
+              "button_link": {
+                "type": "Link",
+                "config": {
+                  "label": "Button link"
+                }
+              },
+              "button_text": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "paragraph, strong, em",
+                  "label": "Button text"
                 }
               }
             }
