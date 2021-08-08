@@ -38,12 +38,16 @@ const Services = ({ data }) => {
                 return 0;
               })
               .map((service, i) => {
-                const { title, body, icon_class } = service.node.data;
+                const { title, body, icon_class, icon } = service.node.data;
                 return (
                   <Col md={6} key={i}>
                     <Service>
                       <div className="header">
-                        <i className={icon_class.text}></i>
+                        <img
+                          src={icon.fixed.srcWebp}
+                          srcSet={icon.fixed.srcSetWebp}
+                          alt=""
+                        />
                         <h3>{title.text}</h3>
                       </div>
                       <div
@@ -78,6 +82,14 @@ const query = graphql`
             }
             icon_class {
               text
+            }
+            icon {
+              fixed {
+                width
+                height
+                srcWebp
+                srcSetWebp
+              }
             }
           }
         }

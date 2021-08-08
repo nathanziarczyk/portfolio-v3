@@ -20,8 +20,8 @@ export const Service = styled(motion.div)`
     align-items: center;
     margin-bottom: 1rem;
 
-    i {
-      font-size: 1.25rem;
+    img {
+      max-width: 2rem;
       color: ${({ theme }) => theme.text};
       margin-right: 1rem;
     }
