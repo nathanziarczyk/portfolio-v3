@@ -1,30 +1,37 @@
 {
-  "Main" : {
-    "order" : {
-      "type" : "Number",
-      "config" : {
-        "label" : "Order"
+  "Main": {
+    "order": {
+      "type": "Number",
+      "config": {
+        "label": "Order"
       }
     },
-    "icon_class" : {
-      "type" : "StructuredText",
-      "config" : {
-        "single" : "paragraph",
-        "label" : "Fas icon class"
+    "icon_class": {
+      "type": "StructuredText",
+      "config": {
+        "single": "paragraph",
+        "label": "Fas icon class"
       }
     },
-    "title" : {
-      "type" : "StructuredText",
-      "config" : {
-        "single" : "heading1",
-        "label" : "Title"
+    "title": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading1",
+        "label": "Title"
       }
     },
-    "body" : {
-      "type" : "StructuredText",
-      "config" : {
-        "multi" : "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, embed, list-item, o-list-item, rtl",
-        "label" : "Body"
+    "body": {
+      "type": "StructuredText",
+      "config": {
+        "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, embed, list-item, o-list-item, rtl",
+        "label": "Body"
+      }
+    },
+    "expanded_body": {
+      "type": "StructuredText",
+      "config": {
+        "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+        "label": "Expanded body"
       }
     }
   }

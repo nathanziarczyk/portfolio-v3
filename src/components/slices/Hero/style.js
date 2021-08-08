@@ -1,5 +1,6 @@
 import { transparentize } from "polished";
 import styled from "styled-components";
+import { variables } from "../../../styles/variables";
 import Wrapper from "../../Wrapper";
 
 export const HeroWrapper = styled(Wrapper)`
@@ -10,6 +11,9 @@ export const HeroWrapper = styled(Wrapper)`
     justify-content: center;
     h1 {
       font-size: 3.5rem;
+      @media screen and (max-width: ${variables.md}) {
+        font-size: 3rem;
+      }
       span {
         display: inline-block;
         white-space: break-spaces;

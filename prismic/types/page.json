@@ -32,7 +32,8 @@
           "hero": [],
           "image_text": [],
           "widget": [],
-          "page_header": []
+          "page_header": [],
+          "usp": []
         },
         "choices": {
           "rich_text": {
@@ -240,6 +241,64 @@
               }
             },
             "repeat": {}
+          },
+          "usp": {
+            "type": "Slice",
+            "fieldset": "USP",
+            "description": "USP slice",
+            "icon": "insert_chart",
+            "display": "list",
+            "non-repeat": {
+              "theme": {
+                "type": "Select",
+                "config": {
+                  "options": [
+                    "with_bg",
+                    "without_bg"
+                  ],
+                  "default_value": "with_bg",
+                  "label": "Theme"
+                }
+              },
+              "section_title": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "heading2",
+                  "label": "Section title"
+                }
+              },
+              "button": {
+                "type": "Link",
+                "config": {
+                  "allowTargetBlank": true,
+                  "label": "Button"
+                }
+              }
+            },
+            "repeat": {
+              "icon": {
+                "type": "Image",
+                "config": {
+                  "constraint": {},
+                  "thumbnails": [],
+                  "label": "Icon"
+                }
+              },
+              "title": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "heading3",
+                  "label": "Title"
+                }
+              },
+              "content": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+                  "label": "Content"
+                }
+              }
+            }
           }
         }
       }
