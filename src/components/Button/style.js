@@ -13,7 +13,7 @@ export const Button = styled.button`
   cursor: pointer;
   color: ${({ theme }) => theme.text};
   border: 2px solid ${({ theme }) => theme.accent};
-  background-color: ${({ _type, theme }) =>
-    _type === "primary" ? theme.accent : "unset"};
+  background-color: ${({ theme }) => theme.accent};
+  background-color: ${({ _type }) => _type === "secondary" && "unset"};
   position: relative;
 `;
