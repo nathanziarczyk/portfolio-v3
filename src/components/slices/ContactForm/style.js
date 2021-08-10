@@ -16,6 +16,7 @@ export const Form = styled(motion.form)`
     font-weight: 600;
     input,
     textarea {
+      -webkit-appearance: none;
       display: block;
       min-width: 100%;
       max-width: 100%;
