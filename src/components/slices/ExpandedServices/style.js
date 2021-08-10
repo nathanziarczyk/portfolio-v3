@@ -1,6 +1,11 @@
 import { motion } from "framer-motion";
 import { transparentize } from "polished";
 import styled from "styled-components";
+import Wrapper from "../../Wrapper";
+
+export const ExpandedServicesWrapper = styled(Wrapper)`
+  margin-top: 0;
+`;
 
 export const Title = styled(motion.h2)`
   text-align: center;
@@ -8,11 +13,8 @@ export const Title = styled(motion.h2)`
 
 export const ServicesContainer = styled.div``;
 export const Service = styled(motion.div)`
-  padding: 2rem;
   height: 90%;
   border-radius: 0.5rem;
-  background-color: ${({ bg, theme }) =>
-    bg === "with_bg" ? theme.bg : theme.primary};
   margin-top: 2rem;
 
   .header {
@@ -31,6 +33,7 @@ export const Service = styled(motion.div)`
     }
   }
   .content {
+    max-width: 95%;
     p {
       &:last-child {
         margin-bottom: 0;

@@ -2,9 +2,13 @@ import { motion } from "framer-motion";
 import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import Wrapper from "../../Wrapper";
 import { variants } from "./animations";
-import { ServicesContainer, Title, Service } from "./style";
+import {
+  ServicesContainer,
+  Title,
+  Service,
+  ExpandedServicesWrapper,
+} from "./style";
 import { useScrollAnimation } from "../../../hooks/useScrollAnimation";
 
 const ExpandedServices = ({ data }) => {
@@ -15,11 +19,15 @@ const ExpandedServices = ({ data }) => {
 
   return (
     <div ref={ref}>
-      <Wrapper type={theme}>
+      <ExpandedServicesWrapper type={theme}>
         <Row>
           <Col>
             {title?.text && (
-              <Title initial="hidden" variants={variants} animate={controls}>
+              <Title
+                initial="hidden"
+                variants={variants.title}
+                animate={controls}
+              >
                 {title?.text}
               </Title>
             )}
@@ -46,7 +54,12 @@ const ExpandedServices = ({ data }) => {
                 } = service.node.data;
                 return (
                   <Col md={6} key={i}>
-                    <Service>
+                    <Service
+                      initial="hidden"
+                      variants={variants.title}
+                      animate={controls}
+                      custom={i}
+                    >
                       <div className="header">
                         <img
                           src={icon.fixed.srcWebp}
@@ -65,7 +78,7 @@ const ExpandedServices = ({ data }) => {
               })}
           </Row>
         </ServicesContainer>
-      </Wrapper>
+      </ExpandedServicesWrapper>
     </div>
   );
 };
