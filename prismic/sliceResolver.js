@@ -7,6 +7,7 @@ import PageHeader from "../src/components/slices/PageHeader";
 import Text from "../src/components/slices/Text";
 import Usp from "../src/components/slices/Usp";
 import Focus from "../src/components/slices/Focus";
+import ExpandedServices from "../src/components/slices/ExpandedServices";
 
 export const sliceResolver = (slice, key) => {
   switch (slice?.slice_type) {
@@ -29,10 +30,13 @@ export const sliceResolver = (slice, key) => {
       return <Focus data={slice} key={key} />;
 
     case "widget":
+      console.log(slice.primary.widget);
       if (slice.primary.widget === "Contact form") {
         return <ContactForm data={slice} key={key} />;
       } else if (slice.primary.widget === "Services") {
         return <Services data={slice} key={key} />;
+      } else if (slice.primary.widget === "Expanded services") {
+        return <ExpandedServices data={slice} key={key} />;
       }
       return;
     default:

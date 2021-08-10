@@ -193,7 +193,8 @@
                 "config": {
                   "options": [
                     "Contact form",
-                    "Services"
+                    "Services",
+                    "Expanded services"
                   ],
                   "label": "Widget"
                 }
