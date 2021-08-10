@@ -3,7 +3,7 @@ import { graphql, Link, useStaticQuery } from "gatsby";
 import React, { useContext } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { ThemeContext } from "../../context/themeContext";
-import { HeaderEl, HeaderWrapper } from "./style";
+import { BottomNav, HeaderEl, HeaderWrapper } from "./style";
 import linkResolver from "../../../prismic/linkResolver";
 import { motion } from "framer-motion";
 import { variants } from "./animations";
@@ -14,12 +14,29 @@ const Header = () => {
   const { links } = prismicMainNavigation.data;
   const { pathname } = useLocation();
   return (
-    <HeaderWrapper>
-      <Container>
-        <Row>
-          <Col>
-            <HeaderEl>
-              <motion.h2
+    <>
+      <BottomNav>
+        <Container>
+          <ul>
+            <motion.li
+              variants={variants.fadeIn}
+              initial={
+                typeof window !== "undefined" && !window.GATSBY_LOADED
+                  ? "hidden"
+                  : ""
+              }
+              animate={"visible"}
+              custom={0}
+            >
+              <Link
+                to={"/"}
+                className={["/" === pathname ? "active" : ""].join(" ")}
+              >
+                Home
+              </Link>
+            </motion.li>
+            {links.map((link, i) => (
+              <motion.li
                 variants={variants.fadeIn}
                 initial={
                   typeof window !== "undefined" && !window.GATSBY_LOADED
@@ -27,35 +44,66 @@ const Header = () => {
                     : ""
                 }
                 animate={"visible"}
-                custom={0}
+                custom={i + 1}
+                key={i}
               >
-                <Link to="/">Nathan</Link>
-              </motion.h2>
-              <nav>
-                <ul>
-                  {links.map((link, i) => (
-                    <motion.li
-                      variants={variants.fadeIn}
-                      initial={
-                        typeof window !== "undefined" && !window.GATSBY_LOADED
-                          ? "hidden"
-                          : ""
-                      }
-                      animate={"visible"}
-                      custom={i}
-                      key={i}
-                    >
-                      <Link
-                        to={linkResolver(link.link)}
-                        className={[
-                          linkResolver(link.link) === pathname ? "active" : "",
-                        ].join(" ")}
+                <Link
+                  to={linkResolver(link.link)}
+                  className={[
+                    linkResolver(link.link) === pathname ? "active" : "",
+                  ].join(" ")}
+                >
+                  {link.label.text}
+                </Link>
+              </motion.li>
+            ))}
+          </ul>
+        </Container>
+      </BottomNav>
+      <HeaderWrapper>
+        <Container>
+          <Row>
+            <Col style={{ position: "static" }}>
+              <HeaderEl>
+                <motion.h2
+                  variants={variants.fadeIn}
+                  initial={
+                    typeof window !== "undefined" && !window.GATSBY_LOADED
+                      ? "hidden"
+                      : ""
+                  }
+                  animate={"visible"}
+                  custom={0}
+                >
+                  <Link to="/">Nathan</Link>
+                </motion.h2>
+                <nav>
+                  <ul>
+                    {links.map((link, i) => (
+                      <motion.li
+                        variants={variants.fadeIn}
+                        initial={
+                          typeof window !== "undefined" && !window.GATSBY_LOADED
+                            ? "hidden"
+                            : ""
+                        }
+                        animate={"visible"}
+                        custom={i}
+                        key={i}
                       >
-                        {link.label.text}
-                      </Link>
-                    </motion.li>
-                  ))}
-                  {/* <motion.li
+                        <Link
+                          to={linkResolver(link.link)}
+                          className={[
+                            linkResolver(link.link) === pathname
+                              ? "active"
+                              : "",
+                          ].join(" ")}
+                        >
+                          {link.label.text}
+                        </Link>
+                      </motion.li>
+                    ))}
+                    {/* <motion.li
                   variants={variants.fadeIn}
                   initial={"hidden"}
                   animate={"visible"}
@@ -63,13 +111,14 @@ const Header = () => {
                 >
                   <ThemeToggle />
                 </motion.li> */}
-                </ul>
-              </nav>
-            </HeaderEl>
-          </Col>
-        </Row>
-      </Container>
-    </HeaderWrapper>
+                  </ul>
+                </nav>
+              </HeaderEl>
+            </Col>
+          </Row>
+        </Container>
+      </HeaderWrapper>
+    </>
   );
 };
 

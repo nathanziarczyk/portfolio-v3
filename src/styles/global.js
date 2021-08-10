@@ -58,6 +58,9 @@ body {
     }
     visibility: hidden;
   }
+  @media screen and (max-width: ${variables.md}) {
+      padding-bottom:5rem;
+  }
 }
 
 html{
