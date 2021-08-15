@@ -14,7 +14,13 @@ const ImageText = ({ data }) => {
     <div ref={ref}>
       <ImageTextWrapper type={theme} imageAlignment={image_alignment}>
         <Row>
-          <Col lg={6}>
+          <Col
+            lg={6}
+            className={[
+              "order-1",
+              direction ? "order-lg-1" : "order-lg-2 offset-lg-1",
+            ].join(" ")}
+          >
             <motion.div
               initial="hidden"
               animate={controls}
@@ -27,7 +33,13 @@ const ImageText = ({ data }) => {
               ></Content>
             </motion.div>
           </Col>
-          <Col lg={5} className="offset-sm-1">
+          <Col
+            lg={5}
+            className={[
+              "order-1",
+              direction ? "order-lg-2 offset-lg-2" : "order-lg-1",
+            ].join(" ")}
+          >
             <div className="image-wrapper">
               <Parallax y={[-2.5, 2.5]}>
                 <Image>
