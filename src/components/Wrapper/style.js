@@ -8,21 +8,21 @@ export const WrapperWrapper = styled.div`
   ${({ type, theme }) => {
     if (type === "rounded") {
       return `
-        margin: 3rem 0;
+        margin: 4.5rem 0;
         padding: 3rem 6rem;
         border-radius: 2rem;
         background-color: ${theme.primary};
       `;
     } else if (type === "with_bg") {
       return `
-        margin: 3rem 0;
+        margin: 4.5rem 0;
         padding: 3rem 0;
         background-color: ${theme.primary};
       `;
     } else {
       return `
         padding: 0;
-        margin: 6rem 0;
+        margin: 4.5rem 0;
       `;
     }
   }};
