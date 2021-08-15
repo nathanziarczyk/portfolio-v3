@@ -27,6 +27,14 @@ export const WrapperWrapper = styled.div`
     }
   }};
 
+  ${({ index }) => {
+    console.log(index);
+    if (index === 1)
+      return `
+    margin-top: 2rem;
+    `;
+  }}
+
   @media screen and (max-width: ${variables.md}) {
     ${({ type, theme }) => {
       if (type === "rounded") {
