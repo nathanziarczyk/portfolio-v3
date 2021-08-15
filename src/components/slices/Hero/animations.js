@@ -11,8 +11,8 @@ export const variants = {
         y: 0,
         skewY: 0,
         transition: {
-          duration: 0.75,
-          delay: i * 0.1,
+          duration: 0.5,
+          delay: i * 0.025,
         },
       }),
     },
