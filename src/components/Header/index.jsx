@@ -18,54 +18,9 @@ const Header = () => {
       <BottomNav>
         <Container>
           <ul>
-            <motion.li
-              variants={variants.fadeIn}
-              initial={
-                typeof window !== "undefined" && !window.GATSBY_LOADED
-                  ? "hidden"
-                  : ""
-              }
-              animate={"visible"}
-              custom={0}
-            >
-              <Link
-                to={"/"}
-                className={["/" === pathname ? "active" : ""].join(" ")}
-              >
-                Home
-              </Link>
-            </motion.li>
-            {links.map((link, i) => (
-              <motion.li
-                variants={variants.fadeIn}
-                initial={
-                  typeof window !== "undefined" && !window.GATSBY_LOADED
-                    ? "hidden"
-                    : ""
-                }
-                animate={"visible"}
-                custom={i + 1}
-                key={i}
-              >
-                <Link
-                  to={linkResolver(link.link)}
-                  className={[
-                    linkResolver(link.link) === pathname ? "active" : "",
-                  ].join(" ")}
-                >
-                  {link.label.text}
-                </Link>
-              </motion.li>
-            ))}
-          </ul>
-        </Container>
-      </BottomNav>
-      <HeaderWrapper>
-        <Container>
-          <Row>
-            <Col style={{ position: "static" }}>
-              <HeaderEl>
-                <motion.h2
+            {typeof window !== "undefined" ? (
+              window.GATSBY_LOADED ? (
+                <motion.li
                   variants={variants.fadeIn}
                   initial={
                     typeof window !== "undefined" && !window.GATSBY_LOADED
@@ -75,42 +30,215 @@ const Header = () => {
                   animate={"visible"}
                   custom={0}
                 >
-                  <Link to="/">Nathan</Link>
-                </motion.h2>
+                  <Link
+                    to={"/"}
+                    className={["/" === pathname ? "active" : ""].join(" ")}
+                  >
+                    Home
+                  </Link>
+                </motion.li>
+              ) : (
+                <li>
+                  <Link
+                    to={"/"}
+                    className={["/" === pathname ? "active" : ""].join(" ")}
+                  >
+                    Home
+                  </Link>
+                </li>
+              )
+            ) : (
+              <motion.li
+                variants={variants.fadeIn}
+                initial={
+                  typeof window !== "undefined" && !window.GATSBY_LOADED
+                    ? "hidden"
+                    : ""
+                }
+                animate={"visible"}
+                custom={0}
+              >
+                <Link
+                  to={"/"}
+                  className={["/" === pathname ? "active" : ""].join(" ")}
+                >
+                  Home
+                </Link>
+              </motion.li>
+            )}
+
+            {links.map((link, i) => (
+              <>
+                {typeof window !== "undefined" ? (
+                  window.GATSBY_LOADED ? (
+                    <motion.li
+                      variants={variants.fadeIn}
+                      initial={
+                        typeof window !== "undefined" && !window.GATSBY_LOADED
+                          ? "hidden"
+                          : ""
+                      }
+                      animate={"visible"}
+                      custom={i + 1}
+                      key={i}
+                    >
+                      <Link
+                        to={linkResolver(link.link)}
+                        className={[
+                          linkResolver(link.link) === pathname ? "active" : "",
+                        ].join(" ")}
+                      >
+                        {link.label.text}
+                      </Link>
+                    </motion.li>
+                  ) : (
+                    <li key={i}>
+                      <Link
+                        to={linkResolver(link.link)}
+                        className={[
+                          linkResolver(link.link) === pathname ? "active" : "",
+                        ].join(" ")}
+                      >
+                        {link.label.text}
+                      </Link>
+                    </li>
+                  )
+                ) : (
+                  <motion.li
+                    variants={variants.fadeIn}
+                    initial={
+                      typeof window !== "undefined" && !window.GATSBY_LOADED
+                        ? "hidden"
+                        : ""
+                    }
+                    animate={"visible"}
+                    custom={i + 1}
+                    key={i}
+                  >
+                    <Link
+                      to={linkResolver(link.link)}
+                      className={[
+                        linkResolver(link.link) === pathname ? "active" : "",
+                      ].join(" ")}
+                    >
+                      {link.label.text}
+                    </Link>
+                  </motion.li>
+                )}
+              </>
+            ))}
+          </ul>
+        </Container>
+      </BottomNav>
+      <HeaderWrapper>
+        <Container>
+          <Row>
+            <Col style={{ position: "static" }}>
+              <HeaderEl>
+                {typeof window !== "undefined" ? (
+                  window.GATSBY_LOADED ? (
+                    <h2>
+                      <Link to="/">Nathan</Link>
+                    </h2>
+                  ) : (
+                    <motion.h2
+                      variants={variants.fadeIn}
+                      initial={
+                        typeof window !== "undefined" && !window.GATSBY_LOADED
+                          ? "hidden"
+                          : ""
+                      }
+                      animate={"visible"}
+                      custom={0}
+                    >
+                      <Link to="/">Nathan</Link>
+                    </motion.h2>
+                  )
+                ) : (
+                  <motion.h2
+                    variants={variants.fadeIn}
+                    initial={
+                      typeof window !== "undefined" && !window.GATSBY_LOADED
+                        ? "hidden"
+                        : ""
+                    }
+                    animate={"visible"}
+                    custom={0}
+                  >
+                    <Link to="/">Nathan</Link>
+                  </motion.h2>
+                )}
+
                 <nav>
                   <ul>
                     {links.map((link, i) => (
-                      <motion.li
-                        variants={variants.fadeIn}
-                        initial={
-                          typeof window !== "undefined" && !window.GATSBY_LOADED
-                            ? "hidden"
-                            : ""
-                        }
-                        animate={"visible"}
-                        custom={i}
-                        key={i}
-                      >
-                        <Link
-                          to={linkResolver(link.link)}
-                          className={[
-                            linkResolver(link.link) === pathname
-                              ? "active"
-                              : "",
-                          ].join(" ")}
-                        >
-                          {link.label.text}
-                        </Link>
-                      </motion.li>
+                      <>
+                        {typeof window !== "undefined" ? (
+                          window.GATSBY_LOADED ? (
+                            <li key={i}>
+                              <Link
+                                to={linkResolver(link.link)}
+                                className={[
+                                  linkResolver(link.link) === pathname
+                                    ? "active"
+                                    : "",
+                                ].join(" ")}
+                              >
+                                {link.label.text}
+                              </Link>
+                            </li>
+                          ) : (
+                            <motion.li
+                              variants={variants.fadeIn}
+                              initial={
+                                typeof window !== "undefined" &&
+                                !window.GATSBY_LOADED
+                                  ? "hidden"
+                                  : ""
+                              }
+                              animate={"visible"}
+                              custom={i}
+                              key={i}
+                            >
+                              <Link
+                                to={linkResolver(link.link)}
+                                className={[
+                                  linkResolver(link.link) === pathname
+                                    ? "active"
+                                    : "",
+                                ].join(" ")}
+                              >
+                                {link.label.text}
+                              </Link>
+                            </motion.li>
+                          )
+                        ) : (
+                          <motion.li
+                            variants={variants.fadeIn}
+                            initial={
+                              typeof window !== "undefined" &&
+                              !window.GATSBY_LOADED
+                                ? "hidden"
+                                : ""
+                            }
+                            animate={"visible"}
+                            custom={i}
+                            key={i}
+                          >
+                            <Link
+                              to={linkResolver(link.link)}
+                              className={[
+                                linkResolver(link.link) === pathname
+                                  ? "active"
+                                  : "",
+                              ].join(" ")}
+                            >
+                              {link.label.text}
+                            </Link>
+                          </motion.li>
+                        )}
+                      </>
                     ))}
-                    {/* <motion.li
-                  variants={variants.fadeIn}
-                  initial={"hidden"}
-                  animate={"visible"}
-                  custom={links.length}
-                >
-                  <ThemeToggle />
-                </motion.li> */}
                   </ul>
                 </nav>
               </HeaderEl>
