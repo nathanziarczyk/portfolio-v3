@@ -18,7 +18,16 @@ const Header = () => {
       <BottomNav>
         <Container>
           <ul>
-            <motion.li>
+            <motion.li
+              variants={variants.fadeIn}
+              initial={
+                typeof window !== "undefined" && !window.GATSBY_LOADED
+                  ? "hidden"
+                  : ""
+              }
+              animate={"visible"}
+              custom={0}
+            >
               <Link
                 to={"/"}
                 className={["/" === pathname ? "active" : ""].join(" ")}
@@ -27,7 +36,17 @@ const Header = () => {
               </Link>
             </motion.li>
             {links.map((link, i) => (
-              <motion.li>
+              <motion.li
+                variants={variants.fadeIn}
+                initial={
+                  typeof window !== "undefined" && !window.GATSBY_LOADED
+                    ? "hidden"
+                    : ""
+                }
+                animate={"visible"}
+                custom={i + 1}
+                key={i}
+              >
                 <Link
                   to={linkResolver(link.link)}
                   className={[
@@ -46,13 +65,32 @@ const Header = () => {
           <Row>
             <Col style={{ position: "static" }}>
               <HeaderEl>
-                <motion.h2>
+                <motion.h2
+                  variants={variants.fadeIn}
+                  initial={
+                    typeof window !== "undefined" && !window.GATSBY_LOADED
+                      ? "hidden"
+                      : ""
+                  }
+                  animate={"visible"}
+                  custom={0}
+                >
                   <Link to="/">Nathan</Link>
                 </motion.h2>
                 <nav>
                   <ul>
                     {links.map((link, i) => (
-                      <motion.li>
+                      <motion.li
+                        variants={variants.fadeIn}
+                        initial={
+                          typeof window !== "undefined" && !window.GATSBY_LOADED
+                            ? "hidden"
+                            : ""
+                        }
+                        animate={"visible"}
+                        custom={i}
+                        key={i}
+                      >
                         <Link
                           to={linkResolver(link.link)}
                           className={[
