@@ -40,4 +40,13 @@ export const HeroWrapper = styled(Wrapper)`
       max-width: 80%;
     }
   }
+
+  .buttons {
+    text-align: center;
+    margin-top: 1rem;
+
+    button:not(:last-child) {
+      margin-right: 0.5rem;
+    }
+  }
 `;

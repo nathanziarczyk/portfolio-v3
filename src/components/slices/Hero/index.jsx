@@ -4,9 +4,16 @@ import { Col, Container, Row } from "react-bootstrap";
 import { variants } from "./animations";
 import { HeroWrapper } from "./style";
 import { Parallax } from "react-scroll-parallax";
+import linkResolver from "../../../../prismic/linkResolver";
+import { Link } from "gatsby";
+import { Button } from "../../Button/style";
 
 const Hero = ({ data }) => {
-  const { hero_title, hero_body, image } = data.primary;
+  const {
+    primary: { hero_title, hero_body },
+    items,
+  } = data;
+  console.log(items);
   return (
     <HeroWrapper type={"without_bg"}>
       <Row>
@@ -33,6 +40,22 @@ const Hero = ({ data }) => {
               variants={variants.content}
               dangerouslySetInnerHTML={{ __html: hero_body.html }}
             ></motion.div>
+            <div className="buttons">
+              {items.map((item, index) => {
+                return (
+                  <Button _type={index === 0 ? "primary" : "secondary"}>
+                    <Link
+                      target={
+                        item.button_link.link_type === "Web" ? "_blank" : null
+                      }
+                      to={linkResolver(item.button_link)}
+                    >
+                      {item.button_label.text}
+                    </Link>
+                  </Button>
+                );
+              })}
+            </div>
           </div>
         </Col>
       </Row>

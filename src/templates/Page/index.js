@@ -112,15 +112,17 @@ export const query = graphql`
                   hero_body {
                     html
                   }
-                  image {
-                    fluid {
-                      src
-                      srcSet
-                      srcWebp
-                      srcSetWebp
-                      sizes
-                    }
-                    alt
+                }
+                items {
+                  button_label {
+                    text
+                  }
+                  button_link {
+                    type
+                    url
+                    uid
+                    link_type
+                    target
                   }
                 }
               }
