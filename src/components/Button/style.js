@@ -4,10 +4,10 @@ export const Button = styled.button`
   border: none;
   z-index: 1;
 
-  padding: 0.75rem 1.75rem;
+  padding: 0.65rem 1.75rem;
   font-size: 1rem;
   min-width: 8rem;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 1px;
   border-radius: 1.5rem;
   cursor: pointer;
