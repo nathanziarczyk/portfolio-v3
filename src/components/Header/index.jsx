@@ -8,6 +8,7 @@ import linkResolver from "../../../prismic/linkResolver";
 import { motion } from "framer-motion";
 import { variants } from "./animations";
 import { useLocation } from "@reach/router";
+import { Button } from "../Button/style";
 
 const Header = () => {
   const { prismicMainNavigation } = useStaticQuery(query);
@@ -26,18 +27,20 @@ const Header = () => {
                 Home
               </Link>
             </motion.li>
-            {links.map((link, i) => (
-              <motion.li>
-                <Link
-                  to={linkResolver(link.link)}
-                  className={[
-                    linkResolver(link.link) === pathname ? "active" : "",
-                  ].join(" ")}
-                >
-                  {link.label.text}
-                </Link>
-              </motion.li>
-            ))}
+            {links.map((link, i) => {
+              return (
+                <motion.li>
+                  <Link
+                    to={linkResolver(link.link)}
+                    className={[
+                      linkResolver(link.link) === pathname ? "active" : "",
+                    ].join(" ")}
+                  >
+                    {link.label.text}
+                  </Link>
+                </motion.li>
+              );
+            })}
           </ul>
         </Container>
       </BottomNav>
@@ -51,20 +54,28 @@ const Header = () => {
                 </motion.h2>
                 <nav>
                   <ul>
-                    {links.map((link, i) => (
-                      <motion.li>
-                        <Link
-                          to={linkResolver(link.link)}
-                          className={[
-                            linkResolver(link.link) === pathname
-                              ? "active"
-                              : "",
-                          ].join(" ")}
-                        >
-                          {link.label.text}
-                        </Link>
-                      </motion.li>
-                    ))}
+                    {links.map((link, i) => {
+                      return i === links.length - 1 ? (
+                        <Button>
+                          <Link to={linkResolver(link.link)}>
+                            {link.label.text}
+                          </Link>
+                        </Button>
+                      ) : (
+                        <motion.li>
+                          <Link
+                            to={linkResolver(link.link)}
+                            className={[
+                              linkResolver(link.link) === pathname
+                                ? "active"
+                                : "",
+                            ].join(" ")}
+                          >
+                            {link.label.text}
+                          </Link>
+                        </motion.li>
+                      );
+                    })}
                     {/* <motion.li
                   variants={variants.fadeIn}
                   initial={"hidden"}

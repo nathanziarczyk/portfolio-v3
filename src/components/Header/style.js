@@ -1,3 +1,4 @@
+import { transparentize } from "polished";
 import styled from "styled-components";
 import { variables } from "../../styles/variables";
 
@@ -13,7 +14,7 @@ export const HeaderWrapper = styled.div`
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: ${({ theme }) => theme.bg};
+    background-color: ${({ theme }) => transparentize(50, theme.bg)};
     backdrop-filter: blur(0.45rem);
     z-index: -1;
   }
@@ -43,6 +44,7 @@ export const HeaderEl = styled.header`
   nav {
     ul {
       display: flex;
+      align-items: center;
       list-style: none;
       margin: 0;
       padding: 0;
@@ -100,10 +102,11 @@ export const BottomNav = styled.nav`
   height: 5rem;
   display: flex;
   align-items: center;
-  background-color: ${({ theme }) => theme.bg};
+  background-color: ${({ theme }) => transparentize(50, theme.bg)};
   backdrop-filter: blur(0.45rem);
   ul {
     display: flex;
+    align-items: center;
     list-style: none;
     justify-content: center;
     margin: 0;

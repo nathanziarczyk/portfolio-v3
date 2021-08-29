@@ -12,7 +12,7 @@ export const Service = styled(motion.div)`
   height: 90%;
   border-radius: 0.5rem;
   background-color: ${({ bg, theme }) =>
-    bg === "with_bg" ? theme.bg : theme.primary};
+    bg === "with_bg" ? theme.bg : theme.secondary};
   margin-top: 2rem;
 
   .header {
