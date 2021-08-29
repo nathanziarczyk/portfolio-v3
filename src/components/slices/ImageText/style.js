@@ -31,12 +31,6 @@ export const Image = styled.div`
   flex-direction: column;
   justify-content: flex-end;
 
-  img {
-    filter: drop-shadow(
-      0px -7px 12px ${({ theme }) => (theme.secondary === "#252834" ? transparentize(0.95, theme.secondary) : theme.secondary)}
-    );
-  }
-
   @media screen and (max-width: 992px) {
     width: 60%;
     margin: 2rem auto 0;

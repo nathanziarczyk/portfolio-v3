@@ -11,13 +11,13 @@ export const WrapperWrapper = styled.div`
         margin: 3rem 0;
         padding: 3rem 6rem;
         border-radius: 2rem;
-        background-color: ${theme.primary};
+        background-color: ${theme.secondary};
       `;
     } else if (type === "with_bg") {
       return `
         margin: 3rem 0;
         padding: 3rem 0;
-        background-color: ${theme.primary};
+        background-color: ${theme.secondary};
       `;
     } else {
       return `
@@ -36,7 +36,7 @@ export const WrapperWrapper = styled.div`
       } else if (type === "with_bg") {
         return `
           padding: 3rem 0;
-          background-color: ${theme.primary};
+          background-color: ${theme.secondary};
         `;
       } else {
         return `

@@ -4,13 +4,17 @@ import { variables } from "../../../styles/variables";
 import Wrapper from "../../Wrapper";
 
 export const HeroWrapper = styled(Wrapper)`
+  margin: 3rem 0;
   .content-wrapper {
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: center;
     h1 {
       font-size: 3.5rem;
+      margin: 0;
+      color: ${({ theme }) => theme.text_dark};
       @media screen and (max-width: ${variables.md}) {
         font-size: 3rem;
       }
@@ -21,17 +25,13 @@ export const HeroWrapper = styled(Wrapper)`
     }
 
     p {
-      color: ${({ theme }) => theme.text_dark};
-      font-size: 1.25rem;
+      color: ${({ theme }) => theme.text};
+      font-size: 1.5rem;
       line-height: 150%;
     }
   }
 
   img {
-    filter: drop-shadow(
-      0px -7px 12px ${({ theme }) => (theme.secondary === "#252834" ? transparentize(0.95, theme.secondary) : theme.secondary)}
-    );
-
     @media screen and (max-width: 992px) {
       margin-top: 2rem;
       max-width: 60%;

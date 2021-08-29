@@ -110,7 +110,7 @@ span {
 
 a{
   text-decoration: none;
-  color: ${({ theme }) => theme.text};
+  color: ${({ theme }) => theme.text_dark};
   &:not(header a)::not(.disable-global) {
     font-weight: bold;
     color: ${({ theme }) => theme.accent};
@@ -144,7 +144,7 @@ h4,
 h5,
 h6,
 p {
-  color: ${({ theme }) => theme.text};
+  color: ${({ theme }) => theme.text_dark};
 }
 
 h1 {

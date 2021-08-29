@@ -9,12 +9,12 @@ export const theme = {
     bg: "#333746",
   },
   light: {
-    text: "#333746",
-    text_dark: "#252834",
+    text: "#424841",
+    text_dark: "#0D1817",
     button_color: "#FFFFFF",
-    primary: "#F0F5FD",
-    secondary: "#252834",
-    accent: "#FFC15C",
-    bg: "#F7F8FFCC",
+    primary: "#537173",
+    secondary: "#F7F8F8",
+    accent: "#537173",
+    bg: "#FFFFFF",
   },
 };
