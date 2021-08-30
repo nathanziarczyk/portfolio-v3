@@ -34,7 +34,8 @@
           "widget" : [ ],
           "page_header" : [ ],
           "usp" : [ ],
-          "focus" : [ ]
+          "focus" : [ ],
+          "logo_bar" : [ ]
         },
         "choices" : {
           "rich_text" : {
@@ -323,6 +324,39 @@
                 "config" : {
                   "multi" : "paragraph, strong, em",
                   "label" : "Button text"
+                }
+              }
+            }
+          },
+          "logo_bar" : {
+            "type" : "Slice",
+            "fieldset" : "Logo bar",
+            "description" : "Logo bar slice",
+            "icon" : "person_pin",
+            "display" : "list",
+            "non-repeat" : {
+              "title" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading2",
+                  "label" : "Title"
+                }
+              }
+            },
+            "repeat" : {
+              "logo" : {
+                "type" : "Image",
+                "config" : {
+                  "constraint" : { },
+                  "thumbnails" : [ ],
+                  "label" : "Logo"
+                }
+              },
+              "link" : {
+                "type" : "Link",
+                "config" : {
+                  "allowTargetBlank" : true,
+                  "label" : "Link"
                 }
               }
             }

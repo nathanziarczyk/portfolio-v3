@@ -25,6 +25,29 @@ export const query = graphql`
               text
             }
             body {
+              ... on PrismicPageBodyLogoBar {
+                id
+                slice_type
+                primary {
+                  title {
+                    text
+                  }
+                }
+                items {
+                  link {
+                    type
+                    url
+                    uid
+                    link_type
+                    target
+                  }
+                  logo {
+                    fixed(height: 52) {
+                      src
+                    }
+                  }
+                }
+              }
               ... on PrismicPageBodyFocus {
                 id
                 slice_type

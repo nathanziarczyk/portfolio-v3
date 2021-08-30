@@ -8,6 +8,7 @@ import Text from "../src/components/slices/Text";
 import Usp from "../src/components/slices/Usp";
 import Focus from "../src/components/slices/Focus";
 import ExpandedServices from "../src/components/slices/ExpandedServices";
+import Logobar from "../src/components/slices/Logobar/Logobar";
 
 export const sliceResolver = (slice, key) => {
   switch (slice?.slice_type) {
@@ -28,6 +29,9 @@ export const sliceResolver = (slice, key) => {
 
     case "focus":
       return <Focus data={slice} key={key} />;
+
+    case "logo_bar":
+      return <Logobar data={slice} key={key} />;
 
     case "widget":
       console.log(slice.primary.widget);
