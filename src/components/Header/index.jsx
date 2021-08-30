@@ -19,14 +19,6 @@ const Header = () => {
       <BottomNav>
         <Container>
           <ul>
-            <motion.li>
-              <Link
-                to={"/"}
-                className={["/" === pathname ? "active" : ""].join(" ")}
-              >
-                Home
-              </Link>
-            </motion.li>
             {links.map((link, i) => {
               return (
                 <motion.li>
@@ -49,9 +41,40 @@ const Header = () => {
           <Row>
             <Col style={{ position: "static" }}>
               <HeaderEl>
-                <motion.h2>
-                  <Link to="/">Nathan</Link>
-                </motion.h2>
+                {typeof window !== "undefined" ? (
+                  window.GATSBY_LOADED ? (
+                    <h2>
+                      <Link to="/">Nathan</Link>
+                    </h2>
+                  ) : (
+                    <motion.h2
+                      variants={variants.fadeIn}
+                      initial={
+                        typeof window !== "undefined" && !window.GATSBY_LOADED
+                          ? "hidden"
+                          : ""
+                      }
+                      animate={"visible"}
+                      custom={0}
+                    >
+                      <Link to="/">Nathan</Link>
+                    </motion.h2>
+                  )
+                ) : (
+                  <motion.h2
+                    variants={variants.fadeIn}
+                    initial={
+                      typeof window !== "undefined" && !window.GATSBY_LOADED
+                        ? "hidden"
+                        : ""
+                    }
+                    animate={"visible"}
+                    custom={0}
+                  >
+                    <Link to="/">Nathan</Link>
+                  </motion.h2>
+                )}
+
                 <nav>
                   <ul>
                     {links.map((link, i) => {

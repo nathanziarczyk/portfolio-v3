@@ -58,6 +58,19 @@ const Hero = ({ data }) => {
             </div>
           </div>
         </Col>
+        <Col lg={5} className="d-none d-lg-block">
+          <Parallax y={[2.5, -2.5]}>
+            <motion.img
+              initial="hidden"
+              animate="visible"
+              variants={variants.image}
+              src={image.fluid.src}
+              alt={image.alt}
+              width={600}
+              height={500}
+            />
+          </Parallax>
+        </Col>
       </Row>
     </HeroWrapper>
   );

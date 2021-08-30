@@ -8,10 +8,11 @@ import { variants } from "./animations";
 
 const ContactForm = (props) => {
   const { theme, title } = props.data.primary;
+  const key = props.index;
   const [ref, controls] = useScrollAnimation(0.1);
   return (
     <div ref={ref}>
-      <FormWrapper type={theme}>
+      <FormWrapper type={theme} index={key}>
         <Row>
           <Col></Col>
           <Col lg={8}>

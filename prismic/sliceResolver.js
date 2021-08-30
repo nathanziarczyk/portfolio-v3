@@ -12,31 +12,31 @@ import ExpandedServices from "../src/components/slices/ExpandedServices";
 export const sliceResolver = (slice, key) => {
   switch (slice?.slice_type) {
     case "hero":
-      return <Hero data={slice} key={key} />;
+      return <Hero index={key} data={slice} key={key} />;
 
     case "image_text":
-      return <ImageText data={slice} key={key} />;
+      return <ImageText index={key} data={slice} key={key} />;
 
     case "page_header":
-      return <PageHeader data={slice} key={key} />;
+      return <PageHeader index={key} data={slice} key={key} />;
 
     case "rich_text":
-      return <Text data={slice} key={key} />;
+      return <Text index={key} data={slice} key={key} />;
 
     case "usp":
-      return <Usp data={slice} key={key} />;
+      return <Usp index={key} data={slice} key={key} />;
 
     case "focus":
-      return <Focus data={slice} key={key} />;
+      return <Focus index={key} data={slice} key={key} />;
 
     case "widget":
       console.log(slice.primary.widget);
       if (slice.primary.widget === "Contact form") {
-        return <ContactForm data={slice} key={key} />;
+        return <ContactForm index={key} data={slice} key={key} />;
       } else if (slice.primary.widget === "Services") {
-        return <Services data={slice} key={key} />;
+        return <Services index={key} data={slice} key={key} />;
       } else if (slice.primary.widget === "Expanded services") {
-        return <ExpandedServices data={slice} key={key} />;
+        return <ExpandedServices index={key} data={slice} key={key} />;
       }
       return;
     default:
