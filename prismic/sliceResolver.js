@@ -34,7 +34,6 @@ export const sliceResolver = (slice, key) => {
       return <Logobar data={slice} key={key} />;
 
     case "widget":
-      console.log(slice.primary.widget);
       if (slice.primary.widget === "Contact form") {
         return <ContactForm index={key} data={slice} key={key} />;
       } else if (slice.primary.widget === "Services") {

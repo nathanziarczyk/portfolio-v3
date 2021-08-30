@@ -17,7 +17,6 @@ const Logobar = ({ data }) => {
             {title?.text && <h2>{title.text}</h2>}
             <div className="logos">
               {items.map((logo) => {
-                console.log(logo);
                 return (
                   <Link to={linkResolver(logo.link)} target="_blank">
                     <img src={logo.logo.fixed.src} alt="" />

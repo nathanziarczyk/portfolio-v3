@@ -28,7 +28,6 @@ export const WrapperWrapper = styled.div`
   }};
 
   ${({ index }) => {
-    console.log(index);
     if (index === 1)
       return `
     margin-top: 2rem;

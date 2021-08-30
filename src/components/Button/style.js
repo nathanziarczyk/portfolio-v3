@@ -8,7 +8,6 @@ export const Button = styled.button`
   font-size: 1rem;
   min-width: 8rem;
   font-weight: 500;
-  letter-spacing: 1px;
   border-radius: 1.5rem;
   cursor: pointer;
   color: ${({ theme, _type = "primary" }) =>

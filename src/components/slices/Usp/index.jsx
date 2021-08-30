@@ -12,7 +12,6 @@ const Usp = ({ data }) => {
           <h2>{section_title.text}</h2>
         </Col>
         {items.map((item) => {
-          console.log(item);
           return (
             <Col md={6} lg={4}>
               <UspItem>

@@ -13,7 +13,6 @@ const Hero = ({ data }) => {
     primary: { hero_title, hero_body },
     items,
   } = data;
-  console.log(items);
   return (
     <HeroWrapper type={"without_bg"}>
       <Row>
