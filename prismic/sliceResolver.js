@@ -9,6 +9,7 @@ import Usp from "../src/components/slices/Usp";
 import Focus from "../src/components/slices/Focus";
 import ExpandedServices from "../src/components/slices/ExpandedServices";
 import Logobar from "../src/components/slices/Logobar/Logobar";
+import IconBlocks from "../src/components/slices/IconBlocks/IconBlocks";
 
 export const sliceResolver = (slice, key) => {
   switch (slice?.slice_type) {
@@ -32,6 +33,9 @@ export const sliceResolver = (slice, key) => {
 
     case "logo_bar":
       return <Logobar data={slice} key={key} />;
+
+    case "icon_blocks":
+      return <IconBlocks data={slice} key={key} />;
 
     case "widget":
       if (slice.primary.widget === "Contact form") {

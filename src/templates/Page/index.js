@@ -25,6 +25,34 @@ export const query = graphql`
               text
             }
             body {
+              ... on PrismicPageBodyIconBlocks {
+                id
+                slice_type
+                primary {
+                  title {
+                    text
+                  }
+                  subtitle {
+                    html
+                  }
+                }
+                items {
+                  title {
+                    text
+                  }
+                  image {
+                    fluid {
+                      src
+                      srcSet
+                      srcWebp
+                      srcSetWebp
+                    }
+                  }
+                  content {
+                    html
+                  }
+                }
+              }
               ... on PrismicPageBodyLogoBar {
                 id
                 slice_type
