@@ -15,6 +15,7 @@ export const theme = {
     primary: "#537173",
     secondary: "#F7F8F8",
     accent: "#537173",
+    light_blue: "#B9C1CB",
     bg: "#FFFFFF",
   },
 };

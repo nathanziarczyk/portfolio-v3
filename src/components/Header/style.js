@@ -102,7 +102,7 @@ export const BottomNav = styled.nav`
   height: 5rem;
   display: flex;
   align-items: center;
-  background-color: ${({ theme }) => transparentize(50, theme.bg)};
+  background-color: ${({ theme }) => transparentize(0.4, theme.light_blue)};
   backdrop-filter: blur(0.45rem);
   ul {
     display: flex;
