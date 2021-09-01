@@ -9,6 +9,14 @@ export const ImageTextWrapper = styled(Wrapper)`
     display: flex;
     align-items: center;
   }
+
+  .image-wrap {
+    box-shadow: ${({ type }) => {
+      if (type) {
+        return "rgba(0, 0, 0, 0.1) 0px 4px 12px";
+      }
+    }};
+  }
 `;
 
 export const Content = styled.div`
@@ -30,6 +38,8 @@ export const Image = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  border-radius: 1rem;
+  overflow: hidden;
 
   @media screen and (max-width: 992px) {
     width: 60%;

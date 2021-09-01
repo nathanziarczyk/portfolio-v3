@@ -39,7 +39,12 @@ const Hero = ({ data }) => {
               variants={variants.content}
               dangerouslySetInnerHTML={{ __html: hero_body.html }}
             ></motion.div>
-            <div className="buttons">
+            <motion.div
+              className="buttons"
+              initial={"hidden"}
+              animate="visible"
+              variants={variants.buttons}
+            >
               {items.map((item, index) => {
                 return (
                   <Button _type={index === 0 ? "primary" : "secondary"}>
@@ -54,7 +59,7 @@ const Hero = ({ data }) => {
                   </Button>
                 );
               })}
-            </div>
+            </motion.div>
           </div>
         </Col>
       </Row>

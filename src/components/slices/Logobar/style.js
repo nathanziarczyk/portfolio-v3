@@ -12,11 +12,8 @@ export const LogobarWrapper = styled(Wrapper)`
       display: none;
     }
     a {
-      margin-top: 1rem;
       transition: opacity 0.5s ease-in-out;
-      &:not(:last-child) {
-        margin-right: 2.5rem;
-      }
+      margin: 1.5rem 1.05rem 0;
       img {
         height: 3.25rem;
         width: auto;
@@ -24,15 +21,6 @@ export const LogobarWrapper = styled(Wrapper)`
 
       &:hover {
         opacity: 0.75;
-      }
-    }
-    @media screen and (max-width: ${variables.sm}) {
-      flex-direction: column;
-
-      a {
-        &:not(:last-child) {
-          margin-right: 0rem;
-        }
       }
     }
   }

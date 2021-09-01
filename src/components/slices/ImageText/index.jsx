@@ -42,7 +42,7 @@ const ImageText = ({ data }) => {
           >
             <div className="image-wrapper">
               <Parallax y={[-2.5, 2.5]}>
-                <Image>
+                <Image className="image-wrap">
                   <motion.img
                     src={image.fluid.src}
                     alt={image.alt}
