@@ -7,6 +7,7 @@ import { Parallax } from "react-scroll-parallax";
 import linkResolver from "../../../../prismic/linkResolver";
 import { Link } from "gatsby";
 import { Button } from "../../Button/style";
+import grid from "../../../images/grid.svg";
 
 const Hero = ({ data }) => {
   const {
@@ -15,6 +16,7 @@ const Hero = ({ data }) => {
   } = data;
   return (
     <HeroWrapper type={"without_bg"}>
+      <div className="grid" style={{ backgroundImage: `url(${grid})` }}></div>
       <Row>
         <Col lg={8} className="offset-lg-2">
           <div className="content-wrapper">

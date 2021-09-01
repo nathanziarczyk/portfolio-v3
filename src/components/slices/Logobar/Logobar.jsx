@@ -38,10 +38,13 @@ const Logobar = ({ data }) => {
                           type="image/webp"
                         />
                         <source srcset={logo.logo.fluid.src} type="image/png" />
-                        <img
+                        <motion.img
                           srcset={logo.logo.fluid.src}
                           alt=""
                           loading="lazy"
+                          initial={"hidden"}
+                          animate={controls}
+                          variants={variants.image}
                         />
                       </picture>
                     </Link>

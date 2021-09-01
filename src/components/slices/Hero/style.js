@@ -9,6 +9,16 @@ export const HeroWrapper = styled(Wrapper)`
   @media screen and (max-width: ${variables.md}) {
     margin-top: 1rem;
   }
+  .grid {
+    min-width: 15rem;
+    width: 30%;
+    height: 80%;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    filter: drop-shadow(red 20px 4px 12px);
+  }
   .content-wrapper {
     height: 100%;
     display: flex;

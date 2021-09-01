@@ -4,12 +4,14 @@ import { FocusWrapper } from "./style";
 import { Button } from "../../Button/style";
 import linkResolver from "../../../../prismic/linkResolver";
 import { Link } from "gatsby";
+import grid from "../../../images/grid.svg";
 
 const Focus = ({ data }) => {
   const { primary, items } = data;
   const { title, content, theme } = primary;
   return (
     <FocusWrapper type={theme}>
+      <div className="grid" style={{ backgroundImage: `url(${grid})` }}></div>
       <Row>
         <Col sm={12}>
           <h2>{title.text}</h2>
