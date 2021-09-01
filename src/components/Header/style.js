@@ -34,7 +34,8 @@ export const HeaderEl = styled.header`
   height: 5.6rem;
   h2 {
     margin: 0;
-    font-size: 2.5rem;
+    font-size: 1.75rem;
+    font-weight: 700;
 
     a {
       position: relative;
