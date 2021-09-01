@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 import { useLocation } from "@reach/router";
+import { PopupWidget } from "react-calendly";
 import { useStaticQuery, graphql } from "gatsby";
 const SEO = (props) => {
   const { title, description, image, article } = props;
@@ -66,6 +67,12 @@ const SEO = (props) => {
         )}
         {seo.image && <meta name="twitter:image" content={seo.image} />}
       </Helmet>
+      <PopupWidget
+        color={"#B9C1CB"}
+        textColor={"#0D1817"}
+        text="Schedule a meeting"
+        url="https://calendly.com/nathan-ziarczyk/30min"
+      />
     </>
   );
 };

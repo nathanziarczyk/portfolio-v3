@@ -13,6 +13,17 @@ body {
   scroll-behavior: smooth;
 }
 
+.calendly-badge-content{
+  padding: 0.65rem 1.75rem !important;
+  font-size: 1rem !important;
+  border-radius: 1.5rem !important;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  cursor: pointer;
+  border: 2.5px solid ${({ theme }) => theme.light_blue};
+  position: relative;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease;
+}
+
 body {
   background-color: ${({ theme }) => theme.bg};
   font-family: ${variables.baseFont};
