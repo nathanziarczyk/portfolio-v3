@@ -67,6 +67,8 @@ ul {
 
 p {
   margin-top: 0;
+  color: ${({ theme }) => theme.text_dark};
+  color: ${({ theme }) => theme.text};
   margin-bottom: 0.5em;
 }
 
@@ -130,9 +132,6 @@ h5,
 h6 {
   color: ${({ theme }) => theme.text_dark};
   font-weight: 800;
-}
-p {
-  color: ${({ theme }) => theme.text_dark};
 }
 
 h1 {
