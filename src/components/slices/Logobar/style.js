@@ -12,6 +12,7 @@ export const LogobarWrapper = styled(Wrapper)`
       display: none;
     }
     a {
+      opacity: 0.85;
       transition: opacity 0.5s ease-in-out;
       margin: 1.5rem 1.05rem 0;
       img {
