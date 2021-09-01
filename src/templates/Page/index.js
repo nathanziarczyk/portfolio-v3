@@ -57,6 +57,7 @@ export const query = graphql`
                 id
                 slice_type
                 primary {
+                  theme
                   title {
                     text
                   }

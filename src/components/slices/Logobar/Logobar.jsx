@@ -6,11 +6,11 @@ import { LogobarWrapper } from "./style";
 
 const Logobar = ({ data }) => {
   const {
-    primary: { title },
+    primary: { title, theme },
     items,
   } = data;
   return (
-    <LogobarWrapper>
+    <LogobarWrapper type={theme}>
       <Container>
         <Row>
           <Col sm={12}>
