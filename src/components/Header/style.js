@@ -99,7 +99,7 @@ export const BottomNav = styled.nav`
   bottom: 0;
   left: 0;
   right: 0;
-  height: 5rem;
+  height: 4rem;
   display: flex;
   align-items: center;
   background-color: ${({ theme }) => transparentize(0.4, theme.light_blue)};

@@ -26,6 +26,7 @@ export const Button = styled.button`
       _type === "secondary" ? theme.primary : theme.button_color};
 
     &::before {
+      content: "";
       position: absolute;
       top: 0;
       right: 0;

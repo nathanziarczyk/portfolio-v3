@@ -20,7 +20,7 @@ export const LogobarWrapper = styled(Wrapper)`
       }
 
       &:hover {
-        opacity: 0.75;
+        opacity: 0.5;
       }
     }
   }

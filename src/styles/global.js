@@ -22,6 +22,10 @@ body {
   border: 2.5px solid ${({ theme }) => theme.light_blue};
   position: relative;
   transition: color 0.3s ease-in-out, background-color 0.3s ease;
+
+  @media screen and (max-width: ${variables.md}){
+    display: none !important;
+  }
 }
 
 body {
@@ -37,12 +41,15 @@ body {
   }
 
   @media screen and (max-width: ${variables.md}) {
-      padding-bottom:5rem;
+      padding-bottom:4rem;
   }
 }
 
 html{
   font-size: ${variables.fontSize};
+  @media screen and (max-width: ${variables.md}) {
+      font-size: 1.125rem;
+  }
 }
 
 .overflow-hidden {
