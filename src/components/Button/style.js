@@ -24,6 +24,14 @@ export const Button = styled.button`
     transition: color 0.3s ease-in-out;
     color: ${({ theme, _type }) =>
       _type === "secondary" ? theme.primary : theme.button_color};
+
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
   }
 
   &:hover {
