@@ -5,6 +5,7 @@ import Wrapper from "../../Wrapper";
 
 export const HeroWrapper = styled(Wrapper)`
   margin: 3rem 0;
+  position: relative;
   @media screen and (max-width: ${variables.md}) {
     margin-top: 1rem;
   }
@@ -31,6 +32,7 @@ export const HeroWrapper = styled(Wrapper)`
       color: ${({ theme }) => theme.text};
       font-size: 1.5rem;
       line-height: 150%;
+      margin: 1.5rem 0 1rem;
     }
   }
 

@@ -71,8 +71,11 @@ export const query = graphql`
                     target
                   }
                   logo {
-                    fixed(height: 52) {
+                    fluid {
                       src
+                      srcSet
+                      srcWebp
+                      srcSetWebp
                     }
                   }
                 }

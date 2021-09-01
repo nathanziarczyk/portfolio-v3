@@ -19,6 +19,14 @@ const Header = () => {
       <BottomNav>
         <Container>
           <ul>
+            <motion.li>
+              <Link
+                to={"/"}
+                className={["/" === pathname ? "active" : ""].join(" ")}
+              >
+                Home
+              </Link>
+            </motion.li>
             {links.map((link, i) => {
               return (
                 <motion.li>

@@ -32,14 +32,18 @@ const Logobar = ({ data }) => {
                 {items.map((logo, i) => {
                   return (
                     <Link to={linkResolver(logo.link)} target="_blank">
-                      <motion.img
-                        initial={"hidden"}
-                        animate={controls}
-                        variants={variants.image}
-                        custom={i}
-                        src={logo.logo.fixed.src}
-                        alt=""
-                      />
+                      <picture>
+                        <source
+                          srcset={logo.logo.fluid.srcWebp}
+                          type="image/webp"
+                        />
+                        <source srcset={logo.logo.fluid.src} type="image/png" />
+                        <img
+                          srcset={logo.logo.fluid.src}
+                          alt=""
+                          loading="lazy"
+                        />
+                      </picture>
                     </Link>
                   );
                 })}
