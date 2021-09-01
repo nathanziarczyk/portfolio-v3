@@ -45,7 +45,7 @@ const SEO = (props) => {
         <meta name="description" content={seo.description} />
         <meta
           name="keywords"
-          content="site, web, websites, website, webshop, webshops, Shopify, shopify, shop, developer, design, web, web design, web developer, web designer, front, end, front-end, back-end, back, end, website maken, webshop maken, ontwikkellaar, ontwerper, online winkel"
+          content="site, freelance, belgie, Belgie, België, belgië, belgium, JAMstack, jamstack, Jamstack, gatsby, Gatsby, Prismic, prismic, web, websites, website, developer, design, web, web design, web developer, web designer, front, end, front-end, back-end, back, end, website maken, webshop maken, ontwikkellaar, ontwerper"
         />
         <meta name="image" content={seo.image} />
         {seo.url && <meta property="og:url" content={seo.url} />}
