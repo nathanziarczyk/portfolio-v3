@@ -41,6 +41,7 @@ export const query = graphql`
                     text
                   }
                   image {
+                    alt
                     fluid {
                       src
                       srcSet
@@ -71,6 +72,7 @@ export const query = graphql`
                     target
                   }
                   logo {
+                    alt
                     fluid {
                       src
                       srcSet
@@ -192,6 +194,7 @@ export const query = graphql`
                     html
                   }
                   image {
+                    alt
                     fluid {
                       src
                       srcSet

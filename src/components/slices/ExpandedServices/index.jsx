@@ -64,7 +64,7 @@ const ExpandedServices = ({ data }) => {
                         <img
                           src={icon.fixed.srcWebp}
                           srcSet={icon.fixed.srcSetWebp}
-                          alt=""
+                          alt={icon.alt}
                         />
                         <h3>{title.text}</h3>
                       </div>

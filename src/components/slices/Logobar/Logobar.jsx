@@ -40,7 +40,7 @@ const Logobar = ({ data }) => {
                         <source srcset={logo.logo.fluid.src} type="image/png" />
                         <motion.img
                           srcset={logo.logo.fluid.src}
-                          alt=""
+                          alt={logo.logo.alt}
                           loading="lazy"
                           initial={"hidden"}
                           animate={controls}

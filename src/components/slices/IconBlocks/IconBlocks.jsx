@@ -28,7 +28,11 @@ const IconBlocks = ({ data }) => {
                     <picture>
                       <source srcset={image.fluid.srcWebp} type="image/webp" />
                       <source srcset={image.fluid.src} type="image/png" />
-                      <img srcset={image.fluid.src} alt="" loading="lazy" />
+                      <img
+                        srcset={image.fluid.src}
+                        alt={image.alt}
+                        loading="lazy"
+                      />
                     </picture>
                     <h3>{title.text}</h3>
                     <div
