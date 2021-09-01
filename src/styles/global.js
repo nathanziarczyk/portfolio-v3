@@ -110,6 +110,7 @@ span {
 
 a{
   text-decoration: none;
+  font-family: --apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   color: ${({ theme }) => theme.text_dark};
   &:not(header a)::not(.disable-global) {
     font-weight: bold;
@@ -142,13 +143,20 @@ h2,
 h3,
 h4,
 h5,
-h6,
+h6 {
+  color: ${({ theme }) => theme.text_dark};
+  font-weight: 800;
+}
 p {
   color: ${({ theme }) => theme.text_dark};
 }
 
 h1 {
   font-size: 2.5rem;
+
+  @media screen and (max-width: ${variables.md}){
+    font-size: 2.25rem;
+  }
 }
 
 h2 {

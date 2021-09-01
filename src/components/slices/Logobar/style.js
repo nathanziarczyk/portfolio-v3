@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { variables } from "../../../styles/variables";
 import Wrapper from "../../Wrapper";
 
 export const LogobarWrapper = styled(Wrapper)`
@@ -23,6 +24,15 @@ export const LogobarWrapper = styled(Wrapper)`
 
       &:hover {
         opacity: 0.75;
+      }
+    }
+    @media screen and (max-width: ${variables.sm}) {
+      flex-direction: column;
+
+      a {
+        &:not(:last-child) {
+          margin-right: 0rem;
+        }
       }
     }
   }

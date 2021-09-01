@@ -5,6 +5,9 @@ import Wrapper from "../../Wrapper";
 
 export const HeroWrapper = styled(Wrapper)`
   margin: 3rem 0;
+  @media screen and (max-width: ${variables.md}) {
+    margin-top: 1rem;
+  }
   .content-wrapper {
     height: 100%;
     display: flex;
@@ -16,7 +19,7 @@ export const HeroWrapper = styled(Wrapper)`
       margin: 0;
       color: ${({ theme }) => theme.text_dark};
       @media screen and (max-width: ${variables.md}) {
-        font-size: 3rem;
+        font-size: 2.75rem;
       }
       span {
         display: inline-block;
@@ -42,10 +45,12 @@ export const HeroWrapper = styled(Wrapper)`
   }
 
   .buttons {
-    text-align: center;
-    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 
-    button:not(:last-child) {
+    button {
+      margin-top: 0.5rem;
       margin-right: 0.5rem;
     }
   }
