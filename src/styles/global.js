@@ -25,39 +25,6 @@ body {
     outline-color: ${({ theme }) => transparentize(0.5, theme.text)};
   }
 
-  .splash{
-    position: fixed;
-    z-index: 20;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 1;
-
-    p{
-      font-family: "Orelega One";
-      line-height: 8.5rem;
-      font-size: 8.5rem;
-      -webkit-text-stroke: 2px #252834;
-      -webkit-text-fill-color: transparent;
-      -webkit-background-clip: text;
-      animation: hue 10s infinite linear;
-      background-image: -webkit-linear-gradient(92deg, #FFC15C, #FFC15C);
-    }
-    @keyframes hue {
-      from {
-        -webkit-filter: hue-rotate(0deg);
-      }
-      to {
-        -webkit-filter: hue-rotate(-90deg);
-      }
-    }
-    visibility: hidden;
-  }
   @media screen and (max-width: ${variables.md}) {
       padding-bottom:5rem;
   }
@@ -108,9 +75,8 @@ span {
   // white-space: pre;
 }
 
-a{
-  text-decoration: none;
-  font-family: --apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+a {
+  text-decoration: dotted;
   color: ${({ theme }) => theme.text_dark};
   &:not(header a)::not(.disable-global) {
     font-weight: bold;
