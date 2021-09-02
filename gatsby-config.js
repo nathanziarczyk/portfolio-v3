@@ -43,7 +43,7 @@ module.exports = {
     "gatsby-plugin-react-helmet",
     {
       resolve: "gatsby-plugin-sitemap",
-      excludes: ["success", "404"],
+      excludes: ["/success", "/404"],
     },
     {
       resolve: "gatsby-plugin-manifest",
