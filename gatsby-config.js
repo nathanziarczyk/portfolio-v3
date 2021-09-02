@@ -41,7 +41,10 @@ module.exports = {
       },
     },
     "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sitemap",
+    {
+      resolve: "gatsby-plugin-sitemap",
+      excludes: ["success", "404"],
+    },
     {
       resolve: "gatsby-plugin-manifest",
       options: {
