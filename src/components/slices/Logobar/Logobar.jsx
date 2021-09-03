@@ -1,11 +1,14 @@
 import { motion } from "framer-motion";
 import { Link } from "gatsby";
 import React from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import { Carousel, Col, Container, Row } from "react-bootstrap";
 import linkResolver from "../../../../prismic/linkResolver";
 import { useScrollAnimation } from "../../../hooks/useScrollAnimation";
 import { variants } from "./animations";
-import { LogobarWrapper } from "./style";
+import { LogobarSlider, LogobarWrapper } from "./style";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const Logobar = ({ data }) => {
   const {
@@ -13,6 +16,45 @@ const Logobar = ({ data }) => {
     items,
   } = data;
   const [ref, controls] = useScrollAnimation();
+  const settings = {
+    dots: false,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 0,
+    arrows: false,
+    cssEase: "linear",
+    swipe: false,
+    speed: 5000,
+    slidesToShow: 6,
+    slidesToScroll: 1,
+    infinite: true,
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 5,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 4,
+        },
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 450,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+    ],
+  };
   return (
     <div ref={ref}>
       <LogobarWrapper type={theme}>
@@ -28,7 +70,7 @@ const Logobar = ({ data }) => {
                   {title.text}
                 </motion.h2>
               )}
-              <div className="logos">
+              <LogobarSlider {...settings} className="logos">
                 {items.map((logo, i) => {
                   return (
                     <Link to={linkResolver(logo.link)} target="_blank">
@@ -50,7 +92,7 @@ const Logobar = ({ data }) => {
                     </Link>
                   );
                 })}
-              </div>
+              </LogobarSlider>
             </Col>
           </Row>
         </Container>

@@ -42,9 +42,11 @@
     "react-helmet": "^6.1.0",
     "react-intersection-observer": "^8.32.0",
     "react-scroll-parallax": "^2.4.0",
+    "react-slick": "^0.28.1",
     "react-spring": "^9.1.2",
     "react-tsparticles": "^1.27.0",
     "sass": "^1.32.8",
+    "slick-carousel": "^1.8.1",
     "styled-components": "^5.2.1"
   },
   "devDependencies": {
