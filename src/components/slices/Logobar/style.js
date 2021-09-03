@@ -16,8 +16,7 @@ export const LogobarWrapper = styled(Wrapper)`
         margin: 0 auto;
         width: auto;
         height: auto;
-        max-width: 8rem;
-        max-height: 5rem;
+        max-height: 3.5rem;
       }
 
       &:hover {
