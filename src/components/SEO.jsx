@@ -66,6 +66,10 @@ const SEO = (props) => {
           <meta name="twitter:description" content={seo.description} />
         )}
         {seo.image && <meta name="twitter:image" content={seo.image} />}
+        <link
+          rel="stylesheet"
+          href="https://use.typekit.net/xkc3uag.css"
+        ></link>
       </Helmet>
       <PopupWidget
         color={"#B9C1CB"}

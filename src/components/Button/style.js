@@ -1,9 +1,11 @@
 import { lighten, transparentize } from "polished";
 import styled from "styled-components";
+import { variables } from "../../styles/variables";
 
 export const Button = styled.button`
   border: none;
   z-index: 1;
+  font-family: ${variables.baseFont};
 
   padding: 0.65rem 1.75rem;
   font-size: 1rem;
