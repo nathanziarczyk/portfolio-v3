@@ -100,10 +100,10 @@ export const BottomNav = styled.nav`
   bottom: 0;
   left: 0;
   right: 0;
-  height: 4rem;
+  height: 3rem;
   display: flex;
   align-items: center;
-  background-color: ${({ theme }) => transparentize(0.4, theme.light_blue)};
+  background-color: ${({ theme }) => transparentize(0.8, theme.light_blue)};
   backdrop-filter: blur(0.45rem);
   ul {
     display: flex;
