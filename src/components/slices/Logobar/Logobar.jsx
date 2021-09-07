@@ -20,10 +20,10 @@ const Logobar = ({ data }) => {
     dots: false,
     infinite: true,
     autoplay: true,
-    autoplaySpeed: 500,
+    autoplaySpeed: 3000,
     arrows: false,
     swipe: false,
-    speed: 5000,
+    speed: 1000,
     slidesToShow: 6,
     slidesToScroll: 1,
     responsive: [
