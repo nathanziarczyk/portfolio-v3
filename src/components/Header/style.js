@@ -100,7 +100,7 @@ export const BottomNav = styled.nav`
   bottom: 0;
   left: 0;
   right: 0;
-  height: 3rem;
+  height: 4rem;
   display: flex;
   align-items: center;
   background-color: ${({ theme }) => transparentize(0.8, theme.light_blue)};
@@ -122,6 +122,7 @@ export const BottomNav = styled.nav`
       a {
         position: relative;
         font-weight: 500;
+        font-size: 0.925rem;
 
         &::after {
           content: "";
