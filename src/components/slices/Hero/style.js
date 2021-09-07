@@ -1,4 +1,3 @@
-import { transparentize } from "polished";
 import styled from "styled-components";
 import { variables } from "../../../styles/variables";
 import Wrapper from "../../Wrapper";

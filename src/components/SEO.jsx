@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 import { useLocation } from "@reach/router";
 import { PopupWidget } from "react-calendly";
@@ -9,7 +8,6 @@ const SEO = (props) => {
   const { pathname } = useLocation();
   const { site } = useStaticQuery(query);
   const {
-    defaultTitle,
     defaultDescription,
     siteUrl,
     defaultImage,

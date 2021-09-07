@@ -1,6 +1,4 @@
-import { transparentize } from "polished";
 import styled from "styled-components";
-import { colors, variables } from "../../../styles/variables";
 import Wrapper from "../../Wrapper";
 
 export const ImageTextWrapper = styled(Wrapper)`

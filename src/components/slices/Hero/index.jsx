@@ -1,9 +1,8 @@
 import { motion } from "framer-motion";
 import React from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 import { variants } from "./animations";
 import { HeroWrapper } from "./style";
-import { Parallax } from "react-scroll-parallax";
 import linkResolver from "../../../../prismic/linkResolver";
 import { Link } from "gatsby";
 import { Button } from "../../Button/style";

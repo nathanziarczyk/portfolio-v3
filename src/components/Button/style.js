@@ -1,4 +1,4 @@
-import { lighten, transparentize } from "polished";
+import { lighten } from "polished";
 import styled from "styled-components";
 import { variables } from "../../styles/variables";
 

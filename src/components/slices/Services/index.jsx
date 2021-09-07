@@ -1,7 +1,6 @@
-import { motion } from "framer-motion";
 import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 import Wrapper from "../../Wrapper";
 import { variants } from "./animations";
 import { ServicesContainer, Title, Service } from "./style";
@@ -38,7 +37,7 @@ const Services = ({ data }) => {
                 return 0;
               })
               .map((service, i) => {
-                const { title, body, icon_class, icon } = service.node.data;
+                const { title, body, icon } = service.node.data;
                 return (
                   <Col md={6} key={i}>
                     <Service>

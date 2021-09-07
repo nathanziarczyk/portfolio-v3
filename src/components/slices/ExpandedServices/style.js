@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { transparentize } from "polished";
 import styled from "styled-components";
 import Wrapper from "../../Wrapper";
 

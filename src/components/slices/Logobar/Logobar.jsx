@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
 import { Link } from "gatsby";
 import React from "react";
-import { Carousel, Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import linkResolver from "../../../../prismic/linkResolver";
 import { useScrollAnimation } from "../../../hooks/useScrollAnimation";
 import { variants } from "./animations";
 import { LogobarSlider, LogobarWrapper } from "./style";
-import Slider from "react-slick";
+
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -26,7 +26,6 @@ const Logobar = ({ data }) => {
     speed: 5000,
     slidesToShow: 6,
     slidesToScroll: 1,
-    infinite: true,
     responsive: [
       {
         breakpoint: 992,

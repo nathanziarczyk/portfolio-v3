@@ -3,7 +3,6 @@ import * as React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import styled from "styled-components";
 import Layout from "../components/Layout";
-import { useLocation } from "@reach/router";
 import { transparentize } from "polished";
 
 const MessageWrapper = styled.div`
