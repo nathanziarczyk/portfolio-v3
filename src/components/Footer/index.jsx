@@ -35,7 +35,7 @@ const Footer = () => {
               <h3>Contact</h3>
               <ul>
                 <li>
-                  <b>Nathan Ziarcyk</b>
+                  <b>Nathan Ziarczyk</b>
                 </li>
                 <li>
                   <a href="mailto:hello@nathanz.dev">hello@nathanz.dev</a>
