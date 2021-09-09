@@ -19,6 +19,13 @@ export const HeaderWrapper = styled.div`
     z-index: -1;
   }
 
+  img {
+    max-height: 100%;
+    height: auto;
+    width: 160px;
+    max-width: 100%;
+  }
+
   @media screen and (max-width: ${variables.md}) {
     position: absolute;
   }

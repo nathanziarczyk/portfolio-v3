@@ -8,6 +8,8 @@ import { variants } from "./animations";
 import { useLocation } from "@reach/router";
 import { Button } from "../Button/style";
 
+import logo from "../../images/logo.png";
+
 const Header = () => {
   const { prismicMainNavigation } = useStaticQuery(query);
   const { links } = prismicMainNavigation.data;
@@ -50,7 +52,15 @@ const Header = () => {
                 {typeof window !== "undefined" ? (
                   window.GATSBY_LOADED ? (
                     <h2>
-                      <Link to="/">Nathan</Link>
+                      <Link to="/">
+                        <img
+                          src={logo}
+                          alt="Logo"
+                          loading="lazy"
+                          width="160"
+                          height="100"
+                        />
+                      </Link>
                     </h2>
                   ) : (
                     <motion.h2
@@ -63,7 +73,15 @@ const Header = () => {
                       animate={"visible"}
                       custom={0}
                     >
-                      <Link to="/">Nathan</Link>
+                      <Link to="/">
+                        <img
+                          src={logo}
+                          alt="Logo"
+                          loading="lazy"
+                          width="160"
+                          height="100"
+                        />
+                      </Link>
                     </motion.h2>
                   )
                 ) : (
@@ -77,7 +95,15 @@ const Header = () => {
                     animate={"visible"}
                     custom={0}
                   >
-                    <Link to="/">Nathan</Link>
+                    <Link to="/">
+                      <img
+                        src={logo}
+                        alt="Logo"
+                        loading="lazy"
+                        width="160"
+                        height="100"
+                      />
+                    </Link>
                   </motion.h2>
                 )}
 

@@ -8,6 +8,13 @@ export const FooterWrapper = styled.footer`
     margin: 0;
   }
 
+  img {
+    max-height: 100%;
+    height: auto;
+    width: 160px;
+    max-width: 100%;
+  }
+
   h2 {
     margin: 0;
     font-size: 1.75rem;

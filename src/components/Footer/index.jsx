@@ -3,6 +3,8 @@ import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { FooterTab, FooterWrapper } from "./style";
 
+import logo from "../../images/logo.png";
+
 const Footer = () => {
   return (
     <FooterWrapper>
@@ -11,7 +13,13 @@ const Footer = () => {
           <Col lg={3}>
             <h2>
               <Link className="disable-global" to="/">
-                Nathan
+                <img
+                  src={logo}
+                  alt="Logo"
+                  loading="lazy"
+                  width="160"
+                  height="100"
+                />
               </Link>
             </h2>
           </Col>
