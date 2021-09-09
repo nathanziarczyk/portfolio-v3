@@ -18,7 +18,7 @@ const Footer = () => {
                   alt="Logo"
                   loading="lazy"
                   width="160"
-                  height="100"
+                  height="42"
                 />
               </Link>
             </h2>
