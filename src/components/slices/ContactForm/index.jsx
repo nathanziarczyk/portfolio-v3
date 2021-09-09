@@ -1,70 +1,26 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
-import { Form, FormRow, FormWrapper } from "./style";
-import { Button } from "../../Button/style";
-import { motion } from "framer-motion";
-import { useScrollAnimation } from "../../../hooks/useScrollAnimation";
-import { variants } from "./animations";
+import { FormWrapper } from "./style";
 
 const ContactForm = (props) => {
-  const { theme, title } = props.data.primary;
+  const { theme } = props.data.primary;
   const key = props.index;
-  const [ref, controls] = useScrollAnimation(0.1);
   return (
-    <div ref={ref}>
+    <div>
       <FormWrapper type={theme} index={key}>
         <Row>
           <Col></Col>
           <Col lg={8}>
-            {title?.text && (
-              <motion.h2
-                initial="hidden"
-                animate={controls}
-                variants={variants}
-              >
-                {title.text}
-              </motion.h2>
-            )}
-            <Form
-              bg={theme}
-              action="/success"
-              name="contact"
-              method="POST"
-              data-netlify="true"
-              initial="hidden"
-              animate={controls}
-              variants={variants}
-              custom={1}
-            >
-              <input type="hidden" name="form-name" value="contact" />
-              <FormRow>
-                <label htmlFor="name">
-                  Name *
-                  <input required type="text" name="name" id="name" />
-                </label>
-                <label htmlFor="email">
-                  E-mail *
-                  <input required type="email" name="email" id="email" />
-                </label>
-              </FormRow>
-              <FormRow>
-                <label htmlFor="phone">
-                  Phone
-                  <input type="text" name="phone" id="phone" />
-                </label>
-                <label htmlFor="company">
-                  Company
-                  <input type="email" name="company" id="company" />
-                </label>
-              </FormRow>
-              <FormRow>
-                <label htmlFor="message">
-                  Message *
-                  <textarea required name="message" id="message"></textarea>
-                </label>
-              </FormRow>
-              <Button type="submit">Submit</Button>
-            </Form>
+            <iframe
+              src="https://tally.so/embed/m6kde3?hideTitle=1&alignLeft=1&transparentBackground=1"
+              width="100%"
+              height="650"
+              frameborder="0"
+              marginheight="0"
+              marginwidth="0"
+              title="Contact form
+"
+            ></iframe>
           </Col>
           <Col></Col>
         </Row>
