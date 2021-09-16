@@ -9,10 +9,10 @@ module.exports = {
     titleTemplate: "%s · Nathan",
     description:
       "I create great websites and webshops to boost your company's performance.",
-    url: "https://nathanz.dev", // No trailing slash allowed!
+    url: "https://www.nathanz.dev", // No trailing slash allowed!
     image: "/images/seo-image.png", // Path to your image you placed in the 'static' folder
     twitterUsername: "@zzznathan",
-    siteUrl: "https://nathanz.dev",
+    siteUrl: "https://www.nathanz.dev",
   },
   plugins: [
     "gatsby-plugin-robots-txt",
@@ -43,7 +43,7 @@ module.exports = {
     "gatsby-plugin-react-helmet",
     {
       resolve: "gatsby-plugin-sitemap",
-      excludes: ["success/", "/404"],
+      excludes: ["/success", "/success.html", "*success*", "/404"],
     },
     {
       resolve: "gatsby-plugin-manifest",
