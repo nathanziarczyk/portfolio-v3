@@ -43,7 +43,7 @@ const SEO = (props) => {
         <meta name="description" content={seo.description} />
         <meta
           name="keywords"
-          content="site, freelance, belgie, Belgie, België, belgië, belgium, JAMstack, jamstack, Jamstack, gatsby, Gatsby, Prismic, prismic, web, websites, website, developer, design, web, web design, web developer, web designer, front, end, front-end, back-end, back, end, website maken, webshop maken, ontwikkellaar, ontwerper"
+          content="site, freelance, belgie, Belgie, België, belgië, belgium, websitebouwer, Wordpress, wordpress, wp, shopify, Shopify, gatsby, Gatsby, Prismic, prismic, web, websites, website, developer, design, web, web design, web developer, web designer, front, end, front-end, back-end, back, end, website maken, webshop maken, ontwikkellaar, ontwerper"
         />
         <meta name="image" content={seo.image} />
         {seo.url && <meta property="og:url" content={seo.url} />}
@@ -72,7 +72,7 @@ const SEO = (props) => {
       <PopupWidget
         color={"#B9C1CB"}
         textColor={"#0D1817"}
-        text="Schedule a meeting"
+        text="Plan een meeting"
         url="https://calendly.com/nathan-ziarczyk/30min"
       />
     </>

@@ -40,9 +40,9 @@ const SuccessPage = () => {
           <Col>
             <MessageWrapper>
               <Message>
-                <h1>Thanks for your message</h1>
-                <p>I will get back to you as soon as possible.</p>
-                <Link to={"/"}>Go back</Link>
+                <h1>Bedankt voor je bericht!</h1>
+                <p>Ik neem zo snel mogelijk contact op.</p>
+                <Link to={"/"}>Ga terug</Link>
               </Message>
             </MessageWrapper>
           </Col>
