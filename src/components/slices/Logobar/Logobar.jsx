@@ -24,17 +24,11 @@ const Logobar = ({ data }) => {
     arrows: false,
     swipe: false,
     speed: 1000,
-    slidesToShow: 6,
+    slidesToShow: items.length,
     slidesToScroll: 1,
     responsive: [
       {
         breakpoint: 992,
-        settings: {
-          slidesToShow: 5,
-        },
-      },
-      {
-        breakpoint: 768,
         settings: {
           slidesToShow: 4,
         },

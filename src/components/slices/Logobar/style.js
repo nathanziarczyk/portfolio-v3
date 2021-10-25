@@ -7,7 +7,7 @@ export const LogobarWrapper = styled(Wrapper)`
   text-align: center;
   .slick-slide {
     &:nth-child(n + 5) {
-      display: none;
+      /* display: none; */
     }
   }
   .logos {
