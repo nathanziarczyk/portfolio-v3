@@ -71,15 +71,15 @@ const Logobar = ({ data }) => {
               <LogobarSlider {...settings} className="logos">
                 {items.map((logo, i) => {
                   return (
-                    <Link to={linkResolver(logo.link)} target="_blank">
+                    <a key={i} href={logo.link.url} target="_blank">
                       <picture>
                         <source
-                          srcset={logo.logo.fluid.srcWebp}
+                          srcSet={logo.logo.fluid.srcWebp}
                           type="image/webp"
                         />
-                        <source srcset={logo.logo.fluid.src} type="image/png" />
+                        <source srcSet={logo.logo.fluid.src} type="image/png" />
                         <motion.img
-                          srcset={logo.logo.fluid.src}
+                          srcSet={logo.logo.fluid.src}
                           alt={logo.logo.alt}
                           loading="lazy"
                           initial={"hidden"}
@@ -87,7 +87,7 @@ const Logobar = ({ data }) => {
                           variants={variants.image}
                         />
                       </picture>
-                    </Link>
+                    </a>
                   );
                 })}
               </LogobarSlider>

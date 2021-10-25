@@ -29,7 +29,7 @@ const Header = () => {
             </motion.li>
             {links.map((link, i) => {
               return (
-                <motion.li>
+                <motion.li key={i}>
                   <Link
                     to={linkResolver(link.link)}
                     className={[
@@ -111,13 +111,13 @@ const Header = () => {
                   <ul>
                     {links.map((link, i) => {
                       return i === links.length - 1 ? (
-                        <Button>
+                        <Button key={i}>
                           <Link to={linkResolver(link.link)}>
                             {link.label.text}
                           </Link>
                         </Button>
                       ) : (
-                        <motion.li>
+                        <motion.li key={i}>
                           <Link
                             to={linkResolver(link.link)}
                             className={[

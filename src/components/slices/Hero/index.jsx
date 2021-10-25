@@ -48,7 +48,7 @@ const Hero = ({ data }) => {
             >
               {items.map((item, index) => {
                 return (
-                  <Button _type={index === 0 ? "primary" : "secondary"}>
+                  <Button key={index} _type={index === 0 ? "primary" : "secondary"}>
                     <Link
                       target={
                         item.button_link.link_type === "Web" ? "_blank" : null

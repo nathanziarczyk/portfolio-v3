@@ -20,16 +20,15 @@ const IconBlocks = ({ data }) => {
           </Col>
           <Col md={6} lg={8}>
             <IconBlocksContainer>
-              {items.map((item) => {
-                console.log(item);
+              {items.map((item, index) => {
                 const { title, image, content } = item;
                 return (
-                  <div className="icon-block">
+                  <div className="icon-block" key={index}>
                     <picture>
-                      <source srcset={image.fluid.srcWebp} type="image/webp" />
-                      <source srcset={image.fluid.src} type="image/png" />
+                      <source srcSet={image.fluid.srcWebp} type="image/webp" />
+                      <source srcSet={image.fluid.src} type="image/png" />
                       <img
-                        srcset={image.fluid.src}
+                        srcSet={image.fluid.src}
                         alt={image.alt}
                         loading="lazy"
                       />
