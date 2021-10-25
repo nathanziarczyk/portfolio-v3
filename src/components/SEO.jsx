@@ -27,7 +27,7 @@ const SEO = (props) => {
       <Helmet
         title={seo.title}
         htmlAttributes={{
-          lang: "en",
+          lang: "nl",
         }}
       >
         <link rel="preconnect" href="https://fonts.googleapis.com"></link>
