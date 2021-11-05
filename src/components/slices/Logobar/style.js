@@ -5,27 +5,25 @@ import Slider from "react-slick";
 
 export const LogobarWrapper = styled(Wrapper)`
   text-align: center;
-  .slick-slide {
-    &:nth-child(n + 5) {
-      /* display: none; */
-    }
+  h2 {
+    margin-bottom: 3rem;
+  }
+  .slick-track {
+    display: flex;
+    align-items: center;
   }
   .logos {
-    width: 70%;
-    margin: 3rem auto 0;
+    width: 90%;
+    margin: 0 auto;
     a {
-      opacity: 0.85;
-      transition: opacity 0.5s ease-in-out;
       img {
+        position: relative;
         display: block;
+        height: 100%;
         margin: 0 auto;
+        max-height: 5rem;
+        max-width: 8rem;
         width: auto;
-        height: auto;
-        max-height: 3.5rem;
-      }
-
-      &:hover {
-        opacity: 0.5;
       }
     }
 
