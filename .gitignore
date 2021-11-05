@@ -6,3 +6,5 @@ public
 .netlify
 
 .env
+
+.DS_STORE
