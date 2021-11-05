@@ -4,6 +4,8 @@ import Wrapper from "../../Wrapper";
 export const IconBlocksWrapper = styled(Wrapper)`
   h2 {
     margin-bottom: 0.5rem;
+    position: sticky;
+    top: 6rem;
   }
 `;
 

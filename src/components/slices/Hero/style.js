@@ -34,6 +34,7 @@ export const HeroWrapper = styled(Wrapper)`
       span {
         display: inline-block;
         white-space: break-spaces;
+        hyphens: auto;
       }
     }
 
