@@ -19,7 +19,6 @@ export const LogobarWrapper = styled(Wrapper)`
       img {
         position: relative;
         display: block;
-        height: 100%;
         margin: 0 auto;
         max-height: 5rem;
         max-width: 8rem;
