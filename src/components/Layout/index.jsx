@@ -11,6 +11,7 @@ import Footer from "../Footer";
 import Header from "../Header";
 import SEO from "../SEO";
 import SplashScreen from "./SplashScreen";
+import Gradient from "../Gradient";
 
 const Layout = ({ children, title, description }) => {
   const [selectedTheme, setSelectedTheme] = useState("dark");
@@ -34,6 +35,7 @@ const Layout = ({ children, title, description }) => {
     <ParallaxProvider>
       <ThemeContext.Provider value={[selectedTheme, toggleTheme]}>
         <ThemeProvider theme={theme["light"]}>
+          <Gradient />
           <GlobalStyles />
           <SplashScreen />
           <SEO title={title} description={description} />
