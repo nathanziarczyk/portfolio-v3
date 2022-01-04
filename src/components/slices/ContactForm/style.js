@@ -24,7 +24,7 @@ export const Form = styled(motion.form)`
       font-family: "Raleway";
       font-weight: 400;
       background-color: ${({ theme, bg }) => {
-        return bg === "with_bg" ? "#fff" : theme.primary;
+        return bg === "with_bg" ? "#fff" : theme.white;
       }};
       padding: 0.75rem 1.25rem;
       color: ${({ theme }) => theme.text};

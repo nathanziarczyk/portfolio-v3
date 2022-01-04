@@ -15,7 +15,7 @@ const MessageWrapper = styled.div`
 const Message = styled.div`
   padding: 2rem;
   border-radius: 1rem;
-  background: ${({ theme }) => transparentize(0.5, theme.primary)};
+  background: ${({ theme }) => transparentize(0.5, theme.yellow)};
   text-align: center;
 
   h1 {

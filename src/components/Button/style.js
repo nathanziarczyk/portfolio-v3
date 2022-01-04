@@ -11,21 +11,18 @@ export const Button = styled.button`
   font-size: 1rem;
   min-width: 8rem;
   font-weight: 500;
-  border-radius: 0.5rem;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   cursor: pointer;
-  color: ${({ theme, _type = "primary" }) =>
-    _type === "secondary" ? theme.primary : theme.button_color};
-  border: 2.5px solid ${({ theme }) => theme.accent};
-  background-color: ${({ theme }) => theme.accent};
+  color: ${({ theme, _type = "primary" }) => theme.text};
+  border: 1px solid ${({ theme }) => theme.text};
+  background-color: ${({ theme }) => theme.yellow};
   background-color: ${({ _type = "primary" }) =>
     _type === "secondary" && "unset"};
   position: relative;
   transition: color 0.3s ease-in-out, background-color 0.3s ease;
   a {
     transition: color 0.3s ease-in-out;
-    color: ${({ theme, _type }) =>
-      _type === "secondary" ? theme.primary : theme.button_color};
+    color: ${({ theme, _type }) => theme.text};
 
     &::before {
       content: "";
@@ -42,16 +39,16 @@ export const Button = styled.button`
       return _type === "primary"
         ? `
         background-color: unset;
-        color: ${theme.primary};
+        color: ${theme.text};
         a{
-          color: ${theme.primary};
+          color: ${theme.text};
         }
       `
         : `
-        background-color: ${lighten(0.1, theme.primary)};
-        color: ${theme.bg};
+        background-color: ${lighten(0.1, theme.yellow)};
+        color: ${theme.text};
         a{
-          color: ${theme.bg};
+          color: ${theme.text};
         }`;
     }}
   }

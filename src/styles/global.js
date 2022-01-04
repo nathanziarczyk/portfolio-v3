@@ -19,7 +19,7 @@ body {
   border-radius: 1.5rem !important;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   cursor: pointer;
-  border: 2.5px solid ${({ theme }) => theme.light_blue};
+  border: 2.5px solid ${({ theme }) => theme.blue_light};
   position: relative;
   transition: color 0.3s ease-in-out, background-color 0.3s ease;
 
@@ -80,7 +80,7 @@ ul {
 
 p {
   margin-top: 0;
-  color: ${({ theme }) => theme.text_dark};
+  color: ${({ theme }) => theme.text};
   color: ${({ theme }) => theme.text};
   margin-bottom: 0.5em;
 }
@@ -110,30 +110,11 @@ span {
 
 a {
   text-decoration: dotted;
-  color: ${({ theme }) => theme.text_dark};
+  color: ${({ theme }) => theme.text};
   &:not(header a)::not(.disable-global) {
     font-weight: bold;
-    color: ${({ theme }) => theme.accent};
+    color: ${({ theme }) => theme.text};
     position: relative;
-
-    &::after {
-      content: "";
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      height: 1px;
-      background-color: ${({ theme }) => theme.accent};
-      transform: translateY(90%) scaleX(0);
-      transition: transform 250ms ease-in-out;
-      transform-origin: right;
-      opacity: 0.75;
-    }
-
-    &:hover::after {
-      transform: translateY(90%) scaleX(1);
-      transform-origin: left;
-    }
   }
 }
 
@@ -143,7 +124,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: ${({ theme }) => theme.text_dark};
+  color: ${({ theme }) => theme.text};
   font-weight: 800;
 }
 

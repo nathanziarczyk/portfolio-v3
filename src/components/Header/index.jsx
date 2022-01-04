@@ -75,7 +75,7 @@ const Header = () => {
                     >
                       <Link to="/">
                         <img
-                          src={logo}
+                          src={"/images/logo_gradient.png"}
                           alt="Logo"
                           loading="lazy"
                           width="160"

@@ -74,7 +74,7 @@ export const HeaderEl = styled.header`
             bottom: 0;
             left: 0;
             height: 5px;
-            background-color: ${({ theme }) => theme.accent};
+            background-color: ${({ theme }) => theme.text};
             transform: translateY(90%) scaleX(0);
             transition: transform 250ms ease-in-out;
             transform-origin: right;
@@ -110,7 +110,7 @@ export const BottomNav = styled.nav`
   height: 4rem;
   display: flex;
   align-items: center;
-  background-color: ${({ theme }) => transparentize(0.8, theme.light_blue)};
+  background-color: ${({ theme }) => transparentize(0.8, theme.blue_light)};
   backdrop-filter: blur(0.45rem);
   ul {
     display: flex;
@@ -138,7 +138,7 @@ export const BottomNav = styled.nav`
           bottom: 0;
           left: 0;
           height: 5px;
-          background-color: ${({ theme }) => theme.accent};
+          background-color: ${({ theme }) => theme.text};
           transform: translateY(90%) scaleX(0);
           transition: transform 250ms ease-in-out;
           transform-origin: right;

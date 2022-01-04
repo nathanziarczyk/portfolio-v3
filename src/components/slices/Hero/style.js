@@ -26,7 +26,7 @@ export const HeroWrapper = styled(Wrapper)`
     h1 {
       font-size: 3.5rem;
       margin: 0;
-      color: ${({ theme }) => theme.text_dark};
+      color: ${({ theme }) => theme.text};
       @media screen and (max-width: ${variables.md}) {
         font-size: 2.75rem;
       }
