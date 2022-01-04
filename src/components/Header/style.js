@@ -3,8 +3,6 @@ import styled from "styled-components";
 import { variables } from "../../styles/variables";
 
 export const HeaderWrapper = styled.div`
-  position: fixed;
-  top: 0px;
   width: 100%;
   z-index: 2;
   &::before {

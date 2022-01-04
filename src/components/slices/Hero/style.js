@@ -3,7 +3,7 @@ import { variables } from "../../../styles/variables";
 import Wrapper from "../../Wrapper";
 
 export const HeroWrapper = styled(Wrapper)`
-  margin: 3rem 0;
+  margin-top: 4rem;
   position: relative;
   @media screen and (max-width: ${variables.md}) {
     margin-top: 1rem;

@@ -8,8 +8,6 @@ import { variants } from "./animations";
 import { useLocation } from "@reach/router";
 import { Button } from "../Button/style";
 
-import logo from "../../images/logo.png";
-
 const Header = () => {
   const { prismicMainNavigation } = useStaticQuery(query);
   const { links } = prismicMainNavigation.data;
@@ -54,7 +52,7 @@ const Header = () => {
                     <h2>
                       <Link to="/">
                         <img
-                          src={logo}
+                          src={"/images/logo_gradient.svg"}
                           alt="Logo"
                           loading="lazy"
                           width="160"
@@ -75,7 +73,7 @@ const Header = () => {
                     >
                       <Link to="/">
                         <img
-                          src={"/images/logo_gradient.png"}
+                          src={"/images/logo_gradient.svg"}
                           alt="Logo"
                           loading="lazy"
                           width="160"
@@ -97,7 +95,7 @@ const Header = () => {
                   >
                     <Link to="/">
                       <img
-                        src={logo}
+                        src={"/images/logo_gradient.svg"}
                         alt="Logo"
                         loading="lazy"
                         width="160"

@@ -34,14 +34,10 @@ body {
   font-weight: ${variables.regular};
   line-height: ${variables.lineHeight};
   transition: color .3s ease-out;
-  padding-top: 5.6rem;
+  height: max-content;
 
   *{
     outline-color: ${({ theme }) => transparentize(0.5, theme.text)};
-  }
-
-  @media screen and (max-width: ${variables.md}) {
-      padding-bottom:4rem;
   }
 }
 
