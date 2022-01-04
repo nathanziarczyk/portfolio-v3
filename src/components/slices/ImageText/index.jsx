@@ -15,10 +15,10 @@ const ImageText = ({ data }) => {
       <ImageTextWrapper type={theme} imageAlignment={image_alignment}>
         <Row>
           <Col
-            lg={6}
+            lg={5}
             className={[
               "order-1",
-              direction ? "order-lg-1" : "order-lg-2 offset-lg-1",
+              direction ? "order-lg-1" : "order-lg-2",
             ].join(" ")}
           >
             <motion.div
@@ -34,27 +34,23 @@ const ImageText = ({ data }) => {
             </motion.div>
           </Col>
           <Col
-            lg={5}
+            lg={7}
             className={[
               "order-1",
-              direction ? "order-lg-2 offset-lg-2" : "order-lg-1",
+              direction ? "order-lg-2" : "order-lg-1",
             ].join(" ")}
           >
-            <div className="image-wrapper">
-              <Parallax y={[-2.5, 2.5]}>
-                <Image className="image-wrap">
-                  <motion.img
-                    src={image.fluid.src}
-                    alt={image.alt}
-                    initial="hidden"
-                    animate={controls}
-                    variants={variants.image}
-                    width={600}
-                    height={500}
-                  />
-                </Image>
-              </Parallax>
-            </div>
+            <Image className="image-wrap">
+              <motion.img
+                src={image.fluid.src}
+                alt={image.alt}
+                initial="hidden"
+                animate={controls}
+                variants={variants.image}
+                width={600}
+                height={500}
+              />
+            </Image>
           </Col>
         </Row>
       </ImageTextWrapper>

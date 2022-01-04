@@ -21,27 +21,27 @@ export const Content = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   padding-bottom: ${({ imageAlignment }) =>
     imageAlignment === "bottom" ? "4rem" : 0};
 
+  h2 {
+    margin-bottom: 1.5rem;
+  }
   .links {
     margin-top: 1rem;
   }
 `;
 export const Image = styled.div`
-  position: relative;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  border-radius: 1rem;
-  overflow: hidden;
+  img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
 
   @media screen and (max-width: 992px) {
     width: 60%;
-    margin: 2rem auto 0;
+    margin-top: 1.5rem;
   }
   @media screen and (max-width: 768px) {
     width: 80%;

@@ -9,14 +9,14 @@ export const WrapperWrapper = styled.div`
     if (type === "rounded") {
       return `
         margin: 6rem 0;
-        padding: 3rem 6rem;
+        padding: 4rem 6rem;
         border-radius: 2rem;
         background-color: ${theme.blue_light};
       `;
     } else if (type === "with_bg") {
       return `
         margin: 6rem 0;
-        padding: 3rem 0;
+        padding: 4rem 0;
         background-color: ${theme.blue_light};
       `;
     } else {
@@ -52,5 +52,9 @@ export const WrapperWrapper = styled.div`
         `;
       }
     }};
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
   }
 `;

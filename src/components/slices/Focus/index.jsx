@@ -13,10 +13,10 @@ const Focus = ({ data }) => {
     <FocusWrapper type={theme}>
       <div className="grid" style={{ backgroundImage: `url(${grid})` }}></div>
       <Row>
-        <Col sm={12}>
+        <Col sm={12} md={8}>
           <h2>{title.text}</h2>
         </Col>
-        <Col sm={12} md={10}>
+        <Col sm={12} md={8}>
           <div
             className="content"
             dangerouslySetInnerHTML={{ __html: content.html }}
@@ -25,7 +25,10 @@ const Focus = ({ data }) => {
             <div className="buttons">
               {items.map((item, index) => {
                 return (
-                  <Button key={index} _type={index === 0 ? "primary" : "secondary"}>
+                  <Button
+                    key={index}
+                    _type={index === 0 ? "primary" : "secondary"}
+                  >
                     <Link
                       target={
                         item.button_link.link_type === "Web" ? "_blank" : null
