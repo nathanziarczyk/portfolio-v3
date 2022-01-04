@@ -45,6 +45,19 @@ body {
   }
 }
 
+.gradient{
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: auto;
+
+  @media screen and (max-width: ${variables.sm}) {
+    min-height: 100vh;
+  }
+}
+
 html{
   font-size: ${variables.fontSize};
   @media screen and (max-width: ${variables.md}) {

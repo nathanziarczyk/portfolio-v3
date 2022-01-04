@@ -23,7 +23,6 @@ export const HeroWrapper = styled(Wrapper)`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-align: center;
     h1 {
       font-size: 3.5rem;
       margin: 0;
@@ -57,10 +56,6 @@ export const HeroWrapper = styled(Wrapper)`
   }
 
   .buttons {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-
     button {
       margin-top: 0.5rem;
       margin-right: 0.5rem;
