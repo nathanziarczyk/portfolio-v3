@@ -15,25 +15,10 @@ const Hero = ({ data }) => {
   } = data;
   return (
     <HeroWrapper type={"without_bg"}>
-      <div className="grid" style={{ backgroundImage: `url(${grid})` }}></div>
       <Row>
-        <Col lg={8} className="offset-lg-2">
+        <Col lg={8} className="">
           <div className="content-wrapper">
-            <h1>
-              {hero_title.text.split(" ").map((word, i) => (
-                <span className="overflow-hidden" key={i}>
-                  <motion.span
-                    className="word"
-                    custom={i}
-                    initial="hidden"
-                    animate="visible"
-                    variants={variants.h1.word}
-                  >
-                    {word + " "}
-                  </motion.span>
-                </span>
-              ))}
-            </h1>
+            <h1>{hero_title.text}</h1>
             <motion.div
               initial="hidden"
               animate="visible"
@@ -48,7 +33,10 @@ const Hero = ({ data }) => {
             >
               {items.map((item, index) => {
                 return (
-                  <Button key={index} _type={index === 0 ? "primary" : "secondary"}>
+                  <Button
+                    key={index}
+                    _type={index === 0 ? "primary" : "secondary"}
+                  >
                     <Link
                       target={
                         item.button_link.link_type === "Web" ? "_blank" : null
