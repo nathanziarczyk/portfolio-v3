@@ -10,8 +10,10 @@ import Focus from "../src/components/slices/Focus";
 import ExpandedServices from "../src/components/slices/ExpandedServices";
 import Logobar from "../src/components/slices/Logobar/Logobar";
 import IconBlocks from "../src/components/slices/IconBlocks/IconBlocks";
+import Case from "../src/components/slices/Case";
 
 export const sliceResolver = (slice, key) => {
+  console.log(slice);
   switch (slice?.slice_type) {
     case "hero":
       return <Hero index={key} data={slice} key={key} />;
@@ -36,6 +38,9 @@ export const sliceResolver = (slice, key) => {
 
     case "icon_blocks":
       return <IconBlocks data={slice} key={key} />;
+
+    case "case":
+      return <Case data={slice} key={key} />;
 
     case "widget":
       if (slice.primary.widget === "Contact form") {

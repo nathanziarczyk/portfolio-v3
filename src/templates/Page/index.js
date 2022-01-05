@@ -146,6 +146,36 @@ export const query = graphql`
                   }
                 }
               }
+              ... on PrismicPageBodyCase {
+                id
+                slice_type
+                primary {
+                  body1 {
+                    html
+                  }
+                  image {
+                    fluid {
+                      src
+                      srcSet
+                      srcSetWebp
+                      srcWebp
+                    }
+                    alt
+                  }
+                  link {
+                    type
+                    url
+                    uid
+                    link_type
+                    target
+                  }
+                  quotee
+                  title1
+                  quote {
+                    html
+                  }
+                }
+              }
               ... on PrismicPageBodyRichText {
                 id
                 slice_type

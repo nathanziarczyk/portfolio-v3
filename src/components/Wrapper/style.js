@@ -43,7 +43,6 @@ export const WrapperWrapper = styled.div`
       } else if (type === "with_bg") {
         return `
           padding: 3rem 0;
-          background-color: ${theme.blue};
         `;
       } else {
         return `

@@ -26,18 +26,7 @@
       "type": "Slices",
       "fieldset": "Slice zone",
       "config": {
-        "labels": {
-          "richt_text": [],
-          "rich_text": [],
-          "hero": [],
-          "image_text": [],
-          "widget": [],
-          "page_header": [],
-          "usp": [],
-          "focus": [],
-          "logo_bar": [],
-          "icon_blocks": []
-        },
+        "labels": null,
         "choices": {
           "rich_text": {
             "type": "Slice",
@@ -49,11 +38,7 @@
               "theme": {
                 "type": "Select",
                 "config": {
-                  "options": [
-                    "without_bg",
-                    "with_bg",
-                    "rounded"
-                  ],
+                  "options": ["without_bg", "with_bg", "rounded"],
                   "default_value": "without_bg",
                   "label": "Theme"
                 }
@@ -61,10 +46,7 @@
               "size": {
                 "type": "Select",
                 "config": {
-                  "options": [
-                    "flow",
-                    "container"
-                  ],
+                  "options": ["flow", "container"],
                   "default_value": "flow",
                   "label": "Size"
                 }
@@ -72,7 +54,7 @@
               "text": {
                 "type": "StructuredText",
                 "config": {
-                  "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, embed, list-item, o-list-item, rtl",
+                  "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,embed,list-item,o-list-item,rtl",
                   "allowTargetBlank": true,
                   "label": "Text"
                 }
@@ -90,14 +72,14 @@
               "hero_title": {
                 "type": "StructuredText",
                 "config": {
-                  "single": "heading1, heading2",
+                  "single": "heading1,heading2",
                   "label": "Title"
                 }
               },
               "hero_body": {
                 "type": "StructuredText",
                 "config": {
-                  "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, embed, list-item, o-list-item, rtl",
+                  "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,embed,list-item,o-list-item,rtl",
                   "allowTargetBlank": true,
                   "label": "Body"
                 }
@@ -115,7 +97,8 @@
                 "type": "Link",
                 "config": {
                   "allowTargetBlank": true,
-                  "label": "Button link"
+                  "label": "Button link",
+                  "select": null
                 }
               }
             }
@@ -130,11 +113,7 @@
               "theme": {
                 "type": "Select",
                 "config": {
-                  "options": [
-                    "without_bg",
-                    "with_bg",
-                    "rounded"
-                  ],
+                  "options": ["without_bg", "with_bg", "rounded"],
                   "default_value": "without_bg",
                   "label": "Theme"
                 }
@@ -142,10 +121,7 @@
               "image_alignment": {
                 "type": "Select",
                 "config": {
-                  "options": [
-                    "center",
-                    "bottom"
-                  ],
+                  "options": ["center", "bottom"],
                   "default_value": "center",
                   "label": "Image alignment"
                 }
@@ -170,7 +146,7 @@
               "content": {
                 "type": "StructuredText",
                 "config": {
-                  "multi": "paragraph, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, embed, list-item, o-list-item, rtl",
+                  "multi": "paragraph,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,embed,list-item,o-list-item,rtl",
                   "allowTargetBlank": true,
                   "label": "Content"
                 }
@@ -188,11 +164,7 @@
               "theme": {
                 "type": "Select",
                 "config": {
-                  "options": [
-                    "without_bg",
-                    "with_bg",
-                    "rounded"
-                  ],
+                  "options": ["without_bg", "with_bg", "rounded"],
                   "default_value": "without_bg",
                   "label": "Theme"
                 }
@@ -200,11 +172,7 @@
               "widget": {
                 "type": "Select",
                 "config": {
-                  "options": [
-                    "Contact form",
-                    "Services",
-                    "Expanded services"
-                  ],
+                  "options": ["Contact form", "Services", "Expanded services"],
                   "label": "Widget"
                 }
               },
@@ -228,10 +196,7 @@
               "theme": {
                 "type": "Select",
                 "config": {
-                  "options": [
-                    "without_bg",
-                    "with_bg"
-                  ],
+                  "options": ["without_bg", "with_bg"],
                   "default_value": "without_bg",
                   "label": "Theme"
                 }
@@ -246,7 +211,7 @@
               "body1": {
                 "type": "StructuredText",
                 "config": {
-                  "multi": "paragraph, strong, em",
+                  "multi": "paragraph,strong,em",
                   "label": "Body"
                 }
               }
@@ -263,10 +228,7 @@
               "theme": {
                 "type": "Select",
                 "config": {
-                  "options": [
-                    "with_bg",
-                    "without_bg"
-                  ],
+                  "options": ["with_bg", "without_bg"],
                   "default_value": "with_bg",
                   "label": "Theme"
                 }
@@ -282,7 +244,8 @@
                 "type": "Link",
                 "config": {
                   "allowTargetBlank": true,
-                  "label": "Button"
+                  "label": "Button",
+                  "select": null
                 }
               }
             },
@@ -305,7 +268,7 @@
               "content": {
                 "type": "StructuredText",
                 "config": {
-                  "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+                  "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl",
                   "label": "Content"
                 }
               }
@@ -321,11 +284,7 @@
               "theme": {
                 "type": "Select",
                 "config": {
-                  "options": [
-                    "rounded",
-                    "with_bg",
-                    "without_bg"
-                  ],
+                  "options": ["rounded", "with_bg", "without_bg"],
                   "default_value": "rounded",
                   "label": "Theme"
                 }
@@ -333,14 +292,14 @@
               "title": {
                 "type": "StructuredText",
                 "config": {
-                  "single": "heading1, heading2, heading3, heading4, heading5, heading6",
+                  "single": "heading1,heading2,heading3,heading4,heading5,heading6",
                   "label": "Title"
                 }
               },
               "content": {
                 "type": "StructuredText",
                 "config": {
-                  "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+                  "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl",
                   "label": "Content"
                 }
               }
@@ -349,13 +308,14 @@
               "button_link": {
                 "type": "Link",
                 "config": {
-                  "label": "Button link"
+                  "label": "Button link",
+                  "select": null
                 }
               },
               "button_text": {
                 "type": "StructuredText",
                 "config": {
-                  "multi": "paragraph, strong, em",
+                  "multi": "paragraph,strong,em",
                   "label": "Button text"
                 }
               }
@@ -371,11 +331,7 @@
               "theme": {
                 "type": "Select",
                 "config": {
-                  "options": [
-                    "without_bg",
-                    "with_bg",
-                    "rounded"
-                  ],
+                  "options": ["without_bg", "with_bg", "rounded"],
                   "default_value": "without_bg",
                   "label": "Theme"
                 }
@@ -401,7 +357,8 @@
                 "type": "Link",
                 "config": {
                   "allowTargetBlank": true,
-                  "label": "Link"
+                  "label": "Link",
+                  "select": null
                 }
               }
             }
@@ -423,7 +380,7 @@
               "subtitle": {
                 "type": "StructuredText",
                 "config": {
-                  "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+                  "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl",
                   "label": "Subtitle"
                 }
               }
@@ -447,11 +404,64 @@
               "content": {
                 "type": "StructuredText",
                 "config": {
-                  "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+                  "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl",
                   "label": "Content"
                 }
               }
             }
+          },
+          "case": {
+            "type": "Slice",
+            "fieldset": "Case",
+            "description": "Case slice",
+            "icon": "assignment_ind",
+            "display": "list",
+            "non-repeat": {
+              "image": {
+                "type": "Image",
+                "config": {
+                  "constraint": {},
+                  "thumbnails": [],
+                  "label": "Image"
+                }
+              },
+              "title1": {
+                "type": "Text",
+                "config": {
+                  "label": "Title"
+                }
+              },
+              "body1": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "paragraph,strong,em,hyperlink,list-item,o-list-item",
+                  "allowTargetBlank": true,
+                  "label": "Body"
+                }
+              },
+              "quote": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "paragraph,strong,em",
+                  "allowTargetBlank": true,
+                  "label": "Quote"
+                }
+              },
+              "quotee": {
+                "type": "Text",
+                "config": {
+                  "label": "Quotee"
+                }
+              },
+              "link": {
+                "type": "Link",
+                "config": {
+                  "label": "Link",
+                  "select": null
+                }
+              }
+            },
+            "repeat": {}
           }
         }
       }
