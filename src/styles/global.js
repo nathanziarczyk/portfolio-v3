@@ -67,9 +67,16 @@ body {
   }
 }
 
+.hero-title{
+    font-size: 3.5rem;
+    @media screen and (max-width: ${variables.md}) {
+      font-size: 2.75rem;
+    }
+}
+
 .gradient{
   width: 100vw;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -78,6 +85,8 @@ body {
 
   @media screen and (max-width: ${variables.sm}) {
     min-height: 100vh;
+    width: 175vw;
+    transform: translateX(-20%);
   }
 }
 

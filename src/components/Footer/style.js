@@ -8,6 +8,10 @@ export const FooterWrapper = styled.footer`
     margin: 0;
   }
 
+  a {
+    display: block;
+  }
+
   img {
     max-height: 100%;
     height: auto;
@@ -23,6 +27,11 @@ export const FooterWrapper = styled.footer`
 `;
 
 export const FooterTab = styled.div`
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
   h3 {
     margin-bottom: 1rem;
   }
