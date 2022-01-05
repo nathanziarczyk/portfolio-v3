@@ -69,12 +69,6 @@ const SEO = (props) => {
           href="https://use.typekit.net/xkc3uag.css"
         ></link>
       </Helmet>
-      <PopupWidget
-        color={"#B9C1CB"}
-        textColor={"#0D1817"}
-        text="Plan een meeting"
-        url="https://calendly.com/nathan-ziarczyk/30min"
-      />
     </>
   );
 };

@@ -8,21 +8,17 @@ const Usp = ({ data }) => {
   return (
     <UspWrapper type={theme}>
       <Row>
-        <Col sm={12}>
-          <h2>{section_title.text}</h2>
-        </Col>
+        {section_title?.text && (
+          <Col sm={12}>
+            <h2>{section_title.text}</h2>
+          </Col>
+        )}
         {items.map((item) => {
           return (
             <Col md={6} lg={4}>
               <UspItem>
                 <div className="heading">
-                  <img
-                    src={item.icon.fixed.src}
-                    width={item.icon.fixed.width}
-                    height={item.icon.fixed.height}
-                    alt={item.icon.alt}
-                  />
-                  <h3>{item.title.text}</h3>
+                  <h4>{item.title.text}</h4>
                 </div>
                 <div
                   className="content"

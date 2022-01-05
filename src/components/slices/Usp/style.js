@@ -2,26 +2,31 @@ import styled from "styled-components";
 import Wrapper from "../../Wrapper";
 
 export const UspWrapper = styled(Wrapper)`
+margin-top 4.5rem;
   h2 {
     text-align: center;
   }
 `;
 
 export const UspItem = styled.div`
-  margin-top: 2rem;
+  box-shadow: var(--shadow-elevation-medium);
+  margin-top: 1.5rem;
+  background-color: ${({ theme }) => theme.bg};
+  height: calc(100% - 1.5rem);
+  padding: 2rem 1.5rem;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
   .heading {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1rem;
     img {
       width: 10%;
       height: auto;
     }
 
-    h3 {
-      width: 85%;
-      margin: 0;
+    h4 {
+      margin-bottom: 1.5rem;
     }
   }
 `;

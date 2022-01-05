@@ -3,6 +3,28 @@ import { createGlobalStyle } from "styled-components";
 import { variables } from "./variables";
 
 export const GlobalStyles = createGlobalStyle`
+:root {
+  --shadow-color: 0deg 0% 0%;
+  --shadow-elevation-low:
+    0.3px 0.5px 0.6px hsl(var(--shadow-color) / 0.12),
+    0.4px 0.8px 0.9px -1.5px hsl(var(--shadow-color) / 0.11),
+    1px 2px 2.3px -3px hsl(var(--shadow-color) / 0.1);
+  --shadow-elevation-medium:
+    0.3px 0.5px 0.6px hsl(var(--shadow-color) / 0.13),
+    0.7px 1.5px 1.7px -1px hsl(var(--shadow-color) / 0.12),
+    2px 3.9px 4.6px -2px hsl(var(--shadow-color) / 0.11),
+    5px 10px 11.7px -3px hsl(var(--shadow-color) / 0.1);
+  --shadow-elevation-high:
+    0.3px 0.5px 0.6px hsl(var(--shadow-color) / 0.12),
+    1.2px 2.5px 2.9px -0.4px hsl(var(--shadow-color) / 0.12),
+    2.3px 4.7px 5.5px -0.9px hsl(var(--shadow-color) / 0.11),
+    4px 8px 9.4px -1.3px hsl(var(--shadow-color) / 0.11),
+    6.7px 13.4px 15.7px -1.7px hsl(var(--shadow-color) / 0.1),
+    10.8px 21.6px 25.4px -2.1px hsl(var(--shadow-color) / 0.1),
+    16.7px 33.5px 39.3px -2.6px hsl(var(--shadow-color) / 0.09),
+    25px 50px 58.7px -3px hsl(var(--shadow-color) / 0.09);
+}
+
 html,
 body {
   margin: 0;
@@ -125,7 +147,7 @@ h6 {
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 3.05rem;
 
   @media screen and (max-width: ${variables.md}){
     font-size: 2.25rem;
@@ -133,19 +155,19 @@ h1 {
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 2.44375rem;
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.94375rem;
 }
 
 h4 {
-  font-size: 1.25rem;
+  font-size: 1.5625rem;
 }
 
 h5 {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
 }
 
 h6 {
