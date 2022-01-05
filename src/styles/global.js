@@ -74,6 +74,7 @@ body {
   left: 0;
   right: 0;
   height: auto;
+  max-height: 100%;
 
   @media screen and (max-width: ${variables.sm}) {
     min-height: 100vh;

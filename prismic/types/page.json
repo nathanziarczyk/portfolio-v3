@@ -471,15 +471,16 @@
             "display": "list",
             "non-repeat": {
               "title": {
-                "type": "Text",
+                "type": "StructuredText",
                 "config": {
+                  "single": "heading2",
                   "label": "Title"
                 }
               },
               "body1": {
                 "type": "StructuredText",
                 "config": {
-                  "multi": "paragraph, strong, em, list-item, o-list-item",
+                  "multi": "paragraph,strong,em,list-item,o-list-item",
                   "label": "Body"
                 }
               }

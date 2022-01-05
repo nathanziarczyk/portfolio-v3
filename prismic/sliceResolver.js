@@ -11,9 +11,9 @@ import ExpandedServices from "../src/components/slices/ExpandedServices";
 import Logobar from "../src/components/slices/Logobar/Logobar";
 import IconBlocks from "../src/components/slices/IconBlocks/IconBlocks";
 import Case from "../src/components/slices/Case";
+import PageHeaderContact from "../src/components/slices/PageHeaderContact";
 
 export const sliceResolver = (slice, key) => {
-  console.log(slice);
   switch (slice?.slice_type) {
     case "hero":
       return <Hero index={key} data={slice} key={key} />;
@@ -41,6 +41,9 @@ export const sliceResolver = (slice, key) => {
 
     case "case":
       return <Case data={slice} key={key} />;
+
+    case "page_header_with_contact_form":
+      return <PageHeaderContact data={slice} key={key} />;
 
     case "widget":
       if (slice.primary.widget === "Contact form") {

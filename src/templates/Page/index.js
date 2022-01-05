@@ -176,6 +176,18 @@ export const query = graphql`
                   }
                 }
               }
+              ... on PrismicPageBodyPageHeaderWithContactForm {
+                id
+                slice_type
+                primary {
+                  body1 {
+                    html
+                  }
+                  title {
+                    text
+                  }
+                }
+              }
               ... on PrismicPageBodyRichText {
                 id
                 slice_type

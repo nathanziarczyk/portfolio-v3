@@ -4,34 +4,30 @@ import styled from "styled-components";
 import Wrapper from "../../Wrapper";
 import { variables } from "../../../styles/variables";
 
-export const FormWrapper = styled(Wrapper)`
-  h2 {
-    text-align: center;
-  }
-`;
-
 export const Form = styled(motion.form)`
+  width: 100%;
+
   label {
     color: ${({ theme }) => theme.text};
     font-weight: 600;
+    width: 100%;
+
     input,
     textarea {
       -webkit-appearance: none;
       display: block;
       min-width: 100%;
       max-width: 100%;
-      border: none;
+      border: 1px solid ${({ theme }) => theme.text};
       font-family: "Raleway";
-      font-weight: 400;
+      font-weight: 500;
       background-color: ${({ theme, bg }) => {
         return bg === "with_bg" ? "#fff" : theme.white;
       }};
-      padding: 0.75rem 1.25rem;
+      padding: 0.5rem 1.25rem;
       color: ${({ theme }) => theme.text};
       font-size: 1rem;
-      margin-top: 0.5rem !important;
-      border-radius: 0.5rem;
-      border: 1px solid ${({ theme }) => transparentize(0.75, theme.text)};
+      margin-top: 0.25rem !important;
     }
 
     textarea {
@@ -49,12 +45,10 @@ export const Form = styled(motion.form)`
 export const FormRow = styled.div`
   display: flex;
   justify-content: space-between;
+  gap: 1rem;
+
   &:not(:last-child) {
     margin-bottom: 1rem;
-  }
-
-  label {
-    width: ${({ children }) => (children.length === 2 ? "48%" : "100%")};
   }
 
   @media screen and (max-width: ${variables.sm}) {
