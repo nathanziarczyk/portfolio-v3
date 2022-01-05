@@ -462,6 +462,29 @@
               }
             },
             "repeat": {}
+          },
+          "page_header_with_contact_form": {
+            "type": "Slice",
+            "fieldset": "Page Header with Contact Form",
+            "description": "Page Header with Contact Form Slice",
+            "icon": "account_box",
+            "display": "list",
+            "non-repeat": {
+              "title": {
+                "type": "Text",
+                "config": {
+                  "label": "Title"
+                }
+              },
+              "body1": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "paragraph, strong, em, list-item, o-list-item",
+                  "label": "Body"
+                }
+              }
+            },
+            "repeat": {}
           }
         }
       }

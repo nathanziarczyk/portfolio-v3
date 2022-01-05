@@ -35,6 +35,10 @@ body {
   scroll-behavior: smooth;
 }
 
+.shadow--medium{
+  box-shadow: var(--shadow-elevation-medium);
+}
+
 .calendly-badge-content{
   padding: 0.65rem 1.75rem !important;
   font-size: 1rem !important;

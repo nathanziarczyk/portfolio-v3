@@ -3,6 +3,26 @@ import Wrapper from "../../Wrapper/index";
 
 export const CaseWrapper = styled(Wrapper)``;
 
+export const ImageWrapper = styled.div`
+  position: relative;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    &:hover {
+      background: ${({ theme }) => theme.bg};
+    }
+  }
+`;
+
 export const Content = styled.div`
   padding: 2rem 1.5rem;
   background: ${({ theme }) => theme.bg};
@@ -27,6 +47,7 @@ export const Content = styled.div`
 
     .quotee {
       font-weight: 500;
+      margin-bottom: 0;
     }
   }
 `;

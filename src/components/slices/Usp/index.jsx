@@ -16,7 +16,7 @@ const Usp = ({ data }) => {
         {items.map((item) => {
           return (
             <Col md={6} lg={4}>
-              <UspItem>
+              <UspItem className="shadow--medium">
                 <div className="heading">
                   <h4>{item.title.text}</h4>
                 </div>

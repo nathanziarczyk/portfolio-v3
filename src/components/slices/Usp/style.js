@@ -9,7 +9,6 @@ margin-top 4.5rem;
 `;
 
 export const UspItem = styled.div`
-  box-shadow: var(--shadow-elevation-medium);
   margin-top: 1.5rem;
   background-color: ${({ theme }) => theme.bg};
   height: calc(100% - 1.5rem);

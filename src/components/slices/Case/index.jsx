@@ -1,23 +1,34 @@
 import React from "react";
-import { CaseWrapper, Content } from "./style";
+import { CaseWrapper, Content, ImageWrapper } from "./style";
 import { Col, Row } from "react-bootstrap";
+import { Button } from "../../Button/style";
 
 export default function Case({ data }) {
   const { image, title1, body1, quote, quotee, link } = data.primary;
   return (
     <CaseWrapper className={"case-wrapper"} type="without_bg">
       <Row>
-        <Col md={8}>
-          <img
-            src={image.fluid.src}
-            width={1200}
-            height={300}
-            alt={image.alt}
-            loading="lazy"
-          />
+        <Col lg={7} xl={8}>
+          <ImageWrapper>
+            <img
+              src={image.fluid.src}
+              srcSet={image.fluid.srcSet}
+              width={1200}
+              height={300}
+              alt={image.alt}
+              loading="lazy"
+            />
+            {link?.url && (
+              <Button>
+                <a href={link.url} target="_blank">
+                  View website
+                </a>
+              </Button>
+            )}
+          </ImageWrapper>
         </Col>
-        <Col md={4}>
-          <Content>
+        <Col lg={5} xl={4}>
+          <Content className="shadow--medium">
             {title1 && <h3>{title1}</h3>}
             <div
               className="body"
