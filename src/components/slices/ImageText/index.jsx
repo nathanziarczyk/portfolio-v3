@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import React from "react";
 import { Col, Row } from "react-bootstrap";
-import { Parallax } from "react-scroll-parallax";
 
 import { useScrollAnimation } from "../../../hooks/useScrollAnimation";
 import { variants } from "./animations";

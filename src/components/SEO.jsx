@@ -1,7 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import { useLocation } from "@reach/router";
-import { PopupWidget } from "react-calendly";
 import { useStaticQuery, graphql } from "gatsby";
 const SEO = (props) => {
   const { title, description, image, article } = props;

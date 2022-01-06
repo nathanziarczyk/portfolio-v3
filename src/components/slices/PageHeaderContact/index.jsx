@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import React from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 import { variants } from "../PageHeader/animations";
 import { Title, PageHeaderWrapper, Body } from "./style";
 import ContactForm from "../ContactForm/index";

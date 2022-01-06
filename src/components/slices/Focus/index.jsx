@@ -4,7 +4,6 @@ import { FocusWrapper } from "./style";
 import { Button } from "../../Button/style";
 import linkResolver from "../../../../prismic/linkResolver";
 import { Link } from "gatsby";
-import grid from "../../../images/grid.svg";
 
 const Focus = ({ data }) => {
   const { primary, items } = data;

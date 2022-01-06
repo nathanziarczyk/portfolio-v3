@@ -1,8 +1,6 @@
 import { motion } from "framer-motion";
-import { Link } from "gatsby";
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import linkResolver from "../../../../prismic/linkResolver";
 import { useScrollAnimation } from "../../../hooks/useScrollAnimation";
 import { variants } from "./animations";
 import { LogobarSlider, LogobarWrapper } from "./style";
@@ -65,7 +63,12 @@ const Logobar = ({ data }) => {
               <LogobarSlider {...settings} className="logos">
                 {items.map((logo, i) => {
                   return (
-                    <a key={i} href={logo.link.url} target="_blank">
+                    <a
+                      key={i}
+                      href={logo.link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <picture>
                         <source
                           srcSet={logo.logo.fluid.srcWebp}

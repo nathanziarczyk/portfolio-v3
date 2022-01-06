@@ -6,7 +6,6 @@ import { HeroWrapper } from "./style";
 import linkResolver from "../../../../prismic/linkResolver";
 import { Link } from "gatsby";
 import { Button } from "../../Button/style";
-import grid from "../../../images/grid.svg";
 
 const Hero = ({ data }) => {
   const {
@@ -18,7 +17,13 @@ const Hero = ({ data }) => {
       <Row>
         <Col lg={8} className="">
           <div className="content-wrapper">
-            <h1>{hero_title.text}</h1>
+            <motion.h1
+              initial="hidden"
+              animate="visible"
+              variants={variants.title}
+            >
+              {hero_title.text}
+            </motion.h1>
             <motion.div
               initial="hidden"
               animate="visible"

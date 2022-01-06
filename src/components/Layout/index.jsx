@@ -10,7 +10,6 @@ import { theme } from "../../styles/theme";
 import Footer from "../Footer";
 import Header from "../Header";
 import SEO from "../SEO";
-import SplashScreen from "./SplashScreen";
 import Gradient from "../Gradient";
 
 const Layout = ({ children, title, description }) => {
@@ -37,7 +36,6 @@ const Layout = ({ children, title, description }) => {
         <ThemeProvider theme={theme["light"]}>
           <Gradient />
           <GlobalStyles />
-          <SplashScreen />
           <SEO title={title} description={description} />
           <Header />
           {children}

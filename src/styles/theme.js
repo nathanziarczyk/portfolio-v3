@@ -1,7 +1,6 @@
 export const theme = {
   dark: {
     text: "#FFFFFF",
-    text: "#BCBABC",
     button_color: "#FFFFFF",
     primary: "#252834",
     secondary: "#333746",

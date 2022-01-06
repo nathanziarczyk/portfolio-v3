@@ -2,25 +2,33 @@ import React from "react";
 import { CaseWrapper, Content, ImageWrapper } from "./style";
 import { Col, Row } from "react-bootstrap";
 import { Button } from "../../Button/style";
+import { useScrollAnimation } from "../../../hooks/useScrollAnimation";
+import { motion } from "framer-motion";
+import { variants } from "./animations";
 
 export default function Case({ data }) {
   const { image, title1, body1, quote, quotee, link } = data.primary;
+  const { ref, controls } = useScrollAnimation(0.1);
+
   return (
-    <CaseWrapper className={"case-wrapper"} type="without_bg">
+    <CaseWrapper ref={ref} className={"case-wrapper"} type="without_bg">
       <Row>
         <Col lg={7} xl={8}>
           <ImageWrapper>
-            <img
+            <motion.img
               src={image.fluid.src}
               srcSet={image.fluid.srcSet}
               width={1200}
               height={300}
               alt={image.alt}
               loading="lazy"
+              initial="hidden"
+              visible={controls}
+              variants={variants.image}
             />
             {link?.url && (
               <Button>
-                <a href={link.url} target="_blank">
+                <a href={link.url} target="_blank" rel="noopener noreferrer">
                   View website
                 </a>
               </Button>

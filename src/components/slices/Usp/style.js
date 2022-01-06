@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Wrapper from "../../Wrapper";
+import { motion } from "framer-motion";
 
 export const UspWrapper = styled(Wrapper)`
 margin-top 4.5rem;
@@ -8,7 +9,7 @@ margin-top 4.5rem;
   }
 `;
 
-export const UspItem = styled.div`
+export const UspItem = styled(motion.div)`
   margin-top: 1.5rem;
   background-color: ${({ theme }) => theme.bg};
   height: calc(100% - 1.5rem);

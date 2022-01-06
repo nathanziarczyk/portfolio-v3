@@ -3,8 +3,6 @@ import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { FooterTab, FooterWrapper } from "./style";
 
-import logo from "../../images/logo.png";
-
 const Footer = () => {
   return (
     <FooterWrapper>

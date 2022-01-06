@@ -1,7 +1,5 @@
 import { motion } from "framer-motion";
-import { transparentize } from "polished";
 import styled from "styled-components";
-import Wrapper from "../../Wrapper";
 import { variables } from "../../../styles/variables";
 
 export const Form = styled(motion.form)`
