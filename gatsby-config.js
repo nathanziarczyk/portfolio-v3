@@ -48,7 +48,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/logo_gradient.png",
+        icon: "src/images/favicon.png",
       },
     },
     "gatsby-plugin-sharp",

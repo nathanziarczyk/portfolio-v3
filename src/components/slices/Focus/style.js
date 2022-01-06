@@ -6,6 +6,10 @@ export const FocusWrapper = styled(Wrapper)`
   padding-left: 3rem;
   padding-right: 3rem;
   position: relative;
+  h2,
+  .content {
+    margin-bottom: 1.5rem;
+  }
   .grid {
     width: 10rem;
     height: 10rem;
@@ -18,16 +22,12 @@ export const FocusWrapper = styled(Wrapper)`
   .buttons {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 1rem;
+    gap: 0.5rem;
     button {
-      margin-top: 0.5rem;
       a {
         display: block;
         height: 100%;
         width: 100%;
-      }
-      &:not(:last-child) {
-        margin-right: 0.5rem;
       }
     }
   }

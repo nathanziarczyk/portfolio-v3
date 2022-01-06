@@ -11,16 +11,17 @@ const Focus = ({ data }) => {
   const { title, content, theme } = primary;
   return (
     <FocusWrapper type={theme}>
-      <div className="grid" style={{ backgroundImage: `url(${grid})` }}></div>
       <Row>
         <Col sm={12} md={8}>
           <h2>{title.text}</h2>
         </Col>
         <Col sm={12} md={8}>
-          <div
-            className="content"
-            dangerouslySetInnerHTML={{ __html: content.html }}
-          ></div>
+          {content?.html && (
+            <div
+              className="content"
+              dangerouslySetInnerHTML={{ __html: content.html }}
+            ></div>
+          )}
           {items.length && (
             <div className="buttons">
               {items.map((item, index) => {

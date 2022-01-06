@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { variables } from "../../styles/variables";
 
 export const FooterWrapper = styled.footer`
-  padding: 2rem 0;
+  padding: 1rem 0;
 
   p {
     margin: 0;

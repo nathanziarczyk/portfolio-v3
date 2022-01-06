@@ -150,6 +150,12 @@ a {
   }
 }
 
+p a {
+  color: ${({ theme }) => theme.pink};
+  text-decoration: underline;
+  font-weight: 500;
+}
+
 h1,
 h2,
 h3,
