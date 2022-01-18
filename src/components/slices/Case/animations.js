@@ -1,12 +1,13 @@
 export const variants = {
   image: {
     hidden: {
-      opacity: 0,
+      scale: 1.1,
     },
     visible: {
-      opacity: 1,
+      scale: 1.01,
       transition: {
-        duration: 0.75,
+        duration: 0.85,
+        type: "tween",
       },
     },
   },

@@ -1,10 +1,12 @@
 import styled from "styled-components";
 import Wrapper from "../../Wrapper/index";
+import { motion } from "framer-motion";
 
 export const CaseWrapper = styled(Wrapper)``;
 
-export const ImageWrapper = styled.div`
+export const ImageWrapper = styled(motion.div)`
   position: relative;
+  overflow: hidden;
 
   img {
     display: block;
@@ -23,7 +25,7 @@ export const ImageWrapper = styled.div`
   }
 `;
 
-export const Content = styled.div`
+export const Content = styled(motion.div)`
   padding: 2rem 1.5rem;
   background: ${({ theme }) => theme.bg};
   height: 100%;

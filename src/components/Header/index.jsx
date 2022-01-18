@@ -142,7 +142,7 @@ const Header = () => {
 
 const query = graphql`
   query MainNavigation {
-    prismicMainNavigation {
+    prismicMainNavigation(lang: { eq: "en-gb" }) {
       data {
         links {
           link {
