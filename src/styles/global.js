@@ -35,6 +35,10 @@ body {
   scroll-behavior: smooth;
 }
 
+.hidden{
+  display: none;
+}
+
 .shadow--medium{
   box-shadow: var(--shadow-elevation-medium);
 }
