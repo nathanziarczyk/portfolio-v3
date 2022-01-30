@@ -69,6 +69,10 @@ body {
   *{
     outline-color: ${({ theme }) => transparentize(0.5, theme.text)};
   }
+
+  @media screen and (max-width: ${variables.md}) {
+    margin-bottom: 4rem;
+  }
 }
 
 .hero-title{
