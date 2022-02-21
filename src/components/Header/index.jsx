@@ -1,4 +1,4 @@
-import { graphql, Link, useStaticQuery } from "gatsby";
+import { Link } from "gatsby";
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { BottomNav, HeaderEl, HeaderWrapper } from "./style";
@@ -7,10 +7,10 @@ import { motion } from "framer-motion";
 import { variants } from "./animations";
 import { useLocation } from "@reach/router";
 import { Button } from "../Button/style";
+import LanguageSwitcher from "../LanguageSwitcher";
 
-const Header = () => {
-  const { prismicMainNavigation } = useStaticQuery(query);
-  const { links } = prismicMainNavigation.data;
+const Header = ({ langData, navigationData }) => {
+  const { links } = navigationData.data;
   const { pathname } = useLocation();
   return (
     <>
@@ -104,7 +104,6 @@ const Header = () => {
                     </Link>
                   </motion.h2>
                 )}
-
                 <nav>
                   <ul>
                     {links.map((link, i) => {
@@ -130,6 +129,7 @@ const Header = () => {
                       );
                     })}
                   </ul>
+                  <LanguageSwitcher langData={langData} />
                 </nav>
               </HeaderEl>
             </Col>
@@ -139,27 +139,5 @@ const Header = () => {
     </>
   );
 };
-
-const query = graphql`
-  query MainNavigation {
-    prismicMainNavigation(lang: { eq: "en-gb" }) {
-      data {
-        links {
-          link {
-            id
-            link_type
-            uid
-            url
-            target
-            lang
-          }
-          label {
-            text
-          }
-        }
-      }
-    }
-  }
-`;
 
 export default Header;

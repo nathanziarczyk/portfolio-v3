@@ -33,6 +33,8 @@ export const HeaderEl = styled.header`
   }
 
   nav {
+    display: flex;
+
     ul {
       display: flex;
       align-items: center;
@@ -77,9 +79,14 @@ export const HeaderEl = styled.header`
         }
       }
     }
+    select {
+      margin-left: 1rem;
+    }
 
     @media screen and (max-width: ${variables.md}) {
-      display: none;
+      ul {
+        display: none;
+      }
     }
   }
 `;
