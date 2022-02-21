@@ -93,8 +93,8 @@ body {
 
   @media screen and (max-width: ${variables.sm}) {
     min-height: 100vh;
-    width: 175vw;
-    transform: translateX(-20%);
+    object-fit: cover;
+    object-position: 15%;
   }
 }
 
