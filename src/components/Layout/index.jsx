@@ -12,7 +12,7 @@ import Header from "../Header";
 import SEO from "../SEO";
 import Gradient from "../Gradient";
 
-const Layout = ({ children, title, description }) => {
+const Layout = ({ children, title, description, langData, navigationData }) => {
   const [selectedTheme, setSelectedTheme] = useState("dark");
 
   useEffect(() => {
@@ -37,7 +37,7 @@ const Layout = ({ children, title, description }) => {
           <Gradient />
           <GlobalStyles />
           <SEO title={title} description={description} />
-          <Header />
+          <Header langData={langData} navigationData={navigationData} />
           {children}
           <Footer />
         </ThemeProvider>
