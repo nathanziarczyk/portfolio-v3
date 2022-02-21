@@ -19,8 +19,12 @@ exports.createPages = async ({ graphql, actions }) => {
   `);
 
   pages.data.allPrismicPage.nodes.forEach((page) => {
+    const prefix = page.lang === "nl-be" ? "" : page.lang.slice(0, 2);
     createPage({
-      path: page.uid === "home" ? "/" : page.uid,
+      path:
+        page.uid === "home"
+          ? `/${prefix}`
+          : `${prefix ? `${prefix}/` : ""}${page.uid}`,
       component: path.resolve(__dirname, "src/templates/Page/index.js"),
       context: { ...page },
     });
