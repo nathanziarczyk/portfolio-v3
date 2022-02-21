@@ -4,22 +4,56 @@ import { sliceResolver } from "../../../prismic/sliceResolver";
 import Layout from "../../components/Layout";
 
 const Page = (props) => {
-  const { data } = props.data.allPrismicPage.edges[0].node;
+  const {
+    data,
+    lang,
+    alternate_languages,
+  } = props.data.allPrismicPage.edges[0].node;
   const { page_title, page_description, body } = data;
   const pageTitle = page_title.text;
   const pageDescription = page_description.text;
   return (
-    <Layout title={pageTitle} description={pageDescription}>
+    <Layout
+      title={pageTitle}
+      description={pageDescription}
+      langData={{ lang, altLangs: alternate_languages }}
+      navigationData={props.data.prismicMainNavigation}
+    >
       <main>{body.map(sliceResolver)}</main>
     </Layout>
   );
 };
 
 export const query = graphql`
-  query PageQuery($uid: String) {
-    allPrismicPage(filter: { uid: { eq: $uid }, lang: { eq: "en-gb" } }) {
+  query PageQuery($uid: String, $lang: String) {
+    prismicMainNavigation(lang: { eq: $lang }) {
+      data {
+        links {
+          link {
+            id
+            link_type
+            uid
+            url
+            target
+            lang
+          }
+          label {
+            text
+          }
+        }
+      }
+    }
+    allPrismicPage(filter: { uid: { eq: $uid }, lang: { eq: $lang } }) {
       edges {
         node {
+          lang
+          alternate_languages {
+            id
+            type
+            lang
+            uid
+            link_type
+          }
           data {
             page_title {
               text
