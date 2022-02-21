@@ -151,6 +151,7 @@ const query = graphql`
             uid
             url
             target
+            lang
           }
           label {
             text

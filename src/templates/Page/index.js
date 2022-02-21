@@ -69,6 +69,7 @@ export const query = graphql`
                     url
                     uid
                     link_type
+                    lang
                     target
                   }
                   logo {
@@ -101,6 +102,7 @@ export const query = graphql`
                     uid
                     link_type
                     target
+                    lang
                   }
                   button_text {
                     text
@@ -168,6 +170,7 @@ export const query = graphql`
                     uid
                     link_type
                     target
+                    lang
                   }
                   quotee
                   title1
@@ -222,6 +225,7 @@ export const query = graphql`
                     uid
                     link_type
                     target
+                    lang
                   }
                 }
               }
