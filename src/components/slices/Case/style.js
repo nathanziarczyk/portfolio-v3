@@ -5,7 +5,10 @@ import { motion } from "framer-motion";
 export const CaseWrapper = styled(Wrapper)``;
 
 export const ImageWrapper = styled(motion.div)`
-  position: relative;
+  position: sticky;
+  top: 0.5rem;
+  right: 0;
+  left: 0;
   overflow: hidden;
 
   img {
