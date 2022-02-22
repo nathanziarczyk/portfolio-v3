@@ -12,6 +12,8 @@ import LanguageSwitcher from "../LanguageSwitcher";
 const Header = ({ langData, navigationData }) => {
   const { links } = navigationData.data;
   const { pathname } = useLocation();
+  const homePath = langData.lang === "nl-be" ? "/" : "/en";
+
   return (
     <>
       <BottomNav>
@@ -19,8 +21,10 @@ const Header = ({ langData, navigationData }) => {
           <ul>
             <motion.li>
               <Link
-                to={"/"}
-                className={["/" === pathname ? "active" : ""].join(" ")}
+                to={homePath}
+                className={[
+                  "/" === pathname || "/en" === pathname ? "active" : "",
+                ].join(" ")}
               >
                 Home
               </Link>
@@ -50,7 +54,7 @@ const Header = ({ langData, navigationData }) => {
                 {typeof window !== "undefined" ? (
                   window.GATSBY_LOADED ? (
                     <h2>
-                      <Link to="/">
+                      <Link to={homePath}>
                         <img
                           src={"/images/logo_gradient.svg"}
                           alt="Logo"
