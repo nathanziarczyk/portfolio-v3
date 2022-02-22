@@ -1,4 +1,4 @@
-import { lighten } from "polished";
+import { lighten, transparentize } from "polished";
 import styled from "styled-components";
 import { variables } from "../../styles/variables";
 
@@ -19,7 +19,8 @@ export const Button = styled.button`
   background-color: ${({ _type = "primary" }) =>
     _type === "secondary" && "unset"};
   position: relative;
-  transition: color 0.3s ease-in-out, background-color 0.3s ease;
+  transition: box-shadow 300ms ease, color 300ms ease, background 300ms ease,
+    transform 300ms ease;
   a {
     transition: color 0.3s ease-in-out;
     color: ${({ theme, _type }) => theme.text};
@@ -32,6 +33,11 @@ export const Button = styled.button`
       bottom: 0;
       left: 0;
     }
+  }
+
+  &:active {
+    transform: scale(0.97);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 6px;
   }
 
   &:hover {

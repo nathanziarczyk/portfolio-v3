@@ -483,6 +483,13 @@
                   "multi": "paragraph,strong,em,list-item,o-list-item",
                   "label": "Body"
                 }
+              },
+              "embed_code": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "preformatted",
+                  "label": "Embed code"
+                }
               }
             },
             "repeat": {}

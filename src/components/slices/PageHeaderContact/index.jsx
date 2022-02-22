@@ -31,7 +31,9 @@ const PageHeaderContact = (props) => {
           )}
         </Col>
         <Col lg={6} className="offset-lg-1">
-          <ContactForm />
+          <div
+            dangerouslySetInnerHTML={{ __html: primary.embed_code.text }}
+          ></div>
         </Col>
       </Row>
     </PageHeaderWrapper>

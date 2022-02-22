@@ -220,6 +220,11 @@ export const query = graphql`
                   body1 {
                     html
                   }
+                  embed_code {
+                    text
+                    html
+                    raw
+                  }
                   title {
                     text
                   }
