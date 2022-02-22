@@ -36,7 +36,7 @@ const Layout = ({ children, title, description, langData, navigationData }) => {
         <ThemeProvider theme={theme["light"]}>
           <Gradient />
           <GlobalStyles />
-          <SEO title={title} description={description} />
+          <SEO title={title} description={description} langData={langData} />
           <Header langData={langData} navigationData={navigationData} />
           {children}
           <Footer />

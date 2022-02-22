@@ -3,9 +3,9 @@ import { Helmet } from "react-helmet";
 import { useLocation } from "@reach/router";
 import { useStaticQuery, graphql } from "gatsby";
 const SEO = (props) => {
-  const { title, description, image, article } = props;
+  const { title, description, image, article, langData } = props;
   const { pathname } = useLocation();
-  const { site } = useStaticQuery(query);
+  const { site, href } = useStaticQuery(query);
   const {
     defaultDescription,
     siteUrl,
@@ -26,7 +26,7 @@ const SEO = (props) => {
       <Helmet
         title={seo.title}
         htmlAttributes={{
-          lang: "nl",
+          lang: langData.lang,
         }}
       >
         <link rel="preconnect" href="https://fonts.googleapis.com"></link>
@@ -39,6 +39,7 @@ const SEO = (props) => {
           as="style"
           onload="this.rel='stylesheet'"
         />
+        <link rel="alternate" href={href} hreflang={langData.lang} />
         <meta name="description" content={seo.description} />
         <meta
           name="keywords"
