@@ -12,6 +12,7 @@ const SEO = (props) => {
     defaultImage,
     twitterUsername,
   } = site.siteMetadata;
+  let lang = langData && langData?.lang ? langData.lang : "nl-be";
 
   const isHome = pathname === "/";
 
@@ -26,7 +27,7 @@ const SEO = (props) => {
       <Helmet
         title={seo.title}
         htmlAttributes={{
-          lang: langData.lang,
+          lang: lang,
         }}
       >
         <link rel="preconnect" href="https://fonts.googleapis.com"></link>
@@ -39,7 +40,7 @@ const SEO = (props) => {
           as="style"
           onload="this.rel='stylesheet'"
         />
-        <link rel="alternate" href={href} hreflang={langData.lang} />
+        <link rel="alternate" href={href} hreflang={lang} />
         <meta name="description" content={seo.description} />
         <meta
           name="keywords"
