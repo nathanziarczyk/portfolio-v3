@@ -15,6 +15,7 @@ export const SelectorWrapper = styled.div`
 
 export const LanguageSelector = styled.select`
   cursor: pointer;
+  color: ${({ theme }) => theme.text};
   font-size: 1rem;
   position: relative;
   z-index: 2;
