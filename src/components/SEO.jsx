@@ -69,11 +69,16 @@ const SEO = (props) => {
           rel="stylesheet"
           href="https://use.typekit.net/xkc3uag.css"
         ></link>
-        <script
-          defer
-          data-domain="nathanz.dev"
-          src="https://plausible.io/js/plausible.js"
-        ></script>
+        {process.env.ENV !== "staging" && (
+          <script
+            defer
+            data-domain="nathanz.dev"
+            src="https://plausible.io/js/plausible.js"
+          ></script>
+        )}
+        {process.env.ENV === "staging" && (
+          <meta name="robots" content="noindex" />
+        )}
       </Helmet>
     </>
   );
